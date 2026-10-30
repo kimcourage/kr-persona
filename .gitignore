@@ -1,0 +1,36 @@
+# local settings
+config/paths.toml
+
+# raw data and pipeline outputs
+/data/
+/artifacts/
+*.parquet
+*.pkl
+*.npz
+*.sav
+*.dta
+*.zip
+*.sas7bdat
+*.feather
+*.pt
+*.gz
+*.log
+
+# credentials and local environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+build/
+dist/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

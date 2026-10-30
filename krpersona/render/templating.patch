@@ -1,0 +1,11 @@
+--- a/environment/agents/matraix/agents/persona/templating.py
++++ b/environment/agents/matraix/agents/persona/templating.py
+@@ -7,7 +7,7 @@
+ from jinja2 import Environment, FileSystemLoader, StrictUndefined, TemplateNotFound
+ 
+ from matraix.agents.persona.loader import Persona
+-from matraix.persona_dimension_catalog import (
++from krpersona.render import (  # Korean renderer: every attribute kept
+     build_template_context_extras,
+     overlay_labels_from_persona_path,
+ )
