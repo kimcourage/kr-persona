@@ -1,0 +1,38 @@
+﻿속성,원 점수,방향,r(가정),정반대 극단 금지 기준(방향)
+trait_curiosity,bfi2_facet_intellectual_curiosity,+,0.8,"bfi2_facet_intellectual_curiosity (+), big5_intellect (+)"
+cog_curiosity,bfi2_facet_intellectual_curiosity,+,0.8,"bfi2_facet_intellectual_curiosity (+), big5_intellect (+), trait_curiosity (+)"
+trait_creativity,bfi2_facet_creative_imagination,+,0.8,"bfi2_facet_creative_imagination (+), big5_imagination (+)"
+trait_appreciation_of_beauty,bfi2_facet_aesthetic_sensitivity,+,0.8,"bfi2_facet_aesthetic_sensitivity (+), big5_artistic_interest (+)"
+trait_open_mindedness,bfi2_domain_open_mindedness,+,0.7,bfi2_domain_open_mindedness (+)
+cog_open_mindedness,bfi2_domain_open_mindedness,+,0.7,"bfi2_domain_open_mindedness (+), trait_open_mindedness (+)"
+cog_ambiguity_tolerance,bfi2_domain_open_mindedness,+,0.6,bfi2_domain_open_mindedness (+)
+need_for_closure,bfi2_domain_open_mindedness,-,0.6,"bfi2_domain_open_mindedness (-), cog_ambiguity_tolerance (-)"
+att_rapid_change,big5_adventurousness,+,0.6,big5_adventurousness (+)
+pref_novelty_vs_familiarity,big5_adventurousness,+,0.8,big5_adventurousness (+)
+pref_routine_vs_variety,big5_adventurousness,-,0.8,"big5_adventurousness (-), pref_novelty_vs_familiarity (-)"
+pref_stability_vs_change,big5_adventurousness,-,0.7,"big5_adventurousness (-), att_rapid_change (-), pref_routine_vs_variety (+)"
+trait_discipline,big5_self_discipline,+,0.8,big5_self_discipline (+)
+trait_perseverance,bfi2_domain_conscientiousness,+,0.7,"bfi2_domain_conscientiousness (+), big5_self_discipline (+)"
+trait_prudence,big5_cautiousness,+,0.8,big5_cautiousness (+)
+trait_self_regulation,big5_immoderation,-,0.7,"big5_immoderation (-), big5_self_discipline (+)"
+trait_ambition,big5_achievement_striving,+,0.8,big5_achievement_striving (+)
+cog_procrastination,bfi2_facet_productiveness,-,0.7,"bfi2_facet_productiveness (-), big5_self_discipline (-), trait_discipline (-)"
+lstyle_tidiness,bfi2_facet_organization,+,0.8,"bfi2_facet_organization (+), big5_orderliness (+)"
+pref_plan_vs_spontaneous,mbti_J,+,0.8,"MBTI_J (+), bfi2_domain_conscientiousness (+)"
+cog_decision_speed,big5_cautiousness,-,0.7,big5_cautiousness (-)
+trait_zest,bfi2_facet_energy_level,+,0.8,"bfi2_facet_energy_level (+), big5_activity_level (+)"
+trait_leadership,bfi2_facet_assertiveness,+,0.7,"bfi2_facet_assertiveness (+), big5_assertiveness (+)"
+skill_leadership,bfi2_facet_assertiveness,+,0.6,trait_leadership (+)
+interpersonal_agency_dominance,bfi2_facet_assertiveness,+,0.8,"bfi2_facet_assertiveness (+), big5_assertiveness (+)"
+cog_assertiveness,bfi2_facet_assertiveness,+,0.8,"bfi2_facet_assertiveness (+), big5_assertiveness (+), interpersonal_agency_dominance (+)"
+pref_big_group_vs_one_on_one,big5_gregariousness,+,0.8,"big5_gregariousness (+), bfi2_facet_sociability (+)"
+trait_competitiveness,big5_cooperation,-,0.7,big5_cooperation (-)
+pref_competition_vs_collab,big5_cooperation,-,0.7,"big5_cooperation (-), trait_competitiveness (+)"
+trait_kindness,big5_altruism,+,0.8,"big5_altruism (+), bfi2_facet_compassion (+)"
+trait_humility,big5_modesty,+,0.8,big5_modesty (+)
+trait_honesty,big5_morality,+,0.8,big5_morality (+)
+interpersonal_communion_warmth,big5_friendliness,+,0.8,big5_friendliness (+)
+cog_politeness,bfi2_facet_respectfulness,+,0.8,bfi2_facet_respectfulness (+)
+trait_resilience,big5_vulnerability,-,0.8,big5_vulnerability (-)
+cog_optimism,bfi2_facet_depression,-,0.6,bfi2_facet_depression (-)
+pref_logic_vs_intuition,mbti_F,-,0.7,MBTI_F (-)

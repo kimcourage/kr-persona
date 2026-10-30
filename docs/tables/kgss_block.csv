@@ -1,0 +1,73 @@
+﻿순서,속성,추정 기간,유효 응답(추정 기간),추정에 쓰는 연도,생성 시 연도,연령 처리,부모 자격 속성 수,선택 부모(최대 3),부모별 로그우도 개선,참고: BIC 기준 선택
+1,demo_religion_affiliation,2016–2025,5650,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,0,(배경 변수만),,(배경 변수만)
+2,religiosity,2016–2025,5625,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,1,demo_religion_affiliation,demo_religion_affiliation +66.7%(논리),demo_religion_affiliation
+3,political_lean,2016–2025,5546,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,2,(배경 변수만),,(배경 변수만)
+4,kr_subjective_class,2016–2025,5694,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,3,(배경 변수만),,(배경 변수만)
+5,kr_view_of_north_korea,2016–2025,5619,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,4,political_lean,political_lean +2.4%,political_lean
+6,kr_unification_need,2016–2025,5639,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,5,kr_view_of_north_korea,kr_view_of_north_korea +6.6%(논리),"kr_view_of_north_korea, political_lean"
+7,kr_trust_in_institutions,2016–2025,5673,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,6,(배경 변수만),,(배경 변수만)
+8,kr_trust_in_news_media,2016–2025,5673,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,7,kr_trust_in_institutions,kr_trust_in_institutions +10.2%,kr_trust_in_institutions
+9,kr_trust_in_big_business,2016–2025,5637,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,8,"kr_trust_in_institutions, kr_trust_in_news_media","kr_trust_in_institutions +7.2%, kr_trust_in_news_media +3.3%","kr_trust_in_institutions, kr_trust_in_news_media"
+10,att_organized_religion,2016–2025,5639,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,9,"demo_religion_affiliation, religiosity, kr_trust_in_news_media","demo_religion_affiliation +5.1%(논리), religiosity +1.2%(논리), kr_trust_in_news_media +4.9%","demo_religion_affiliation, religiosity, kr_trust_in_news_media"
+11,att_labor_unions,2016–2025,5523,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,10,kr_trust_in_news_media,kr_trust_in_news_media +5.8%,"kr_trust_in_news_media, kr_trust_in_institutions, att_organized_religion"
+12,val_patriotism,2016–2025,5660,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,11,kr_trust_in_big_business,kr_trust_in_big_business +2.2%,"kr_trust_in_big_business, kr_unification_need, kr_trust_in_institutions"
+13,kr_country_felt_closest,2016–2025,5437,"2016, 2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,12,kr_view_of_north_korea,kr_view_of_north_korea +4.7%,kr_view_of_north_korea
+14,values_priority,전 연도,6029,"2006, 2007, 2008, 2009",2009년,출생 코호트 맞춤,13,religiosity,religiosity +3.4%,religiosity
+15,kr_life_satisfaction,2016–2025,4682,"2016, 2021, 2023, 2025",2016·2021 보간(1:4),연령 그대로,13,kr_subjective_class,kr_subjective_class +4.4%,"kr_subjective_class, val_patriotism"
+16,kr_happiness,2016–2025,4673,"2016, 2021, 2023, 2025",2016·2021 보간(1:4),연령 그대로,14,"kr_life_satisfaction, kr_subjective_class","kr_life_satisfaction +19.0%(논리), kr_subjective_class +2.1%","kr_life_satisfaction, val_patriotism"
+17,kr_belief_in_saju,2016–2025,4645,"2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,13,demo_religion_affiliation,demo_religion_affiliation +2.0%,demo_religion_affiliation
+18,kr_attitude_same_sex_relations,2016–2025,4573,"2018, 2021, 2023, 2025",2018·2021 보간(1:2),연령 그대로,14,(배경 변수만),,religiosity
+19,att_authority,2016–2025,4502,"2016, 2018, 2023, 2025",2018·2023 보간(3:2),연령 그대로,13,(배경 변수만),,(배경 변수만)
+20,kr_family_wealth_for_success,2016–2025,3639,"2021, 2023, 2025",2021년,연령 그대로,17,(배경 변수만),,(배경 변수만)
+21,kr_living_standard_vs_parents,2016–2025,3625,"2021, 2023, 2025",2021년,연령 그대로,18,kr_subjective_class,kr_subjective_class +2.8%,val_patriotism
+22,health_insurance_status,2016–2025,3617,"2021, 2023, 2025",2021년,연령 그대로,19,(배경 변수만),,att_organized_religion
+23,kr_next_generation_outlook,2016–2025,3587,"2021, 2023, 2025",2021년,연령 그대로,20,kr_living_standard_vs_parents,kr_living_standard_vs_parents +7.6%,kr_living_standard_vs_parents
+24,kr_confidants,2016–2025,3497,"2021, 2023, 2025",2021년,연령 그대로,21,(배경 변수만),,(배경 변수만)
+25,kr_confucian_way_of_life,2016–2025,3458,"2021, 2023, 2025",2021년,연령 그대로,22,demo_religion_affiliation,demo_religion_affiliation +2.2%,"demo_religion_affiliation, kr_life_satisfaction, kr_attitude_same_sex_relations"
+26,trait_empathy,2016–2025,2438,"2023, 2025",2023년,연령 그대로,24,(배경 변수만),,(배경 변수만)
+27,att_data_privacy,2016–2025,2426,"2023, 2025",2023년,연령 그대로,25,(배경 변수만),,(배경 변수만)
+28,att_globalization,2016–2025,2420,"2021, 2023",2021년,연령 그대로,23,(배경 변수만),,(배경 변수만)
+29,lifex_faith_journey,전 연도,2359,"2008, 2018",2018년,연령×시기 상호작용,15,"demo_religion_affiliation, religiosity","demo_religion_affiliation +18.0%(논리), religiosity +2.1%(논리)","demo_religion_affiliation, religiosity"
+30,topic_politics,2016–2025,2256,"2016, 2025",2016년,연령 그대로,16,political_lean,political_lean +2.2%(논리),political_lean
+31,att_surveillance,2016–2025,2239,"2016, 2025",2016년,연령 그대로,17,(배경 변수만),,(배경 변수만)
+32,att_universal_basic_income,2016–2025,2190,"2018, 2021",2018·2021 보간(1:2),연령 그대로,15,(배경 변수만),,kr_unification_need
+33,att_immigration,2016–2025,2189,"2018, 2023",2018·2023 보간(3:2),연령 그대로,16,(배경 변수만),,(배경 변수만)
+34,demo_political_engagement,2016–2025,2065,"2016, 2018",2018년,연령 그대로,14,political_lean,political_lean +1.0%(논리),political_lean
+35,trait_hope_optimism,2016–2025,2016,"2016, 2018",2018년,연령 그대로,15,(배경 변수만),,val_patriotism
+36,att_nuclear_energy,2016–2025,1629,"2018, 2021, 2023",2018·2021 보간(1:2),연령 그대로,15,political_lean,political_lean +2.1%,"kr_trust_in_big_business, kr_view_of_north_korea"
+37,lstyle_giving,전 연도,1509,2011,2011년,출생 코호트 맞춤,17,trait_empathy,trait_empathy +2.8%,(배경 변수만)
+38,musg_pop,전 연도,1453,2008,2008년,출생 코호트 맞춤,18,(배경 변수만),,(배경 변수만)
+39,habit_naps,전 연도,1419,2007,2007년,출생 코호트 맞춤,14,(배경 변수만),,(배경 변수만)
+40,hob_karaoke,전 연도,1418,2007,2007년,출생 코호트 맞춤,15,habit_naps,habit_naps +2.0%,(배경 변수만)
+41,lstyle_gaming_freq,전 연도,1417,2007,2007년,출생 코호트 맞춤,16,(배경 변수만),,(배경 변수만)
+42,lstyle_music_listening,전 연도,1417,2007,2007년,출생 코호트 맞춤,17,(배경 변수만),,(배경 변수만)
+43,lstyle_reading_freq,전 연도,1415,2007,2007년,출생 코호트 맞춤,18,religiosity,religiosity +2.4%,religiosity
+44,musg_rock,전 연도,1336,2008,2008년,출생 코호트 맞춤,19,musg_pop,musg_pop +2.3%,(배경 변수만)
+45,musg_classical,전 연도,1334,2008,2008년,출생 코호트 맞춤,20,musg_rock,musg_rock +11.1%,musg_rock
+46,val_family,전 연도,1302,2003,2003년,출생 코호트 맞춤,15,"val_patriotism, kr_unification_need","val_patriotism +4.4%, kr_unification_need +3.4%",(배경 변수만)
+47,val_health,전 연도,1298,2003,2003년,출생 코호트 맞춤,16,"val_family, religiosity","val_family +9.7%, religiosity +2.3%",val_family
+48,val_spirituality_faith,전 연도,1281,2003,2003년,출생 코호트 맞춤,18,"demo_religion_affiliation, religiosity, att_organized_religion","demo_religion_affiliation +12.5%(논리), religiosity +3.5%(논리), att_organized_religion +3.4%","demo_religion_affiliation, religiosity, att_organized_religion"
+49,lstyle_planning_horizon,2016–2025,1229,2023,2023년,연령 그대로,28,kr_life_satisfaction,kr_life_satisfaction +2.3%,(배경 변수만)
+50,kr_ancestry_for_korean_identity,2016–2025,1228,2023,2023년,연령 그대로,29,att_authority,att_authority +2.4%,kr_confucian_way_of_life
+51,lstyle_volunteering,2016–2025,1223,2023,2023년,연령 그대로,30,religiosity,religiosity +4.6%,religiosity
+52,kr_political_efficacy,2016–2025,1221,2023,2023년,연령 그대로,31,att_globalization,att_globalization +2.1%,(배경 변수만)
+53,pref_lead_vs_follow,2016–2025,1210,2025,2025년,연령 그대로,28,(배경 변수만),,(배경 변수만)
+54,att_ai,2016–2025,1209,2025,2025년,연령 그대로,29,(배경 변수만),,(배경 변수만)
+55,att_free_speech,2016–2025,1206,2025,2025년,연령 그대로,30,"kr_unification_need, att_ai","kr_unification_need +2.1%, att_ai +2.1%",(배경 변수만)
+56,val_sustainability,2016–2025,1203,2021,2021년,연령 그대로,25,(배경 변수만),,(배경 변수만)
+57,health_energy_level,2016–2025,1202,2021,2021년,연령 그대로,26,"kr_life_satisfaction, kr_subjective_class","kr_life_satisfaction +3.7%, kr_subjective_class +2.5%",kr_life_satisfaction
+58,health_health_literacy,2016–2025,1202,2021,2021년,연령 그대로,27,(배경 변수만),,(배경 변수만)
+59,att_climate_action,2016–2025,1201,2021,2021년,연령 그대로,28,"val_sustainability, kr_life_satisfaction","val_sustainability +3.7%, kr_life_satisfaction +2.2%",(배경 변수만)
+60,topic_environment,2016–2025,1200,2021,2021년,연령 그대로,29,"att_climate_action, val_sustainability","att_climate_action +8.4%, val_sustainability +2.8%",att_climate_action
+61,att_government_regulation,2016–2025,1200,2021,2021년,연령 그대로,30,"att_globalization, att_universal_basic_income","att_globalization +2.8%, att_universal_basic_income +2.1%",(배경 변수만)
+62,health_pain_level,2016–2025,1197,2021,2021년,연령 그대로,31,"health_energy_level, health_health_literacy","health_energy_level +6.1%, health_health_literacy +3.4%",health_energy_level
+63,lstyle_cooking_freq,2016–2025,1046,2016,2016년,연령 그대로,20,(배경 변수만),,(배경 변수만)
+64,kr_children_necessity,2016–2025,1045,2016,2016년,연령 그대로,21,att_authority,att_authority +5.2%,(배경 변수만)
+65,demo_birth_order,2016–2025,1044,2016,2016년,연령 그대로,22,(배경 변수만),,(배경 변수만)
+66,risk_tolerance,2016–2025,1021,2018,2018년,연령 그대로,21,att_authority,att_authority +3.8%,(배경 변수만)
+67,mft_authority_subversion,2016–2025,1020,2018,2018년,연령 그대로,22,"att_authority, risk_tolerance","att_authority +4.6%, risk_tolerance +3.4%",(배경 변수만)
+68,dospert_financial_risk_tolerance,2016–2025,1019,2018,2018년,연령 그대로,23,"risk_tolerance, kr_belief_in_saju, mft_authority_subversion","risk_tolerance +8.5%, kr_belief_in_saju +2.6%, mft_authority_subversion +3.1%",risk_tolerance
+69,topic_anime,2016–2025,1018,2018,2018년,연령 그대로,24,(배경 변수만),,(배경 변수만)
+70,lifex_travel_breadth,2016–2025,1017,2018,2018년,연령 그대로,25,kr_subjective_class,kr_subjective_class +2.2%,(배경 변수만)
+71,att_traditional_gender_roles,2016–2025,1017,2018,2018년,연령 그대로,26,"att_authority, risk_tolerance","att_authority +4.5%, risk_tolerance +2.9%",(배경 변수만)
+72,topic_spirituality,2016–2025,1002,2018,2018년,연령 그대로,27,"demo_religion_affiliation, religiosity, lifex_faith_journey","demo_religion_affiliation +56.1%(논리), religiosity +3.2%(논리), lifex_faith_journey +6.2%","demo_religion_affiliation, religiosity"

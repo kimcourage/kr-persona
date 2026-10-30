@@ -1,0 +1,104 @@
+﻿mask_id,대상,대상 방식,조건,금지 값,MatrAIx 분류,6만 명 중 위반,처리
+v3_mask_minor_no_advanced_education,highest_education,(1) 센서스,"{""age_bracket"": [""13-17""]}","Bachelor's, Master's, Doctorate, Postdoc",hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_young_adult_no_postdoc,highest_education,(1) 센서스,"{""age_bracket"": [""18-24""]}",Postdoc,hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_blind_not_current_driver,demo_driver_status,(1) 센서스,"{""health_vision"": [""Blind""]}","Daily driver, Occasional driver, Licensed, rarely drives",hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_nonworker_seniority_Student,seniority,(2) 규칙,"{""demo_employment_status"": [""Student""]}","Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder, Retired",hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_nonworker_seniority_Unemployed,seniority,(2) 규칙,"{""demo_employment_status"": [""Unemployed""]}","Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder, Retired",hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_nonworker_seniority_Homemaker,seniority,(2) 규칙,"{""demo_employment_status"": [""Homemaker""]}","Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder, Retired",hard_guard_logical_or_operational_constraint,4973,폐기(한국 값과 충돌)
+v3_mask_retired_seniority,seniority,(2) 규칙,"{""demo_employment_status"": [""Retired""]}","Student / intern, Entry, Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder",hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_active_not_retired_seniority_Full-time,seniority,(2) 규칙,"{""demo_employment_status"": [""Full-time""]}",Retired,hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_active_not_retired_seniority_Part-time,seniority,(2) 규칙,"{""demo_employment_status"": [""Part-time""]}",Retired,hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_active_not_retired_seniority_Self-employed,seniority,(2) 규칙,"{""demo_employment_status"": [""Self-employed""]}",Retired,hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_active_not_retired_seniority_Gig / freelance,seniority,(2) 규칙,"{""demo_employment_status"": [""Gig / freelance""]}",Retired,hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_minor_no_11plus_experience,years_experience,(2) 규칙,"{""age_bracket"": [""13-17""]}","11-20, 20+",hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v3_mask_18_24_no_20plus_experience,years_experience,(2) 규칙,"{""age_bracket"": [""18-24""]}",20+,hard_guard_logical_or_operational_constraint,0,모순 검사로 유지
+v4_mask_Atheist_agnostic_not_devout,religiosity,(4) 조사 추정,"{""demo_religion_affiliation"": [""Atheist / agnostic""]}","Observant, Devout",hard_guard_unaffiliated_not_observant_devout,0,모순 검사로 유지
+v4_mask_None_not_devout,religiosity,(4) 조사 추정,"{""demo_religion_affiliation"": [""None""]}","Observant, Devout",hard_guard_unaffiliated_not_observant_devout,0,모순 검사로 유지
+v4_mask_minor_no_2plus_or_adult_children,demo_children_count,(2) 규칙,"{""age_bracket"": [""13-17""]}","Expecting, 1 child, 2 children, 3+ children, Adult children",hard_guard_minor_no_children_general_population_sampler,0,모순 검사로 유지
+v4_mask_minor_no_3plus_years_experience,years_experience,(2) 규칙,"{""age_bracket"": [""13-17""]}","6-10, 11-20, 20+, 3-5",hard_guard_life_course_minor_experience,0,모순 검사로 유지
+v4_1_life_parent_young_requires_children_count,life_stage,(2) 규칙,"{""demo_children_count"": [""None""]}",Parent of young kids,hard_guard_life_stage_requires_child_signal,0,모순 검사로 유지
+v4_1_life_parent_young_requires_parental_status,life_stage,(2) 규칙,"{""demo_parental_status"": [""Not a parent""]}",Parent of young kids,hard_guard_life_stage_requires_parent_signal,0,모순 검사로 유지
+v4_1_empty_nester_requires_adult_parent_signal,life_stage,(2) 규칙,"{""demo_parental_status"": [""Not a parent"", ""New parent"", ""Parent of minors"", ""Step / foster parent""]}",Empty nester,hard_guard_empty_nester_requires_adult_child_or_grandparent_signal,0,모순 검사로 유지
+v4_1_retirement_life_stage_not_under45,life_stage,(2) 규칙,"{""age_bracket"": [""13-17"", ""18-24"", ""25-34"", ""35-44""]}",Retirement,hard_guard_retirement_life_stage_age_plausibility,0,모순 검사로 유지
+v4_1_minor_no_3_5plus_years_experience,years_experience,(2) 규칙,"{""age_bracket"": [""13-17""]}","3-5, 6-10, 11-20, 20+",hard_guard_minor_no_3_5plus_years_experience,0,모순 검사로 유지
+v4_1_minor_no_adult_employment_status,demo_employment_status,(1) 센서스,"{""age_bracket"": [""13-17""]}","Full-time, Self-employed, Gig / freelance, Retired, Homemaker",hard_guard_minor_employment_status,0,모순 검사로 유지
+v4_1_minor_no_regular_smoking,lstyle_smoking,(4) 조사 추정,"{""age_bracket"": [""13-17""]}",Regular,hard_guard_minor_regular_smoking,0,모순 검사로 유지
+v4_1_minor_no_heavy_alcohol,lstyle_alcohol_use,(4) 조사 추정,"{""age_bracket"": [""13-17""]}","Heavily, Regularly",hard_guard_minor_heavy_alcohol,0,모순 검사로 유지
+v4_1_married_partnered_downweight_lives_alone,lstyle_household_size,(1) 센서스,"{""demo_marital_status"": [""Married"", ""Domestic partnership"", ""Engaged""]}",Lives alone,soft_compatibility_married_partnered_household_size,1466,폐기(한국 값과 충돌)
+v4_1_parent_minors_downweight_lives_alone,lstyle_household_size,(1) 센서스,"{""demo_parental_status"": [""New parent"", ""Parent of minors""]}",Lives alone,soft_compatibility_parent_of_minors_household_size,143,폐기(한국 값과 충돌)
+v4_1_clinical_role_mostly_healthcare,role_function,(1) 센서스,"{""domain"": [""Software & AI"", ""Law & Policy"", ""Finance & Economics"", ""Education"", ""Engineering"", ""Natural Sciences"", ""Social Sciences"", ""Arts & Humanities"", ""Business & Management"", ""Agriculture"", ""Manufacturing"", ""Media & Journalism"", ""Public Sector"", ""Hospitality"", ""Skilled Trades""]}",Clinical,hard_guard_clinical_role_requires_healthcare_context,0,모순 검사로 유지
+persona8b_age_yearsexp_children,years_experience,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12""]}","3-5, 6-10, 11-20, 20+",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_yearsexp_teen,years_experience,(2) 규칙,"{""age_bracket"": [""13-17""]}","6-10, 11-20, 20+",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_yearsexp_youngadult,years_experience,(2) 규칙,"{""age_bracket"": [""18-24""]}","11-20, 20+",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_yearsexp_2534,years_experience,(2) 규칙,"{""age_bracket"": [""25-34""]}",20+,persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_seniority_children,seniority,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12""]}","Entry, Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder, Retired",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_seniority_teen,seniority,(2) 규칙,"{""age_bracket"": [""13-17""]}","Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder, Retired",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_seniority_youngadult,seniority,(2) 규칙,"{""age_bracket"": [""18-24""]}","Lead / Principal, Manager, Director, VP, C-suite, Retired",persona8b_constraint_hard_guard,3,폐기(한국 값과 충돌)
+persona8b_age_seniority_2534,seniority,(2) 규칙,"{""age_bracket"": [""25-34""]}","Director, VP, C-suite, Retired",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_seniority_elderly_intern,seniority,(2) 규칙,"{""age_bracket"": [""65-74"", ""75-84"", ""85+""]}",Student / intern,persona8b_constraint_hard_guard,6,폐기(한국 값과 충돌)
+persona8b_age_lifestage_children,life_stage,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12""]}","Early career, Parent of young kids, Mid-life, Career change, Empty nester, Retirement",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_lifestage_teen,life_stage,(2) 규칙,"{""age_bracket"": [""13-17""]}","Parent of young kids, Mid-life, Career change, Empty nester, Retirement",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_lifestage_youngadult,life_stage,(2) 규칙,"{""age_bracket"": [""18-24""]}","Mid-life, Empty nester, Retirement",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_lifestage_2534,life_stage,(2) 규칙,"{""age_bracket"": [""25-34""]}","Student, Empty nester, Retirement",persona8b_constraint_hard_guard,366,폐기(한국 값과 충돌)
+persona8b_age_lifestage_3544,life_stage,(2) 규칙,"{""age_bracket"": [""35-44""]}","Student, Retirement",persona8b_constraint_hard_guard,20,폐기(한국 값과 충돌)
+persona8b_age_lifestage_midage_student,life_stage,(2) 규칙,"{""age_bracket"": [""45-54"", ""55-64""]}",Student,persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_lifestage_elderly,life_stage,(2) 규칙,"{""age_bracket"": [""65-74"", ""75-84"", ""85+""]}","Student, Early career, Parent of young kids",persona8b_constraint_hard_guard,2,폐기(한국 값과 충돌)
+persona8b_age_marital_minor,demo_marital_status,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","Engaged, Married, Domestic partnership, Separated, Divorced, Widowed",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_marital_widowed_young,demo_marital_status,(1) 센서스,"{""age_bracket"": [""18-24""]}",Widowed,persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_children_minor,demo_children_count,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","Expecting, 1 child, 2 children, 3+ children, Adult children",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_children_youngadult,demo_children_count,(2) 규칙,"{""age_bracket"": [""18-24""]}","3+ children, Adult children",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_children_2534_adult,demo_children_count,(2) 규칙,"{""age_bracket"": [""25-34""]}",Adult children,persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_children_expecting_old,demo_children_count,(2) 규칙,"{""age_bracket"": [""55-64"", ""65-74"", ""75-84"", ""85+""]}",Expecting,persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_parental_minor,demo_parental_status,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","New parent, Parent of minors, Parent of adults, Grandparent, Step / foster parent",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_parental_youngadult,demo_parental_status,(2) 규칙,"{""age_bracket"": [""18-24"", ""25-34""]}","Parent of adults, Grandparent",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_employment_children,demo_employment_status,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12""]}","Full-time, Part-time, Self-employed, Gig / freelance, Unemployed, Retired, Homemaker",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_employment_teen,demo_employment_status,(1) 센서스,"{""age_bracket"": [""13-17""]}","Full-time, Self-employed, Retired, Homemaker",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_employment_elderly_student,demo_employment_status,(1) 센서스,"{""age_bracket"": [""65-74"", ""75-84"", ""85+""]}",Student,persona8b_constraint_hard_guard,6,폐기(한국 값과 충돌)
+persona8b_age_education_under5,highest_education,(1) 센서스,"{""age_bracket"": [""Under 5""]}","Primary, Secondary, Vocational / cert, Some college, Associate's, Bachelor's, Master's, Doctorate, Postdoc",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_education_5to12,highest_education,(1) 센서스,"{""age_bracket"": [""5-12""]}","Secondary, Vocational / cert, Some college, Associate's, Bachelor's, Master's, Doctorate, Postdoc",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_education_teen,highest_education,(1) 센서스,"{""age_bracket"": [""13-17""]}","Associate's, Bachelor's, Master's, Doctorate, Postdoc",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_education_youngadult,highest_education,(1) 센서스,"{""age_bracket"": [""18-24""]}","Doctorate, Postdoc",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_alcohol_children,lstyle_alcohol_use,(4) 조사 추정,"{""age_bracket"": [""Under 5"", ""5-12""]}","Rarely, Socially, Regularly, Heavily",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_alcohol_teen,lstyle_alcohol_use,(4) 조사 추정,"{""age_bracket"": [""13-17""]}","Socially, Regularly, Heavily",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_smoking_children,lstyle_smoking,(4) 조사 추정,"{""age_bracket"": [""Under 5"", ""5-12""]}","Former, Occasional, Regular",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_age_smoking_teen,lstyle_smoking,(4) 조사 추정,"{""age_bracket"": [""13-17""]}","Former, Regular",persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_ses_low_education,highest_education,(1) 센서스,"{""socioeconomic_band"": [""Low income""]}","Doctorate, Postdoc",persona8b_constraint_hard_guard,136,폐기(한국 값과 충돌)
+persona8b_edu_noformal_seniority,seniority,(2) 규칙,"{""highest_education"": [""No formal""]}","Senior, Lead / Principal, Manager, Director, VP, C-suite",soft_compatibility_not_hard_due_employment_overlap,77,폐기(한국 값과 충돌)
+persona8b_edu_primary_seniority,seniority,(2) 규칙,"{""highest_education"": [""Primary""]}","Manager, Director, VP, C-suite",soft_compatibility_not_hard_due_employment_overlap,0,모순 검사로 유지
+persona8b_edu_doctorate_seniority,seniority,(2) 규칙,"{""highest_education"": [""Doctorate"", ""Postdoc""]}","Student / intern, Entry",soft_compatibility_not_hard_due_employment_overlap,0,모순 검사로 유지
+persona8b_edu_doctorate_years,years_experience,(2) 규칙,"{""highest_education"": [""Doctorate""]}",0-2,persona8b_constraint_hard_guard,0,모순 검사로 유지
+persona8b_edu_postdoc_years,years_experience,(2) 규칙,"{""highest_education"": [""Postdoc""]}","0-2, 3-5",persona8b_constraint_hard_guard,0,모순 검사로 유지
+v4_2_minor_no_regular_smoking,lstyle_smoking,(4) 조사 추정,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}",Regular,hard_guard,0,모순 검사로 유지
+v4_2_minor_no_heavy_alcohol,lstyle_alcohol_use,(4) 조사 추정,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}",Heavily,hard_guard,0,모순 검사로 유지
+v4_2_children_employment_student_only,demo_employment_status,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12""]}","Full-time, Part-time, Self-employed, Gig / freelance, Unemployed, Retired, Homemaker",hard_guard,0,모순 검사로 유지
+v4_2_children_seniority_student_only,seniority,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12""]}","Entry, Mid, Senior, Lead / Principal, Manager, Director, VP, C-suite, Founder, Retired",hard_guard,0,모순 검사로 유지
+v4_2_elderly_no_student_employment,demo_employment_status,(1) 센서스,"{""age_bracket"": [""65-74"", ""75-84"", ""85+""]}",Student,hard_guard,6,폐기(한국 값과 충돌)
+v4_2_elderly_no_student_seniority,seniority,(2) 규칙,"{""age_bracket"": [""65-74"", ""75-84"", ""85+""]}",Student / intern,hard_guard,6,폐기(한국 값과 충돌)
+v4_2_under18_no_degree_completion,highest_education,(1) 센서스,"{""age_bracket"": [""13-17""]}","Associate's, Bachelor's, Master's, Doctorate, Postdoc",hard_guard,0,모순 검사로 유지
+v4_2_soft_adult_high_income_low_education,highest_education,(1) 센서스,"{""socioeconomic_band"": [""High income""], ""age_bracket"": [""18-24"", ""25-34"", ""35-44"", ""45-54"", ""55-64"", ""65-74"", ""75-84"", ""85+""]}","No formal, Primary",soft_compatibility,136,폐기(한국 값과 충돌)
+v4_2_soft_adult_stem_low_education,highest_education,(1) 센서스,"{""domain"": [""Software & AI"", ""Engineering"", ""Natural Sciences"", ""Healthcare & Medicine"", ""Finance & Economics""], ""age_bracket"": [""18-24"", ""25-34"", ""35-44"", ""45-54"", ""55-64"", ""65-74"", ""75-84"", ""85+""]}","No formal, Primary",soft_compatibility,166,폐기(한국 값과 충돌)
+v4_2_soft_adult_law_low_education,highest_education,(1) 센서스,"{""domain"": [""Law & Policy""], ""age_bracket"": [""18-24"", ""25-34"", ""35-44"", ""45-54"", ""55-64"", ""65-74"", ""75-84"", ""85+""]}","No formal, Primary, Secondary",soft_compatibility,37,폐기(한국 값과 충돌)
+v4_2_final_children_none_not_parental_status,demo_parental_status,(2) 규칙,"{""demo_children_count"": [""None""]}","New parent, Parent of minors, Parent of adults, Grandparent, Step / foster parent",hard_guard_v4_2_persona8b_consistency,0,모순 검사로 유지
+v4_2_final_children_present_not_notparent,demo_parental_status,(2) 규칙,"{""demo_children_count"": [""Expecting"", ""1 child"", ""2 children"", ""3+ children"", ""Adult children""]}",Not a parent,hard_guard_v4_2_persona8b_consistency,0,모순 검사로 유지
+v4_2_final_under13_single_only,demo_marital_status,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12""]}","In a relationship, Engaged, Married, Domestic partnership, Separated, Divorced, Widowed",hard_guard_v4_2_persona8b_consistency,0,모순 검사로 유지
+v4_2_under45_no_retired_employment,demo_employment_status,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17"", ""18-24"", ""25-34"", ""35-44""]}",Retired,hard_guard,0,모순 검사로 유지
+v4_2_guard_under13_no_current_driving,demo_driver_status,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12""]}","Daily driver, Occasional driver, Licensed, rarely drives",hard_guard_v4_2_persona8b_final,0,모순 검사로 유지
+v4_2_guard_teen_no_some_college_or_higher,highest_education,(1) 센서스,"{""age_bracket"": [""13-17""]}","Some college, Associate's, Bachelor's, Master's, Doctorate, Postdoc",hard_guard_v4_2_persona8b_final,0,모순 검사로 유지
+v4_2_guard_children_none_not_parental_status,demo_parental_status,(2) 규칙,"{""demo_children_count"": [""None""]}","New parent, Parent of minors, Parent of adults, Grandparent, Step / foster parent",hard_guard_v4_2_persona8b_final,0,모순 검사로 유지
+v4_2_guard_children_present_not_notparent,demo_parental_status,(2) 규칙,"{""demo_children_count"": [""Expecting"", ""1 child"", ""2 children"", ""3+ children"", ""Adult children""]}",Not a parent,hard_guard_v4_2_persona8b_final,0,모순 검사로 유지
+age_minor_no_parenting_journey,lifex_parenting_journey,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","Young children, Teenagers, Grown children, Empty nester, Raising grandchildren",hard_impossibility,0,모순 검사로 유지
+age_minor_faith_journey,lifex_faith_journey,(4) 조사 추정,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","Converted, Lapsed / left faith, Returned to faith",hard_impossibility,0,모순 검사로 유지
+age_minor_formative_decade_recent,lifex_formative_decade,(2) 규칙,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","1960s-70s, 1980s, 1990s, 2000s",hard_impossibility,0,모순 검사로 유지
+retired_seniority_retirement_lifestage,life_stage,(2) 규칙,"{""seniority"": [""Retired""]}","Student, Early career, Parent of young kids, Mid-life, Career change",soft_compatibility,0,모순 검사로 유지
+budget_mono_lang_korean,lang_korean,(2) 규칙,"{""multilingualism"": [""Monolingual""]}","Conversational, Fluent, Native",strong_implausibility_language_budget,25288,폐기(한국 값과 충돌)
+budget_bi_lang_korean,lang_korean,(2) 규칙,"{""multilingualism"": [""Bilingual""]}","Native, Fluent, Conversational",soft_compatibility_language_budget,25689,폐기(한국 값과 충돌)
+budget_tri_lang_korean,lang_korean,(2) 규칙,"{""multilingualism"": [""Trilingual+""]}","Native, Fluent",soft_compatibility_language_budget,9023,폐기(한국 값과 충돌)
+region_native_cult_south_korea,cult_south_korea,(2) 규칙,"{""region"": [""North America"", ""Latin America"", ""Western Europe"", ""Eastern Europe"", ""Sub-Saharan Africa"", ""MENA"", ""South Asia"", ""Southeast Asia"", ""Oceania""]}",Native,soft_compatibility_cultural_nativeness,0,모순 검사로 유지
+no_disability_health_vision,health_vision,(1) 센서스,"{""demo_disability_status"": [""No disability""]}","Blind, Low vision",consistency_duplicated_variable,0,모순 검사로 유지
+no_disability_health_hearing,health_hearing,(1) 센서스,"{""demo_disability_status"": [""No disability""]}","Deaf / hard of hearing, Moderate loss",consistency_duplicated_variable,0,모순 검사로 유지
+no_disability_health_mobility,health_mobility,(1) 센서스,"{""demo_disability_status"": [""No disability""]}","Moderate limitation, Uses mobility aid",consistency_duplicated_variable,0,모순 검사로 유지
+marital_unpartnered_relationship_length,demo_relationship_length,(1) 센서스,"{""demo_marital_status"": [""Single"", ""Divorced"", ""Widowed"", ""Separated""]}","1-5 years, 15+ years, 5-15 years, Under 1 year",strong_implausibility,0,모순 검사로 유지
+marital_partnered_relationship_length,demo_relationship_length,(1) 센서스,"{""demo_marital_status"": [""In a relationship"", ""Engaged"", ""Married"", ""Domestic partnership""]}",Not in one,strong_implausibility,0,모순 검사로 유지
+age_minor_relationship_length,demo_relationship_length,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12"", ""13-17""]}","5-15 years, 15+ years",hard_impossibility,0,모순 검사로 유지
+history_limited_marital_status,demo_marital_status,(1) 센서스,"{""lifex_relationship_history"": [""Limited""]}","Married, Divorced, Widowed",strong_implausibility,0,모순 검사로 유지
+age_child_relationship_length,demo_relationship_length,(1) 센서스,"{""age_bracket"": [""Under 5"", ""5-12""]}","1-5 years, 15+ years, 5-15 years, Under 1 year",hard_impossibility,0,모순 검사로 유지

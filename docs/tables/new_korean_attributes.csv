@@ -1,0 +1,42 @@
+﻿판정,속성 id,영문 레이블,국문 이름,KGSS 변수,유효 응답 수,연도,근거
+채택,kr_subjective_class,Subjective social class,주관적 계층의식,RANK,23160,17개 연도,객관적 소득(소득층)과 다른 계층 인식. 같은 소득이라도 스스로를 어디에 두느냐가 태도를 가름
+채택,kr_view_of_north_korea,View of North Korea,북한 인식,NORTHWHO,22779,17개 연도,한국 정치 성향과 세대를 가르는 대표 쟁점. 정치 성향(political_lean)만으로는 설명되지 않는 부분이 큼
+채택,kr_unification_need,Need for unification,통일 필요성,UNIFI,20134,15개 연도,세대 차이가 가장 뚜렷한 문항 중 하나. 북한 인식과 상관되지만 별개 차원(협력 대상으로 보지만 통일은 불필요 등)
+채택,kr_trust_in_institutions,Trust in national institutions,국가기관 신뢰,"CONGOVT, CONLEGIS, CONJUDGE",22372,17개 연도,한국은 대인 신뢰보다 기관 불신이 두드러짐. 대인 신뢰(big5_trust)와 구분되는 차원. 세 기관 평균으로 단일 속성화
+채택,kr_life_satisfaction,Life satisfaction,생활만족도,LIFESAT,7893,6개 연도,MatrAIx에 주관적 안녕감 속성이 없음. 정신건강(증상)과 다른 차원
+채택,kr_family_wealth_for_success,Family wealth matters for success,성공에서 집안 배경의 중요성,SUCDWLTH,6608,5개 연도,"""수저론""으로 대표되는 능력주의 대 세습 인식. 공정·불평등 담론의 핵심"
+채택,kr_attitude_same_sex_relations,Attitude toward same-sex relations,동성애에 대한 태도,SEXATT3,8730,7개 연도,사회적 보수·진보를 가르는 대표 문항이며 연령 차이가 큼. 경제 이념과 다른 사회 이념 차원
+채택,kr_ancestry_for_korean_identity,Korean ancestry needed to be Korean,혈통적 한국인 정체성,KRANCSTR,5390,4개 연도,민족(혈통) 대 시민 정체성. 이민·다문화 태도의 바탕이며 애국심(val_patriotism)과 다른 차원
+채택,kr_children_necessity,Married couples need children,자녀 필요성 인식,FAMVAL2,2652,2개 연도(2006·2016),저출생 맥락에서 핵심 가족 가치. 최근 연도가 없어 변화 없음 가정이 필요한 약점이 있음
+채택,kr_happiness,Happiness,행복감,HAPPINSS,7844,6개 연도,"정서적 안녕감. 생활만족도(인지적 평가)와의 상관이 0.56(같은 응답자 6,275명)으로 별개 차원"
+채택,kr_living_standard_vs_parents,Living standard compared with parents,부모세대 대비 생활수준,PARSOL,15185,11개 연도,세대 간 계층 이동 인식. 현재 계층의식과 다른 차원
+채택,kr_next_generation_outlook,Outlook for the next generation,자녀세대 생활수준 전망,KIDSOL06,12157,9개 연도,사회 미래에 대한 비관·낙관. 개인 성향인 낙관성과 다른 차원
+채택,kr_country_felt_closest,Country felt closest to,가장 친밀한 국가,SEDISTAN,22155,17개 연도,미국·중국·일본·북한에 대한 거리감. 한국 외교·안보 인식의 핵심
+채택,kr_trust_in_news_media,Trust in news media,언론 신뢰,"CONPRESS, CONTV",22672,17개 연도,국가기관 신뢰와 별개인 언론 불신. 정보 수용 태도에 직접 영향
+채택,kr_trust_in_big_business,Trust in big business,대기업 신뢰,CONBUS,22791,17개 연도,재벌에 대한 인식. 경제 이념과 상관되지만 별개
+채택,kr_confucian_way_of_life,Lives by Confucian values,유교적 삶,CONFULIV,3461,3개 연도,종교로서의 유교(신자는 매우 적음)와 다른 생활 규범. 한국 고유 차원
+채택,kr_belief_in_saju,Belief in saju,사주에 대한 믿음,MYTH518,4659,4개 연도,한국 고유의 운명관. 종교성과 별개로 무종교인에게도 흔함
+채택,kr_political_efficacy,Political efficacy,정치적 효능감,"POLEFF11, POLEFF18",3883,3개 연도,"정치 관심·참여와 구분되는 ""내가 영향을 줄 수 있다""는 인식. 문항 방향은 코드북으로 확인함"
+채택,kr_confidants,Number of confidants,믿어 주는 친구 수,BESTFRND,3501,3개 연도,사회적 지지망. MatrAIx에 사회적 관계의 크기 속성이 없음
+제외,—,—,"가계 경제 전망, 주관적 소득 수준","FINPROS, FINREL05",17108,11–12개 연도,계층의식·자녀세대 전망과 중복
+제외,—,—,"이타주의 평가, 인간 본성","HELPFUL, HUMNAT",21627,16개 연도,대인 신뢰(big5_trust)와 중복
+제외,—,—,가난의 원인(개인 대 제도),INDDIFF,3969,3개 연도,집안 배경의 중요성·정치 성향과 중복
+제외,—,—,"현 정권 평가, 정부 시책 평가","CURGOV, GOVPER*",20399,15개 연도,시점(정권)에 따라 뜻이 바뀌는 문항
+제외,—,—,"국가 자긍심 분야별, 다시 태어나고 싶은 나라","PROUD*, REBORNKR",5025,4개 연도,애국심(val_patriotism)과 중복
+제외,—,—,한국인 자격요건(출생·국적·유교 등),KRBORNIN 등,5400,4개 연도,혈통 문항 하나로 대표
+제외,—,—,혼전·혼외 성관계 태도,"SEXATT1, SEXATT2",8818,7개 연도,동성애 태도와 같은 성 윤리 차원
+제외,—,—,"종교집단별 호감, 과학과 종교","REGGRP*, RELSCI2",3713,3개 연도,종교·종교성 속성과 중복
+제외,—,—,탈물질주의 우선순위,"POSTMAT1, POSTMAT2",3951,3개 연도,Schwartz 가치와 중복
+제외,—,—,"아들 필요(남아선호), 가족 우선","PATRACH5, PATRACH7",3679,3개 연도,성역할·권위·가족 가치와 중복
+제외,—,—,정부 지출 증감(8개 분야),GOVSPD1–8,8640,7개 연도,"개별로 넣기엔 많고, 정부 역할(att_government_regulation)·정치 성향과 중복"
+제외,—,—,하루 접촉 인원,CONTACTB,3662,3개 연도,믿어 주는 친구 수와 중복
+제외,—,—,거주지역 환경·안전,"SAFE, CARES 등",4149,3개 연도,개인 태도가 아닌 지역 특성
+제외,—,—,한국 정치 만족도,SATPOL,21909,16개 연도,국가기관 신뢰와 중복
+제외,—,—,사람들의 공정성 평가,FAIR,18598,14개 연도,"""사람들이 나를 이용하려 하는가""를 묻는 대인 신뢰 문항이라 big5_trust와 중복. 사회 공정성 인식은 집안 배경 문항이 더 직접적"
+제외,—,—,한반도 전쟁 가능성,WARPOS,5792,5개 연도,북한 인식과 중복
+제외,—,—,가계 상태 만족도,SATFIN,19112,14개 연도,소득·계층의식과 중복
+제외,—,—,"집단 간 갈등 인식(빈부, 노사)",CONWLTH 등,4267,2003–2014,"최근 연도 없음, 계층의식과 중복"
+제외,—,—,외국인 노동자·결혼이주자 규모,"FORNWKER, FORNBRID",2470,2008·2018,att_immigration의 근사 문항으로 사용
+제외,—,—,노후 걱정,WORRY1–5,2775,2010·2021,고령층에만 의미가 크고 문항이 5개로 흩어짐
+제외,kr_right_to_die_if_incurable,Incurably ill person has a right to end their life,불치병 시 자살할 권리 인식,SUICIDE131,5759,5개 연도,최종 검토에서 제외(결정됨). 원문이 존엄사가 아니라 자살할 권리를 묻는 문항
+제외,—,—,기관 신뢰 20개 개별 문항,CON*,22000,전 연도,개별로 넣으면 프로필이 크게 늘어남. 국가기관 3개 평균으로 대표

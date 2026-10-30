@@ -1,0 +1,3 @@
+﻿part,n_professionals,observed_other,predicted_other,observed_developer,predicted_developer,observed_technologist,predicted_technologist,loglik_model,loglik_marginal,share_of_employed_developer,share_of_employed_technologist
+training,32291,0.8889,0.8888,0.0923,0.0923,0.0189,0.0189,-0.2247,-0.3995,0.02111,0.00431
+held-out,8029,0.9065,0.8967,0.08,0.0853,0.0135,0.018,-0.2011,-0.3509,0.01817,0.00306

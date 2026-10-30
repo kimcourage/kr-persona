@@ -1,0 +1,2156 @@
+﻿대상 속성,조건 속성,조건 값,금지되는 대상 값
+lifex_relationship_history,demo_marital_status,Single,Married once
+lifex_relationship_history,demo_marital_status,Single,Remarried
+lifex_relationship_history,demo_marital_status,Single,Widowed
+lifex_loss_experience,demo_marital_status,Widowed,No major loss
+lifex_relationship_history,lifex_loss_experience,No major loss,Widowed
+lifex_loss_experience,lifex_relationship_history,Widowed,No major loss
+lstyle_work_schedule,demo_employment_status,Full-time,Unemployed
+lstyle_work_schedule,demo_employment_status,Part-time,Unemployed
+lstyle_work_schedule,demo_employment_status,Self-employed,Unemployed
+lstyle_work_schedule,demo_employment_status,Gig / freelance,Unemployed
+lstyle_work_schedule,demo_employment_status,Unemployed,9-to-5
+lstyle_work_schedule,demo_employment_status,Unemployed,Shift work
+lstyle_work_schedule,demo_employment_status,Unemployed,On-call
+lstyle_work_schedule,demo_employment_status,Unemployed,Freelance
+lifex_career_path_shape,years_experience,11-20,Just starting
+lifex_career_path_shape,years_experience,20+,Just starting
+lifex_entrepreneurship_history,lifex_career_path_shape,Entrepreneurial,Never considered
+lifex_entrepreneurship_history,lifex_career_path_shape,Entrepreneurial,Considered it
+lifex_career_path_shape,lifex_entrepreneurship_history,Never considered,Entrepreneurial
+lifex_career_path_shape,lifex_entrepreneurship_history,Considered it,Entrepreneurial
+major_life_events,lifex_entrepreneurship_history,Never considered,Started a business
+major_life_events,lifex_entrepreneurship_history,Considered it,Started a business
+lifex_entrepreneurship_history,major_life_events,Started a business,Never considered
+lifex_entrepreneurship_history,major_life_events,Started a business,Considered it
+lifex_entrepreneurship_history,seniority,Founder,Never considered
+lifex_entrepreneurship_history,seniority,Founder,Considered it
+institution_tier,demo_employment_status,Full-time,Top-tier research
+institution_tier,demo_employment_status,Full-time,Mid-tier university
+institution_tier,demo_employment_status,Full-time,Community college
+institution_tier,demo_employment_status,Part-time,Top-tier research
+institution_tier,demo_employment_status,Part-time,Mid-tier university
+institution_tier,demo_employment_status,Part-time,Community college
+institution_tier,demo_employment_status,Self-employed,Top-tier research
+institution_tier,demo_employment_status,Self-employed,Mid-tier university
+institution_tier,demo_employment_status,Self-employed,Community college
+institution_tier,demo_employment_status,Gig / freelance,Top-tier research
+institution_tier,demo_employment_status,Gig / freelance,Mid-tier university
+institution_tier,demo_employment_status,Gig / freelance,Community college
+institution_tier,demo_employment_status,Unemployed,Top-tier research
+institution_tier,demo_employment_status,Unemployed,Mid-tier university
+institution_tier,demo_employment_status,Unemployed,Community college
+institution_tier,demo_employment_status,Retired,Top-tier research
+institution_tier,demo_employment_status,Retired,Mid-tier university
+institution_tier,demo_employment_status,Retired,Community college
+institution_tier,demo_employment_status,Homemaker,Top-tier research
+institution_tier,demo_employment_status,Homemaker,Mid-tier university
+institution_tier,demo_employment_status,Homemaker,Community college
+institution_tier,highest_education,No formal,Top-tier research
+institution_tier,highest_education,No formal,Mid-tier university
+institution_tier,highest_education,No formal,Community college
+institution_tier,highest_education,Primary,Top-tier research
+institution_tier,highest_education,Primary,Mid-tier university
+institution_tier,highest_education,Primary,Community college
+institution_tier,highest_education,Secondary,Top-tier research
+institution_tier,highest_education,Secondary,Mid-tier university
+institution_tier,highest_education,Secondary,Community college
+institution_tier,highest_education,Some college,Self-taught
+institution_tier,highest_education,Some college,Not applicable
+institution_tier,highest_education,Associate's,Self-taught
+institution_tier,highest_education,Associate's,Not applicable
+institution_tier,highest_education,Bachelor's,Self-taught
+institution_tier,highest_education,Bachelor's,Not applicable
+institution_tier,highest_education,Master's,Self-taught
+institution_tier,highest_education,Master's,Not applicable
+institution_tier,highest_education,Doctorate,Self-taught
+institution_tier,highest_education,Doctorate,Not applicable
+institution_tier,highest_education,Postdoc,Self-taught
+institution_tier,highest_education,Postdoc,Not applicable
+institution_tier,life_stage,Early career,Top-tier research
+institution_tier,life_stage,Early career,Mid-tier university
+institution_tier,life_stage,Early career,Community college
+institution_tier,life_stage,Parent of young kids,Top-tier research
+institution_tier,life_stage,Parent of young kids,Mid-tier university
+institution_tier,life_stage,Parent of young kids,Community college
+institution_tier,life_stage,Mid-life,Top-tier research
+institution_tier,life_stage,Mid-life,Mid-tier university
+institution_tier,life_stage,Mid-life,Community college
+institution_tier,life_stage,Career change,Top-tier research
+institution_tier,life_stage,Career change,Mid-tier university
+institution_tier,life_stage,Career change,Community college
+institution_tier,life_stage,Empty nester,Top-tier research
+institution_tier,life_stage,Empty nester,Mid-tier university
+institution_tier,life_stage,Empty nester,Community college
+institution_tier,life_stage,Retirement,Top-tier research
+institution_tier,life_stage,Retirement,Mid-tier university
+institution_tier,life_stage,Retirement,Community college
+lifex_education_journey,highest_education,No formal,Traditional track
+lifex_education_journey,highest_education,No formal,Advanced degrees
+lifex_education_journey,highest_education,Primary,Advanced degrees
+lifex_education_journey,highest_education,Secondary,Advanced degrees
+lifex_education_journey,highest_education,Vocational / cert,Advanced degrees
+lifex_education_journey,highest_education,Some college,Advanced degrees
+lifex_education_journey,highest_education,Associate's,Advanced degrees
+lifex_education_journey,highest_education,Bachelor's,Advanced degrees
+research_output,demo_employment_status,Full-time,Thesis only
+research_output,demo_employment_status,Part-time,Thesis only
+research_output,demo_employment_status,Self-employed,Thesis only
+research_output,demo_employment_status,Gig / freelance,Thesis only
+research_output,demo_employment_status,Unemployed,Thesis only
+research_output,demo_employment_status,Retired,Thesis only
+research_output,demo_employment_status,Homemaker,Thesis only
+research_output,highest_education,No formal,Thesis only
+research_output,highest_education,Primary,Thesis only
+research_output,highest_education,Secondary,Thesis only
+research_output,highest_education,Vocational / cert,Thesis only
+research_output,highest_education,Doctorate,None
+research_output,highest_education,Postdoc,None
+research_output,life_stage,Early career,Thesis only
+research_output,life_stage,Parent of young kids,Thesis only
+research_output,life_stage,Mid-life,Thesis only
+research_output,life_stage,Career change,Thesis only
+research_output,life_stage,Empty nester,Thesis only
+research_output,life_stage,Retirement,Thesis only
+lifex_health_journey,health_chronic_condition,None,Manages chronic condition
+health_fitness_level,lstyle_exercise_freq,Daily,Sedentary
+health_fitness_level,lstyle_exercise_freq,Monthly,Athlete
+health_fitness_level,lstyle_exercise_freq,Rarely,Athlete
+health_fitness_level,lstyle_exercise_freq,Never,Athlete
+neurotype,health_neurodivergence,Neurotypical,ADHD
+neurotype,health_neurodivergence,Neurotypical,Autistic
+neurotype,health_neurodivergence,Neurotypical,Dyslexic
+neurotype,health_neurodivergence,ADHD,Neurotypical
+neurotype,health_neurodivergence,Autistic,Neurotypical
+neurotype,health_neurodivergence,Dyslexic,Neurotypical
+health_neurodivergence,neurotype,Neurotypical,ADHD
+health_neurodivergence,neurotype,Neurotypical,Autistic
+health_neurodivergence,neurotype,Neurotypical,Dyslexic
+health_neurodivergence,neurotype,ADHD,Neurotypical
+health_neurodivergence,neurotype,Autistic,Neurotypical
+health_neurodivergence,neurotype,Dyslexic,Neurotypical
+major_life_events,lifex_loss_experience,No major loss,Bereavement
+lifex_loss_experience,major_life_events,Bereavement,No major loss
+major_life_events,lifex_health_journey,No major events,Health journey
+lifex_health_journey,major_life_events,Health journey,No major events
+cult_argentina,lifex_travel_breadth,Never left country,Lived there
+cult_argentina,lifex_travel_breadth,Never left country,Visited
+cult_australia,lifex_travel_breadth,Never left country,Lived there
+cult_australia,lifex_travel_breadth,Never left country,Visited
+cult_bangladesh,lifex_travel_breadth,Never left country,Lived there
+cult_bangladesh,lifex_travel_breadth,Never left country,Visited
+cult_brazil,lifex_travel_breadth,Never left country,Lived there
+cult_brazil,lifex_travel_breadth,Never left country,Visited
+cult_canada,lifex_travel_breadth,Never left country,Lived there
+cult_canada,lifex_travel_breadth,Never left country,Visited
+cult_china,lifex_travel_breadth,Never left country,Lived there
+cult_china,lifex_travel_breadth,Never left country,Visited
+cult_egypt,lifex_travel_breadth,Never left country,Lived there
+cult_egypt,lifex_travel_breadth,Never left country,Visited
+cult_ethiopia,lifex_travel_breadth,Never left country,Lived there
+cult_ethiopia,lifex_travel_breadth,Never left country,Visited
+cult_france,lifex_travel_breadth,Never left country,Lived there
+cult_france,lifex_travel_breadth,Never left country,Visited
+cult_germany,lifex_travel_breadth,Never left country,Lived there
+cult_germany,lifex_travel_breadth,Never left country,Visited
+cult_greece,lifex_travel_breadth,Never left country,Lived there
+cult_greece,lifex_travel_breadth,Never left country,Visited
+cult_india,lifex_travel_breadth,Never left country,Lived there
+cult_india,lifex_travel_breadth,Never left country,Visited
+cult_indonesia,lifex_travel_breadth,Never left country,Lived there
+cult_indonesia,lifex_travel_breadth,Never left country,Visited
+cult_iran,lifex_travel_breadth,Never left country,Lived there
+cult_iran,lifex_travel_breadth,Never left country,Visited
+cult_israel,lifex_travel_breadth,Never left country,Lived there
+cult_israel,lifex_travel_breadth,Never left country,Visited
+cult_italy,lifex_travel_breadth,Never left country,Lived there
+cult_italy,lifex_travel_breadth,Never left country,Visited
+cult_japan,lifex_travel_breadth,Never left country,Lived there
+cult_japan,lifex_travel_breadth,Never left country,Visited
+cult_kenya,lifex_travel_breadth,Never left country,Lived there
+cult_kenya,lifex_travel_breadth,Never left country,Visited
+cult_malaysia,lifex_travel_breadth,Never left country,Lived there
+cult_malaysia,lifex_travel_breadth,Never left country,Visited
+cult_mexico,lifex_travel_breadth,Never left country,Lived there
+cult_mexico,lifex_travel_breadth,Never left country,Visited
+cult_netherlands,lifex_travel_breadth,Never left country,Lived there
+cult_netherlands,lifex_travel_breadth,Never left country,Visited
+cult_new_zealand,lifex_travel_breadth,Never left country,Lived there
+cult_new_zealand,lifex_travel_breadth,Never left country,Visited
+cult_nigeria,lifex_travel_breadth,Never left country,Lived there
+cult_nigeria,lifex_travel_breadth,Never left country,Visited
+cult_pakistan,lifex_travel_breadth,Never left country,Lived there
+cult_pakistan,lifex_travel_breadth,Never left country,Visited
+cult_philippines,lifex_travel_breadth,Never left country,Lived there
+cult_philippines,lifex_travel_breadth,Never left country,Visited
+cult_poland,lifex_travel_breadth,Never left country,Lived there
+cult_poland,lifex_travel_breadth,Never left country,Visited
+cult_portugal,lifex_travel_breadth,Never left country,Lived there
+cult_portugal,lifex_travel_breadth,Never left country,Visited
+cult_russia,lifex_travel_breadth,Never left country,Lived there
+cult_russia,lifex_travel_breadth,Never left country,Visited
+cult_saudi_arabia,lifex_travel_breadth,Never left country,Lived there
+cult_saudi_arabia,lifex_travel_breadth,Never left country,Visited
+cult_singapore,lifex_travel_breadth,Never left country,Lived there
+cult_singapore,lifex_travel_breadth,Never left country,Visited
+cult_south_africa,lifex_travel_breadth,Never left country,Lived there
+cult_south_africa,lifex_travel_breadth,Never left country,Visited
+cult_spain,lifex_travel_breadth,Never left country,Lived there
+cult_spain,lifex_travel_breadth,Never left country,Visited
+cult_sweden,lifex_travel_breadth,Never left country,Lived there
+cult_sweden,lifex_travel_breadth,Never left country,Visited
+cult_thailand,lifex_travel_breadth,Never left country,Lived there
+cult_thailand,lifex_travel_breadth,Never left country,Visited
+cult_turkey,lifex_travel_breadth,Never left country,Lived there
+cult_turkey,lifex_travel_breadth,Never left country,Visited
+cult_uae,lifex_travel_breadth,Never left country,Lived there
+cult_uae,lifex_travel_breadth,Never left country,Visited
+cult_united_kingdom,lifex_travel_breadth,Never left country,Lived there
+cult_united_kingdom,lifex_travel_breadth,Never left country,Visited
+cult_united_states,lifex_travel_breadth,Never left country,Lived there
+cult_united_states,lifex_travel_breadth,Never left country,Visited
+cult_vietnam,lifex_travel_breadth,Never left country,Lived there
+cult_vietnam,lifex_travel_breadth,Never left country,Visited
+lifex_cultural_exposure,lifex_travel_breadth,Never left country,Lived across cultures
+lifex_cultural_exposure,lifex_travel_breadth,Never left country,Third-culture kid
+major_life_events,lifex_travel_breadth,Never left country,Migration / immigration
+lifex_hometown_tie,lifex_geographic_mobility,Never left hometown,Visits often
+lifex_hometown_tie,lifex_geographic_mobility,Never left hometown,Occasional return
+lifex_hometown_tie,lifex_geographic_mobility,Never left hometown,Rarely returns
+lifex_hometown_tie,lifex_geographic_mobility,Never left hometown,No connection
+major_life_events,lifex_geographic_mobility,Never left hometown,Migration / immigration
+major_life_events,lifex_geographic_mobility,Never left hometown,Major relocation
+lifex_military_history,demo_veteran_status,Active duty,Never served
+lifex_military_history,demo_veteran_status,Reserve / guard,Never served
+lifex_military_history,demo_veteran_status,Veteran,Never served
+demo_veteran_status,lifex_military_history,Never served,Active duty
+demo_veteran_status,lifex_military_history,Never served,Reserve / guard
+demo_veteran_status,lifex_military_history,Never served,Veteran
+major_life_events,lifex_military_history,Never served,Military service
+lifex_military_history,major_life_events,Military service,Never served
+demo_veteran_status,age_bracket,65-74,Active duty
+demo_veteran_status,age_bracket,75-84,Active duty
+demo_veteran_status,age_bracket,85+,Active duty
+demo_veteran_status,demo_employment_status,Retired,Active duty
+demo_veteran_status,demo_employment_status,Homemaker,Active duty
+lifex_military_history,age_bracket,18-24,Career veteran
+lstyle_device_ecosystem,lstyle_browser,Safari,Android/Google
+lstyle_device_ecosystem,lstyle_browser,Safari,Windows
+lstyle_device_ecosystem,lstyle_browser,Safari,Linux
+lstyle_browser,lstyle_device_ecosystem,Android/Google,Safari
+lstyle_browser,lstyle_device_ecosystem,Windows,Safari
+lstyle_browser,lstyle_device_ecosystem,Linux,Safari
+lstyle_primary_messenger,lstyle_device_ecosystem,Android/Google,iMessage
+lstyle_primary_messenger,lstyle_device_ecosystem,Windows,iMessage
+lstyle_primary_messenger,lstyle_device_ecosystem,Linux,iMessage
+lstyle_device_ecosystem,lstyle_primary_messenger,iMessage,Android/Google
+lstyle_device_ecosystem,lstyle_primary_messenger,iMessage,Windows
+lstyle_device_ecosystem,lstyle_primary_messenger,iMessage,Linux
+lstyle_payment_pref,lstyle_banking_style,Unbanked,Credit card
+lstyle_payment_pref,lstyle_banking_style,Unbanked,Debit card
+lstyle_banking_style,lstyle_payment_pref,Credit card,Unbanked
+lstyle_banking_style,lstyle_payment_pref,Debit card,Unbanked
+lstyle_primary_social,linkedin_activity,Thought leader,None
+lstyle_primary_social,linkedin_activity,Active networker,None
+lstyle_primary_social,linkedin_activity,Inactive,LinkedIn
+linkedin_activity,lstyle_primary_social,LinkedIn,Inactive
+linkedin_activity,lstyle_primary_social,None,Thought leader
+linkedin_activity,lstyle_primary_social,None,Active networker
+skill_driving,demo_driver_status,Daily driver,None
+skill_driving,demo_driver_status,Occasional driver,None
+coding_agent_usage_frequency,coding_agent_failure_tolerance,Does not use agents,Daily
+coding_agent_usage_frequency,coding_agent_failure_tolerance,Does not use agents,Weekly
+coding_agent_usage_frequency,coding_agent_failure_tolerance,Does not use agents,Monthly or infrequent
+coding_agent_failure_tolerance,coding_agent_usage_frequency,Daily,Does not use agents
+coding_agent_failure_tolerance,coding_agent_usage_frequency,Weekly,Does not use agents
+coding_agent_failure_tolerance,coding_agent_usage_frequency,Monthly or infrequent,Does not use agents
+coding_ai_usage_frequency,ai_task_code_generation,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_code_generation,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_code_generation,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_code_generation,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_code_generation,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_code_generation,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_code_generation,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_code_generation,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_code_generation,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_code_generation,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_code_generation,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_code_generation,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_code_generation,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_code_generation,Not applicable,Weekly
+ai_task_code_generation,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_code_generation,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_code_generation,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_code_generation,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_code_generation,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_code_generation,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_code_generation,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_code_generation,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_code_generation,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_code_generation,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_code_generation,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_code_generation,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_code_generation,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_code_generation,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_code_review,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_code_review,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_code_review,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_code_review,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_code_review,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_code_review,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_code_review,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_code_review,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_code_review,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_code_review,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_code_review,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_code_review,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_code_review,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_code_review,Not applicable,Weekly
+ai_task_code_review,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_code_review,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_code_review,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_code_review,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_code_review,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_code_review,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_code_review,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_code_review,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_code_review,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_code_review,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_code_review,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_code_review,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_code_review,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_code_review,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_codebase_learning,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_codebase_learning,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_codebase_learning,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_codebase_learning,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_codebase_learning,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_codebase_learning,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_codebase_learning,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_codebase_learning,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_codebase_learning,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_codebase_learning,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_codebase_learning,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_codebase_learning,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_codebase_learning,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_codebase_learning,Not applicable,Weekly
+ai_task_codebase_learning,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_codebase_learning,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_codebase_learning,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_codebase_learning,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_codebase_learning,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_codebase_learning,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_codebase_learning,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_codebase_learning,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_codebase_learning,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_codebase_learning,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_codebase_learning,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_codebase_learning,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_codebase_learning,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_codebase_learning,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_data_generation_analytics,Not applicable,Weekly
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_data_generation_analytics,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_debugging_fixing,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_debugging_fixing,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_debugging_fixing,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_debugging_fixing,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_debugging_fixing,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_debugging_fixing,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_debugging_fixing,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_debugging_fixing,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_debugging_fixing,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_debugging_fixing,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_debugging_fixing,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_debugging_fixing,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_debugging_fixing,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_debugging_fixing,Not applicable,Weekly
+ai_task_debugging_fixing,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_debugging_fixing,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_debugging_fixing,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_debugging_fixing,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_debugging_fixing,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_debugging_fixing,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_debugging_fixing,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_debugging_fixing,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_debugging_fixing,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_debugging_fixing,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_debugging_fixing,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_debugging_fixing,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_debugging_fixing,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_debugging_fixing,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_deployment_monitoring,Not applicable,Weekly
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_deployment_monitoring,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_documentation,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_documentation,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_documentation,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_documentation,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_documentation,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_documentation,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_documentation,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_documentation,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_documentation,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_documentation,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_documentation,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_documentation,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_documentation,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_documentation,Not applicable,Weekly
+ai_task_documentation,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_documentation,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_documentation,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_documentation,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_documentation,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_documentation,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_documentation,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_documentation,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_documentation,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_documentation,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_documentation,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_documentation,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_documentation,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_documentation,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_learning_concepts,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_learning_concepts,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_learning_concepts,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_learning_concepts,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_learning_concepts,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_learning_concepts,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_learning_concepts,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_learning_concepts,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_learning_concepts,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_learning_concepts,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_learning_concepts,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_learning_concepts,Not applicable,Weekly
+ai_task_learning_concepts,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_learning_concepts,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_learning_concepts,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_learning_concepts,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_learning_concepts,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_learning_concepts,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_learning_concepts,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_learning_concepts,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_learning_concepts,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_learning_concepts,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_learning_concepts,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_learning_concepts,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_project_planning,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_project_planning,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_project_planning,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_project_planning,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_project_planning,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_project_planning,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_project_planning,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_project_planning,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_project_planning,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_project_planning,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_project_planning,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_project_planning,Not applicable,Weekly
+ai_task_project_planning,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_project_planning,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_project_planning,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_project_planning,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_project_planning,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_project_planning,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_project_planning,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_project_planning,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_project_planning,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_project_planning,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_project_planning,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_project_planning,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_refactoring,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_refactoring,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_refactoring,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_refactoring,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_refactoring,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_refactoring,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_refactoring,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_refactoring,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_refactoring,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_refactoring,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_refactoring,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_refactoring,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_refactoring,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_refactoring,Not applicable,Weekly
+ai_task_refactoring,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_refactoring,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_refactoring,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_refactoring,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_refactoring,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_refactoring,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_refactoring,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_refactoring,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_refactoring,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_refactoring,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_refactoring,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_refactoring,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_refactoring,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_refactoring,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_search_answers,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_search_answers,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_search_answers,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_search_answers,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_search_answers,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_search_answers,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_search_answers,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_search_answers,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_search_answers,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_search_answers,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_search_answers,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_search_answers,Not applicable,Weekly
+ai_task_search_answers,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_search_answers,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_search_answers,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_search_answers,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_search_answers,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_search_answers,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_search_answers,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_search_answers,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_search_answers,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_search_answers,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_search_answers,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_search_answers,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,ai_task_testing,Currently mostly AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_testing,Currently mostly AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_testing,Currently mostly AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_testing,Currently partially AI-assisted,Tried but not active
+coding_ai_usage_frequency,ai_task_testing,Currently partially AI-assisted,Never used
+coding_ai_usage_frequency,ai_task_testing,Currently partially AI-assisted,Actively avoids
+coding_ai_usage_frequency,ai_task_testing,Plans mostly AI use,Daily
+coding_ai_usage_frequency,ai_task_testing,Plans mostly AI use,Weekly
+coding_ai_usage_frequency,ai_task_testing,Plans partial AI use,Daily
+coding_ai_usage_frequency,ai_task_testing,Plans partial AI use,Weekly
+coding_ai_usage_frequency,ai_task_testing,Does not plan AI use,Daily
+coding_ai_usage_frequency,ai_task_testing,Does not plan AI use,Weekly
+coding_ai_usage_frequency,ai_task_testing,Not applicable,Daily
+coding_ai_usage_frequency,ai_task_testing,Not applicable,Weekly
+ai_task_testing,coding_ai_usage_frequency,Daily,Plans mostly AI use
+ai_task_testing,coding_ai_usage_frequency,Daily,Plans partial AI use
+ai_task_testing,coding_ai_usage_frequency,Daily,Does not plan AI use
+ai_task_testing,coding_ai_usage_frequency,Daily,Not applicable
+ai_task_testing,coding_ai_usage_frequency,Weekly,Plans mostly AI use
+ai_task_testing,coding_ai_usage_frequency,Weekly,Plans partial AI use
+ai_task_testing,coding_ai_usage_frequency,Weekly,Does not plan AI use
+ai_task_testing,coding_ai_usage_frequency,Weekly,Not applicable
+ai_task_testing,coding_ai_usage_frequency,Tried but not active,Currently mostly AI-assisted
+ai_task_testing,coding_ai_usage_frequency,Tried but not active,Currently partially AI-assisted
+ai_task_testing,coding_ai_usage_frequency,Never used,Currently mostly AI-assisted
+ai_task_testing,coding_ai_usage_frequency,Never used,Currently partially AI-assisted
+ai_task_testing,coding_ai_usage_frequency,Actively avoids,Currently mostly AI-assisted
+ai_task_testing,coding_ai_usage_frequency,Actively avoids,Currently partially AI-assisted
+coding_ai_usage_frequency,coding_agent_usage_frequency,Daily,Tried but not active
+coding_ai_usage_frequency,coding_agent_usage_frequency,Daily,Never used
+coding_ai_usage_frequency,coding_agent_usage_frequency,Daily,Actively avoids
+coding_ai_usage_frequency,coding_agent_usage_frequency,Weekly,Tried but not active
+coding_ai_usage_frequency,coding_agent_usage_frequency,Weekly,Never used
+coding_ai_usage_frequency,coding_agent_usage_frequency,Weekly,Actively avoids
+coding_ai_usage_frequency,coding_agent_usage_frequency,Monthly or infrequent,Never used
+coding_ai_usage_frequency,coding_agent_usage_frequency,Monthly or infrequent,Actively avoids
+coding_ai_usage_frequency,coding_agent_usage_frequency,Experimental only,Never used
+coding_agent_usage_frequency,coding_ai_usage_frequency,Tried but not active,Daily
+coding_agent_usage_frequency,coding_ai_usage_frequency,Tried but not active,Weekly
+coding_agent_usage_frequency,coding_ai_usage_frequency,Never used,Daily
+coding_agent_usage_frequency,coding_ai_usage_frequency,Never used,Weekly
+coding_agent_usage_frequency,coding_ai_usage_frequency,Never used,Monthly or infrequent
+coding_agent_usage_frequency,coding_ai_usage_frequency,Never used,Experimental only
+coding_agent_usage_frequency,coding_ai_usage_frequency,Actively avoids,Daily
+coding_agent_usage_frequency,coding_ai_usage_frequency,Actively avoids,Weekly
+coding_agent_usage_frequency,coding_ai_usage_frequency,Actively avoids,Monthly or infrequent
+skill_research,research_output,Prolific publisher,None
+research_output,skill_research,None,Prolific publisher
+subject_specialty,domain,Software & AI,Cardiology
+subject_specialty,domain,Software & AI,Constitutional law
+subject_specialty,domain,Software & AI,Structural engineering
+subject_specialty,domain,Software & AI,Behavioral economics
+subject_specialty,domain,Software & AI,Comparative literature
+subject_specialty,domain,Software & AI,Agronomy
+subject_specialty,domain,Software & AI,Investigative reporting
+subject_specialty,domain,Software & AI,Urban planning
+subject_specialty,domain,Software & AI,Culinary arts
+subject_specialty,domain,Software & AI,Electrical work
+subject_specialty,domain,Healthcare & Medicine,Constitutional law
+subject_specialty,domain,Healthcare & Medicine,Quant trading
+subject_specialty,domain,Healthcare & Medicine,Curriculum design
+subject_specialty,domain,Healthcare & Medicine,Structural engineering
+subject_specialty,domain,Healthcare & Medicine,Behavioral economics
+subject_specialty,domain,Healthcare & Medicine,Comparative literature
+subject_specialty,domain,Healthcare & Medicine,Agronomy
+subject_specialty,domain,Healthcare & Medicine,Investigative reporting
+subject_specialty,domain,Healthcare & Medicine,Urban planning
+subject_specialty,domain,Healthcare & Medicine,Electrical work
+subject_specialty,domain,Law & Policy,Machine learning
+subject_specialty,domain,Law & Policy,Cardiology
+subject_specialty,domain,Law & Policy,Quant trading
+subject_specialty,domain,Law & Policy,Curriculum design
+subject_specialty,domain,Law & Policy,Structural engineering
+subject_specialty,domain,Law & Policy,Molecular biology
+subject_specialty,domain,Law & Policy,Comparative literature
+subject_specialty,domain,Law & Policy,Agronomy
+subject_specialty,domain,Law & Policy,Robotics
+subject_specialty,domain,Law & Policy,Culinary arts
+subject_specialty,domain,Law & Policy,Electrical work
+subject_specialty,domain,Finance & Economics,Cardiology
+subject_specialty,domain,Finance & Economics,Constitutional law
+subject_specialty,domain,Finance & Economics,Curriculum design
+subject_specialty,domain,Finance & Economics,Structural engineering
+subject_specialty,domain,Finance & Economics,Molecular biology
+subject_specialty,domain,Finance & Economics,Comparative literature
+subject_specialty,domain,Finance & Economics,Agronomy
+subject_specialty,domain,Finance & Economics,Robotics
+subject_specialty,domain,Finance & Economics,Investigative reporting
+subject_specialty,domain,Finance & Economics,Urban planning
+subject_specialty,domain,Finance & Economics,Culinary arts
+subject_specialty,domain,Finance & Economics,Electrical work
+subject_specialty,domain,Engineering,Cardiology
+subject_specialty,domain,Engineering,Constitutional law
+subject_specialty,domain,Engineering,Quant trading
+subject_specialty,domain,Engineering,Curriculum design
+subject_specialty,domain,Engineering,Behavioral economics
+subject_specialty,domain,Engineering,Comparative literature
+subject_specialty,domain,Engineering,Investigative reporting
+subject_specialty,domain,Engineering,Culinary arts
+subject_specialty,domain,Natural Sciences,Constitutional law
+subject_specialty,domain,Natural Sciences,Curriculum design
+subject_specialty,domain,Natural Sciences,Structural engineering
+subject_specialty,domain,Natural Sciences,Behavioral economics
+subject_specialty,domain,Natural Sciences,Comparative literature
+subject_specialty,domain,Natural Sciences,Investigative reporting
+subject_specialty,domain,Natural Sciences,Culinary arts
+subject_specialty,domain,Natural Sciences,Electrical work
+subject_specialty,domain,Social Sciences,Cardiology
+subject_specialty,domain,Social Sciences,Quant trading
+subject_specialty,domain,Social Sciences,Structural engineering
+subject_specialty,domain,Social Sciences,Molecular biology
+subject_specialty,domain,Social Sciences,Agronomy
+subject_specialty,domain,Social Sciences,Robotics
+subject_specialty,domain,Social Sciences,Culinary arts
+subject_specialty,domain,Social Sciences,Electrical work
+subject_specialty,domain,Arts & Humanities,Machine learning
+subject_specialty,domain,Arts & Humanities,Cardiology
+subject_specialty,domain,Arts & Humanities,Constitutional law
+subject_specialty,domain,Arts & Humanities,Quant trading
+subject_specialty,domain,Arts & Humanities,Structural engineering
+subject_specialty,domain,Arts & Humanities,Molecular biology
+subject_specialty,domain,Arts & Humanities,Behavioral economics
+subject_specialty,domain,Arts & Humanities,Agronomy
+subject_specialty,domain,Arts & Humanities,Robotics
+subject_specialty,domain,Arts & Humanities,Electrical work
+subject_specialty,domain,Business & Management,Cardiology
+subject_specialty,domain,Business & Management,Constitutional law
+subject_specialty,domain,Business & Management,Structural engineering
+subject_specialty,domain,Business & Management,Molecular biology
+subject_specialty,domain,Business & Management,Comparative literature
+subject_specialty,domain,Business & Management,Agronomy
+subject_specialty,domain,Business & Management,Robotics
+subject_specialty,domain,Business & Management,Investigative reporting
+subject_specialty,domain,Business & Management,Electrical work
+subject_specialty,domain,Agriculture,Cardiology
+subject_specialty,domain,Agriculture,Constitutional law
+subject_specialty,domain,Agriculture,Quant trading
+subject_specialty,domain,Agriculture,Curriculum design
+subject_specialty,domain,Agriculture,Structural engineering
+subject_specialty,domain,Agriculture,Behavioral economics
+subject_specialty,domain,Agriculture,Comparative literature
+subject_specialty,domain,Agriculture,Investigative reporting
+subject_specialty,domain,Agriculture,Urban planning
+subject_specialty,domain,Agriculture,Electrical work
+subject_specialty,domain,Manufacturing,Cardiology
+subject_specialty,domain,Manufacturing,Constitutional law
+subject_specialty,domain,Manufacturing,Quant trading
+subject_specialty,domain,Manufacturing,Curriculum design
+subject_specialty,domain,Manufacturing,Behavioral economics
+subject_specialty,domain,Manufacturing,Comparative literature
+subject_specialty,domain,Manufacturing,Agronomy
+subject_specialty,domain,Manufacturing,Investigative reporting
+subject_specialty,domain,Manufacturing,Urban planning
+subject_specialty,domain,Media & Journalism,Cardiology
+subject_specialty,domain,Media & Journalism,Constitutional law
+subject_specialty,domain,Media & Journalism,Quant trading
+subject_specialty,domain,Media & Journalism,Curriculum design
+subject_specialty,domain,Media & Journalism,Structural engineering
+subject_specialty,domain,Media & Journalism,Molecular biology
+subject_specialty,domain,Media & Journalism,Behavioral economics
+subject_specialty,domain,Media & Journalism,Agronomy
+subject_specialty,domain,Media & Journalism,Robotics
+subject_specialty,domain,Media & Journalism,Urban planning
+subject_specialty,domain,Media & Journalism,Electrical work
+subject_specialty,domain,Public Sector,Cardiology
+subject_specialty,domain,Public Sector,Quant trading
+subject_specialty,domain,Public Sector,Molecular biology
+subject_specialty,domain,Public Sector,Comparative literature
+subject_specialty,domain,Public Sector,Robotics
+subject_specialty,domain,Public Sector,Investigative reporting
+subject_specialty,domain,Hospitality,Machine learning
+subject_specialty,domain,Hospitality,Cardiology
+subject_specialty,domain,Hospitality,Constitutional law
+subject_specialty,domain,Hospitality,Quant trading
+subject_specialty,domain,Hospitality,Curriculum design
+subject_specialty,domain,Hospitality,Structural engineering
+subject_specialty,domain,Hospitality,Molecular biology
+subject_specialty,domain,Hospitality,Behavioral economics
+subject_specialty,domain,Hospitality,Comparative literature
+subject_specialty,domain,Hospitality,Agronomy
+subject_specialty,domain,Hospitality,Robotics
+subject_specialty,domain,Hospitality,Investigative reporting
+subject_specialty,domain,Hospitality,Urban planning
+subject_specialty,domain,Hospitality,Electrical work
+subject_specialty,domain,Skilled Trades,Machine learning
+subject_specialty,domain,Skilled Trades,Cardiology
+subject_specialty,domain,Skilled Trades,Constitutional law
+subject_specialty,domain,Skilled Trades,Quant trading
+subject_specialty,domain,Skilled Trades,Curriculum design
+subject_specialty,domain,Skilled Trades,Molecular biology
+subject_specialty,domain,Skilled Trades,Behavioral economics
+subject_specialty,domain,Skilled Trades,Comparative literature
+subject_specialty,domain,Skilled Trades,Agronomy
+subject_specialty,domain,Skilled Trades,Investigative reporting
+subject_specialty,domain,Skilled Trades,Urban planning
+lifex_career_path_shape,demo_employment_status,Retired,Just starting
+lstyle_investment_style,att_cryptocurrency,Opposed,Crypto-heavy
+att_cryptocurrency,lstyle_investment_style,Crypto-heavy,Opposed
+lstyle_payment_pref,att_cryptocurrency,Opposed,Crypto
+att_cryptocurrency,lstyle_payment_pref,Crypto,Opposed
+pref_save_vs_spend,lstyle_frugality,Frugal saver,Free spender
+pref_save_vs_spend,lstyle_frugality,Splurger,Hard saver
+lstyle_frugality,pref_save_vs_spend,Hard saver,Splurger
+lstyle_frugality,pref_save_vs_spend,Free spender,Frugal saver
+register,cog_use_of_jargon,Avoids jargon,Technical jargon
+cog_use_of_jargon,register,Technical jargon,Avoids jargon
+cult_argentina,lifex_geographic_mobility,Never left hometown,Lived there
+cult_australia,lifex_geographic_mobility,Never left hometown,Lived there
+cult_bangladesh,lifex_geographic_mobility,Never left hometown,Lived there
+cult_brazil,lifex_geographic_mobility,Never left hometown,Lived there
+cult_canada,lifex_geographic_mobility,Never left hometown,Lived there
+cult_china,lifex_geographic_mobility,Never left hometown,Lived there
+cult_egypt,lifex_geographic_mobility,Never left hometown,Lived there
+cult_ethiopia,lifex_geographic_mobility,Never left hometown,Lived there
+cult_france,lifex_geographic_mobility,Never left hometown,Lived there
+cult_germany,lifex_geographic_mobility,Never left hometown,Lived there
+cult_greece,lifex_geographic_mobility,Never left hometown,Lived there
+cult_india,lifex_geographic_mobility,Never left hometown,Lived there
+cult_indonesia,lifex_geographic_mobility,Never left hometown,Lived there
+cult_iran,lifex_geographic_mobility,Never left hometown,Lived there
+cult_israel,lifex_geographic_mobility,Never left hometown,Lived there
+cult_italy,lifex_geographic_mobility,Never left hometown,Lived there
+cult_japan,lifex_geographic_mobility,Never left hometown,Lived there
+cult_kenya,lifex_geographic_mobility,Never left hometown,Lived there
+cult_malaysia,lifex_geographic_mobility,Never left hometown,Lived there
+cult_mexico,lifex_geographic_mobility,Never left hometown,Lived there
+cult_netherlands,lifex_geographic_mobility,Never left hometown,Lived there
+cult_new_zealand,lifex_geographic_mobility,Never left hometown,Lived there
+cult_nigeria,lifex_geographic_mobility,Never left hometown,Lived there
+cult_pakistan,lifex_geographic_mobility,Never left hometown,Lived there
+cult_philippines,lifex_geographic_mobility,Never left hometown,Lived there
+cult_poland,lifex_geographic_mobility,Never left hometown,Lived there
+cult_portugal,lifex_geographic_mobility,Never left hometown,Lived there
+cult_russia,lifex_geographic_mobility,Never left hometown,Lived there
+cult_saudi_arabia,lifex_geographic_mobility,Never left hometown,Lived there
+cult_singapore,lifex_geographic_mobility,Never left hometown,Lived there
+cult_south_africa,lifex_geographic_mobility,Never left hometown,Lived there
+cult_spain,lifex_geographic_mobility,Never left hometown,Lived there
+cult_sweden,lifex_geographic_mobility,Never left hometown,Lived there
+cult_thailand,lifex_geographic_mobility,Never left hometown,Lived there
+cult_turkey,lifex_geographic_mobility,Never left hometown,Lived there
+cult_uae,lifex_geographic_mobility,Never left hometown,Lived there
+cult_united_kingdom,lifex_geographic_mobility,Never left hometown,Lived there
+cult_united_states,lifex_geographic_mobility,Never left hometown,Lived there
+cult_vietnam,lifex_geographic_mobility,Never left hometown,Lived there
+lifex_cultural_exposure,lifex_geographic_mobility,Never left hometown,Lived across cultures
+lifex_cultural_exposure,lifex_geographic_mobility,Never left hometown,Third-culture kid
+lstyle_travel_freq,lifex_travel_breadth,Global nomad,Homebody
+health_color_vision,accessibility_needs,Visual,Typical
+accessibility_needs,health_color_vision,Typical,Visual
+health_contrast_need,accessibility_needs,Visual,No
+accessibility_needs,health_contrast_need,No,Visual
+health_dexterity,accessibility_needs,Motor,Full
+accessibility_needs,health_dexterity,Full,Motor
+accessibility_needs,health_hearing,Normal,Hearing
+accessibility_needs,health_mobility,Full,Motor
+health_text_size_need,accessibility_needs,Visual,No
+accessibility_needs,health_text_size_need,No,Visual
+accessibility_needs,health_vision,Normal,Visual
+accessibility_needs,health_vision,Corrected,Visual
+accessibility_needs,health_vision,Blind,None
+device_context,accessibility_needs,None,Accessibility tool
+accessibility_needs,device_context,Accessibility tool,None
+health_assistive_tech,device_context,Accessibility tool,None
+device_context,health_assistive_tech,None,Accessibility tool
+health_neurodivergence,health_attention_condition,None,ADHD
+health_neurodivergence,health_attention_condition,Diagnosed,Neurotypical
+health_attention_condition,health_neurodivergence,Neurotypical,Diagnosed
+health_attention_condition,health_neurodivergence,ADHD,None
+neurotype,health_attention_condition,None,ADHD
+neurotype,health_attention_condition,Diagnosed,Neurotypical
+health_attention_condition,neurotype,Neurotypical,Diagnosed
+health_attention_condition,neurotype,ADHD,None
+hob_bouldering,lstyle_exercise_freq,Never,Avid
+hob_bouldering,lstyle_exercise_freq,Never,Active
+hob_rock_climbing,lstyle_exercise_freq,Never,Avid
+hob_rock_climbing,lstyle_exercise_freq,Never,Active
+sport_american_football,lstyle_exercise_freq,Never,Play
+sport_badminton,lstyle_exercise_freq,Never,Play
+sport_baseball,lstyle_exercise_freq,Never,Play
+sport_basketball,lstyle_exercise_freq,Never,Play
+sport_boxing,lstyle_exercise_freq,Never,Play
+sport_climbing,lstyle_exercise_freq,Never,Play
+sport_cricket,lstyle_exercise_freq,Never,Play
+sport_crossfit,lstyle_exercise_freq,Never,Play
+sport_cycling,lstyle_exercise_freq,Never,Play
+sport_equestrian,lstyle_exercise_freq,Never,Play
+sport_fencing,lstyle_exercise_freq,Never,Play
+sport_gymnastics,lstyle_exercise_freq,Never,Play
+sport_hockey,lstyle_exercise_freq,Never,Play
+sport_martial_arts,lstyle_exercise_freq,Never,Play
+sport_mma,lstyle_exercise_freq,Never,Play
+sport_pilates,lstyle_exercise_freq,Never,Play
+sport_rowing,lstyle_exercise_freq,Never,Play
+sport_rugby,lstyle_exercise_freq,Never,Play
+sport_running,lstyle_exercise_freq,Never,Play
+sport_sailing,lstyle_exercise_freq,Never,Play
+sport_skateboarding,lstyle_exercise_freq,Never,Play
+sport_skiing,lstyle_exercise_freq,Never,Play
+sport_snowboarding,lstyle_exercise_freq,Never,Play
+sport_soccer,lstyle_exercise_freq,Never,Play
+sport_squash,lstyle_exercise_freq,Never,Play
+sport_surfing,lstyle_exercise_freq,Never,Play
+sport_swimming,lstyle_exercise_freq,Never,Play
+sport_table_tennis,lstyle_exercise_freq,Never,Play
+sport_tennis,lstyle_exercise_freq,Never,Play
+sport_track_field,lstyle_exercise_freq,Never,Play
+sport_triathlon,lstyle_exercise_freq,Never,Play
+sport_volleyball,lstyle_exercise_freq,Never,Play
+sport_weightlifting,lstyle_exercise_freq,Never,Play
+sport_wrestling,lstyle_exercise_freq,Never,Play
+sport_yoga,lstyle_exercise_freq,Never,Play
+lifex_childhood_environment,lifex_adversity_level,Sheltered,Hardship
+lifex_adversity_level,lifex_childhood_environment,Hardship,Sheltered
+lifex_service_history,lstyle_volunteering,Daily,None
+lifex_service_history,lstyle_volunteering,Weekly,None
+media_diet,lstyle_primary_social,None,Social-media-heavy
+lstyle_primary_social,media_diet,Social-media-heavy,None
+media_diet,lstyle_news_freq,Constant,Minimal
+media_diet,lstyle_news_freq,Avoids news,News
+lstyle_news_freq,media_diet,News,Avoids news
+lstyle_news_freq,media_diet,Minimal,Constant
+lstyle_streaming_hours,lstyle_screen_time,<2 hrs,16+
+lstyle_screen_time,lstyle_streaming_hours,16+,<2 hrs
+habit_reading_before_bed,lstyle_reading_freq,Never,Daily
+habit_reading_before_bed,lstyle_reading_freq,Never,Weekly
+lstyle_hobby_intensity,hob_antiquing,Avid,None
+lstyle_hobby_intensity,hob_antiquing,Active,None
+hob_antiquing,lstyle_hobby_intensity,None,Avid
+hob_antiquing,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_aquariums,Avid,None
+lstyle_hobby_intensity,hob_aquariums,Active,None
+hob_aquariums,lstyle_hobby_intensity,None,Avid
+hob_aquariums,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_ballroom_dance,Avid,None
+lstyle_hobby_intensity,hob_ballroom_dance,Active,None
+hob_ballroom_dance,lstyle_hobby_intensity,None,Avid
+hob_ballroom_dance,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_beekeeping,Avid,None
+lstyle_hobby_intensity,hob_beekeeping,Active,None
+hob_beekeeping,lstyle_hobby_intensity,None,Avid
+hob_beekeeping,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_birdwatching,Avid,None
+lstyle_hobby_intensity,hob_birdwatching,Active,None
+hob_birdwatching,lstyle_hobby_intensity,None,Avid
+hob_birdwatching,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_bonsai,Avid,None
+lstyle_hobby_intensity,hob_bonsai,Active,None
+hob_bonsai,lstyle_hobby_intensity,None,Avid
+hob_bonsai,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_bouldering,Avid,None
+lstyle_hobby_intensity,hob_bouldering,Active,None
+hob_bouldering,lstyle_hobby_intensity,None,Avid
+hob_bouldering,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_bread_baking,Avid,None
+lstyle_hobby_intensity,hob_bread_baking,Active,None
+hob_bread_baking,lstyle_hobby_intensity,None,Avid
+hob_bread_baking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_calligraphy,Avid,None
+lstyle_hobby_intensity,hob_calligraphy,Active,None
+hob_calligraphy,lstyle_hobby_intensity,None,Avid
+hob_calligraphy,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_candle_making,Avid,None
+lstyle_hobby_intensity,hob_candle_making,Active,None
+hob_candle_making,lstyle_hobby_intensity,None,Avid
+hob_candle_making,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_cheesemaking,Avid,None
+lstyle_hobby_intensity,hob_cheesemaking,Active,None
+hob_cheesemaking,lstyle_hobby_intensity,None,Avid
+hob_cheesemaking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_coin_collecting,Avid,None
+lstyle_hobby_intensity,hob_coin_collecting,Active,None
+hob_coin_collecting,lstyle_hobby_intensity,None,Avid
+hob_coin_collecting,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_cosplay,Avid,None
+lstyle_hobby_intensity,hob_cosplay,Active,None
+hob_cosplay,lstyle_hobby_intensity,None,Avid
+hob_cosplay,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_crocheting,Avid,None
+lstyle_hobby_intensity,hob_crocheting,Active,None
+hob_crocheting,lstyle_hobby_intensity,None,Avid
+hob_crocheting,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_embroidery,Avid,None
+lstyle_hobby_intensity,hob_embroidery,Active,None
+hob_embroidery,lstyle_hobby_intensity,None,Avid
+hob_embroidery,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_foraging,Avid,None
+lstyle_hobby_intensity,hob_foraging,Active,None
+hob_foraging,lstyle_hobby_intensity,None,Avid
+hob_foraging,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_genealogy,Avid,None
+lstyle_hobby_intensity,hob_genealogy,Active,None
+hob_genealogy,lstyle_hobby_intensity,None,Avid
+hob_genealogy,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_geocaching,Avid,None
+lstyle_hobby_intensity,hob_geocaching,Active,None
+hob_geocaching,lstyle_hobby_intensity,None,Avid
+hob_geocaching,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_home_brewing,Avid,None
+lstyle_hobby_intensity,hob_home_brewing,Active,None
+hob_home_brewing,lstyle_hobby_intensity,None,Avid
+hob_home_brewing,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_horseback_riding,Avid,None
+lstyle_hobby_intensity,hob_horseback_riding,Active,None
+hob_horseback_riding,lstyle_hobby_intensity,None,Avid
+hob_horseback_riding,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_improv,Avid,None
+lstyle_hobby_intensity,hob_improv,Active,None
+hob_improv,lstyle_hobby_intensity,None,Avid
+hob_improv,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_jewelry_making,Avid,None
+lstyle_hobby_intensity,hob_jewelry_making,Active,None
+hob_jewelry_making,lstyle_hobby_intensity,None,Avid
+hob_jewelry_making,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_juggling,Avid,None
+lstyle_hobby_intensity,hob_juggling,Active,None
+hob_juggling,lstyle_hobby_intensity,None,Avid
+hob_juggling,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_karaoke,Avid,None
+lstyle_hobby_intensity,hob_kayaking,Avid,None
+lstyle_hobby_intensity,hob_kayaking,Active,None
+hob_kayaking,lstyle_hobby_intensity,None,Avid
+hob_kayaking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_knitting,Avid,None
+lstyle_hobby_intensity,hob_knitting,Active,None
+hob_knitting,lstyle_hobby_intensity,None,Avid
+hob_knitting,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_leatherworking,Avid,None
+lstyle_hobby_intensity,hob_leatherworking,Active,None
+hob_leatherworking,lstyle_hobby_intensity,None,Avid
+hob_leatherworking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_letterpress,Avid,None
+lstyle_hobby_intensity,hob_letterpress,Active,None
+hob_letterpress,lstyle_hobby_intensity,None,Avid
+hob_letterpress,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_metal_detecting,Avid,None
+lstyle_hobby_intensity,hob_metal_detecting,Active,None
+hob_metal_detecting,lstyle_hobby_intensity,None,Avid
+hob_metal_detecting,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_metalworking,Avid,None
+lstyle_hobby_intensity,hob_metalworking,Active,None
+hob_metalworking,lstyle_hobby_intensity,None,Avid
+hob_metalworking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_model_building,Avid,None
+lstyle_hobby_intensity,hob_model_building,Active,None
+hob_model_building,lstyle_hobby_intensity,None,Avid
+hob_model_building,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_origami,Avid,None
+lstyle_hobby_intensity,hob_origami,Active,None
+hob_origami,lstyle_hobby_intensity,None,Avid
+hob_origami,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_paddleboarding,Avid,None
+lstyle_hobby_intensity,hob_paddleboarding,Active,None
+hob_paddleboarding,lstyle_hobby_intensity,None,Avid
+hob_paddleboarding,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_paragliding,Avid,None
+lstyle_hobby_intensity,hob_paragliding,Active,None
+hob_paragliding,lstyle_hobby_intensity,None,Avid
+hob_paragliding,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_pottery,Avid,None
+lstyle_hobby_intensity,hob_pottery,Active,None
+hob_pottery,lstyle_hobby_intensity,None,Avid
+hob_pottery,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_quilting,Avid,None
+lstyle_hobby_intensity,hob_quilting,Active,None
+hob_quilting,lstyle_hobby_intensity,None,Avid
+hob_quilting,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_rock_climbing,Avid,None
+lstyle_hobby_intensity,hob_rock_climbing,Active,None
+hob_rock_climbing,lstyle_hobby_intensity,None,Avid
+hob_rock_climbing,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_salsa_dancing,Avid,None
+lstyle_hobby_intensity,hob_salsa_dancing,Active,None
+hob_salsa_dancing,lstyle_hobby_intensity,None,Avid
+hob_salsa_dancing,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_scrapbooking,Avid,None
+lstyle_hobby_intensity,hob_scrapbooking,Active,None
+hob_scrapbooking,lstyle_hobby_intensity,None,Avid
+hob_scrapbooking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_scuba_diving,Avid,None
+lstyle_hobby_intensity,hob_scuba_diving,Active,None
+hob_scuba_diving,lstyle_hobby_intensity,None,Avid
+hob_scuba_diving,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_skydiving,Avid,None
+lstyle_hobby_intensity,hob_skydiving,Active,None
+hob_skydiving,lstyle_hobby_intensity,None,Avid
+hob_skydiving,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_snorkeling,Avid,None
+lstyle_hobby_intensity,hob_snorkeling,Active,None
+hob_snorkeling,lstyle_hobby_intensity,None,Avid
+hob_snorkeling,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_stamp_collecting,Avid,None
+lstyle_hobby_intensity,hob_stamp_collecting,Active,None
+hob_stamp_collecting,lstyle_hobby_intensity,None,Avid
+hob_stamp_collecting,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_stand_up_comedy,Avid,None
+lstyle_hobby_intensity,hob_stand_up_comedy,Active,None
+hob_stand_up_comedy,lstyle_hobby_intensity,None,Avid
+hob_stand_up_comedy,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_stargazing,Avid,None
+lstyle_hobby_intensity,hob_stargazing,Active,None
+hob_stargazing,lstyle_hobby_intensity,None,Avid
+hob_stargazing,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_urban_sketching,Avid,None
+lstyle_hobby_intensity,hob_urban_sketching,Active,None
+hob_urban_sketching,lstyle_hobby_intensity,None,Avid
+hob_urban_sketching,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_vegetable_gardening,Avid,None
+lstyle_hobby_intensity,hob_vegetable_gardening,Active,None
+hob_vegetable_gardening,lstyle_hobby_intensity,None,Avid
+hob_vegetable_gardening,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_whittling,Avid,None
+lstyle_hobby_intensity,hob_whittling,Active,None
+hob_whittling,lstyle_hobby_intensity,None,Avid
+hob_whittling,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_winemaking,Avid,None
+lstyle_hobby_intensity,hob_winemaking,Active,None
+hob_winemaking,lstyle_hobby_intensity,None,Avid
+hob_winemaking,lstyle_hobby_intensity,None,Active
+lstyle_hobby_intensity,hob_woodworking,Avid,None
+lstyle_hobby_intensity,hob_woodworking,Active,None
+hob_woodworking,lstyle_hobby_intensity,None,Avid
+hob_woodworking,lstyle_hobby_intensity,None,Active
+lstyle_diet_type,att_veganism,Opposed,Vegan
+att_veganism,lstyle_diet_type,Vegan,Opposed
+sport_esports,lstyle_gaming_freq,Never,Play
+tool_matlab,prog_matlab,Expert,Never used
+tool_matlab,prog_matlab,Proficient,Never used
+tool_matlab,prog_matlab,None,Power user
+tool_matlab,prog_matlab,None,Regular
+prog_matlab,tool_matlab,Power user,None
+prog_matlab,tool_matlab,Regular,None
+prog_matlab,tool_matlab,Never used,Expert
+prog_matlab,tool_matlab,Never used,Proficient
+tool_python,prog_python,Expert,Never used
+tool_python,prog_python,Proficient,Never used
+tool_python,prog_python,None,Power user
+tool_python,prog_python,None,Regular
+prog_python,tool_python,Power user,None
+prog_python,tool_python,Regular,None
+prog_python,tool_python,Never used,Expert
+prog_python,tool_python,Never used,Proficient
+tool_r,prog_r,Expert,Never used
+tool_r,prog_r,Proficient,Never used
+tool_r,prog_r,None,Power user
+tool_r,prog_r,None,Regular
+prog_r,tool_r,Power user,None
+prog_r,tool_r,Regular,None
+prog_r,tool_r,Never used,Expert
+prog_r,tool_r,Never used,Proficient
+tool_sql,prog_sql,Expert,Never used
+tool_sql,prog_sql,Proficient,Never used
+tool_sql,prog_sql,None,Power user
+tool_sql,prog_sql,None,Regular
+prog_sql,tool_sql,Power user,None
+prog_sql,tool_sql,Regular,None
+prog_sql,tool_sql,Never used,Expert
+prog_sql,tool_sql,Never used,Proficient
+skill_coding,prog_assembly,Expert,None
+skill_coding,prog_assembly,Proficient,None
+skill_coding,prog_assembly,None,Master
+skill_coding,prog_assembly,None,Advanced
+prog_assembly,skill_coding,Master,None
+prog_assembly,skill_coding,Advanced,None
+prog_assembly,skill_coding,None,Expert
+prog_assembly,skill_coding,None,Proficient
+skill_coding,prog_bash,Expert,None
+skill_coding,prog_bash,Proficient,None
+skill_coding,prog_bash,None,Master
+skill_coding,prog_bash,None,Advanced
+prog_bash,skill_coding,Master,None
+prog_bash,skill_coding,Advanced,None
+prog_bash,skill_coding,None,Expert
+prog_bash,skill_coding,None,Proficient
+skill_coding,prog_c,Expert,None
+skill_coding,prog_c,Proficient,None
+skill_coding,prog_c,None,Master
+skill_coding,prog_c,None,Advanced
+prog_c,skill_coding,Master,None
+prog_c,skill_coding,Advanced,None
+prog_c,skill_coding,None,Expert
+prog_c,skill_coding,None,Proficient
+skill_coding,prog_clojure,Expert,None
+skill_coding,prog_clojure,Proficient,None
+skill_coding,prog_clojure,None,Master
+skill_coding,prog_clojure,None,Advanced
+prog_clojure,skill_coding,Master,None
+prog_clojure,skill_coding,Advanced,None
+prog_clojure,skill_coding,None,Expert
+prog_clojure,skill_coding,None,Proficient
+skill_coding,prog_cobol,Expert,None
+skill_coding,prog_cobol,Proficient,None
+skill_coding,prog_cobol,None,Master
+skill_coding,prog_cobol,None,Advanced
+prog_cobol,skill_coding,Master,None
+prog_cobol,skill_coding,Advanced,None
+prog_cobol,skill_coding,None,Expert
+prog_cobol,skill_coding,None,Proficient
+skill_coding,prog_dart,Expert,None
+skill_coding,prog_dart,Proficient,None
+skill_coding,prog_dart,None,Master
+skill_coding,prog_dart,None,Advanced
+prog_dart,skill_coding,Master,None
+prog_dart,skill_coding,Advanced,None
+prog_dart,skill_coding,None,Expert
+prog_dart,skill_coding,None,Proficient
+skill_coding,prog_elixir,Expert,None
+skill_coding,prog_elixir,Proficient,None
+skill_coding,prog_elixir,None,Master
+skill_coding,prog_elixir,None,Advanced
+prog_elixir,skill_coding,Master,None
+prog_elixir,skill_coding,Advanced,None
+prog_elixir,skill_coding,None,Expert
+prog_elixir,skill_coding,None,Proficient
+skill_coding,prog_erlang,Expert,None
+skill_coding,prog_erlang,Proficient,None
+skill_coding,prog_erlang,None,Master
+skill_coding,prog_erlang,None,Advanced
+prog_erlang,skill_coding,Master,None
+prog_erlang,skill_coding,Advanced,None
+prog_erlang,skill_coding,None,Expert
+prog_erlang,skill_coding,None,Proficient
+skill_coding,prog_f,Expert,None
+skill_coding,prog_f,Proficient,None
+skill_coding,prog_f,None,Master
+skill_coding,prog_f,None,Advanced
+prog_f,skill_coding,Master,None
+prog_f,skill_coding,Advanced,None
+prog_f,skill_coding,None,Expert
+prog_f,skill_coding,None,Proficient
+skill_coding,prog_fortran,Expert,None
+skill_coding,prog_fortran,Proficient,None
+skill_coding,prog_fortran,None,Master
+skill_coding,prog_fortran,None,Advanced
+prog_fortran,skill_coding,Master,None
+prog_fortran,skill_coding,Advanced,None
+prog_fortran,skill_coding,None,Expert
+prog_fortran,skill_coding,None,Proficient
+skill_coding,prog_go,Expert,None
+skill_coding,prog_go,Proficient,None
+skill_coding,prog_go,None,Master
+skill_coding,prog_go,None,Advanced
+prog_go,skill_coding,Master,None
+prog_go,skill_coding,Advanced,None
+prog_go,skill_coding,None,Expert
+prog_go,skill_coding,None,Proficient
+skill_coding,prog_graphql,Expert,None
+skill_coding,prog_graphql,Proficient,None
+skill_coding,prog_graphql,None,Master
+skill_coding,prog_graphql,None,Advanced
+prog_graphql,skill_coding,Master,None
+prog_graphql,skill_coding,Advanced,None
+prog_graphql,skill_coding,None,Expert
+prog_graphql,skill_coding,None,Proficient
+skill_coding,prog_haskell,Expert,None
+skill_coding,prog_haskell,Proficient,None
+skill_coding,prog_haskell,None,Master
+skill_coding,prog_haskell,None,Advanced
+prog_haskell,skill_coding,Master,None
+prog_haskell,skill_coding,Advanced,None
+prog_haskell,skill_coding,None,Expert
+prog_haskell,skill_coding,None,Proficient
+skill_coding,prog_java,Expert,None
+skill_coding,prog_java,Proficient,None
+skill_coding,prog_java,None,Master
+skill_coding,prog_java,None,Advanced
+prog_java,skill_coding,Master,None
+prog_java,skill_coding,Advanced,None
+prog_java,skill_coding,None,Expert
+prog_java,skill_coding,None,Proficient
+skill_coding,prog_javascript,Expert,None
+skill_coding,prog_javascript,Proficient,None
+skill_coding,prog_javascript,None,Master
+skill_coding,prog_javascript,None,Advanced
+prog_javascript,skill_coding,Master,None
+prog_javascript,skill_coding,Advanced,None
+prog_javascript,skill_coding,None,Expert
+prog_javascript,skill_coding,None,Proficient
+skill_coding,prog_julia,Expert,None
+skill_coding,prog_julia,Proficient,None
+skill_coding,prog_julia,None,Master
+skill_coding,prog_julia,None,Advanced
+prog_julia,skill_coding,Master,None
+prog_julia,skill_coding,Advanced,None
+prog_julia,skill_coding,None,Expert
+prog_julia,skill_coding,None,Proficient
+skill_coding,prog_kotlin,Expert,None
+skill_coding,prog_kotlin,Proficient,None
+skill_coding,prog_kotlin,None,Master
+skill_coding,prog_kotlin,None,Advanced
+prog_kotlin,skill_coding,Master,None
+prog_kotlin,skill_coding,Advanced,None
+prog_kotlin,skill_coding,None,Expert
+prog_kotlin,skill_coding,None,Proficient
+skill_coding,prog_lua,Expert,None
+skill_coding,prog_lua,Proficient,None
+skill_coding,prog_lua,None,Master
+skill_coding,prog_lua,None,Advanced
+prog_lua,skill_coding,Master,None
+prog_lua,skill_coding,Advanced,None
+prog_lua,skill_coding,None,Expert
+prog_lua,skill_coding,None,Proficient
+skill_coding,prog_matlab,Expert,None
+skill_coding,prog_matlab,Proficient,None
+skill_coding,prog_matlab,None,Master
+skill_coding,prog_matlab,None,Advanced
+prog_matlab,skill_coding,Master,None
+prog_matlab,skill_coding,Advanced,None
+prog_matlab,skill_coding,None,Expert
+prog_matlab,skill_coding,None,Proficient
+skill_coding,prog_objective_c,Expert,None
+skill_coding,prog_objective_c,Proficient,None
+skill_coding,prog_objective_c,None,Master
+skill_coding,prog_objective_c,None,Advanced
+prog_objective_c,skill_coding,Master,None
+prog_objective_c,skill_coding,Advanced,None
+prog_objective_c,skill_coding,None,Expert
+prog_objective_c,skill_coding,None,Proficient
+skill_coding,prog_ocaml,Expert,None
+skill_coding,prog_ocaml,Proficient,None
+skill_coding,prog_ocaml,None,Master
+skill_coding,prog_ocaml,None,Advanced
+prog_ocaml,skill_coding,Master,None
+prog_ocaml,skill_coding,Advanced,None
+prog_ocaml,skill_coding,None,Expert
+prog_ocaml,skill_coding,None,Proficient
+skill_coding,prog_perl,Expert,None
+skill_coding,prog_perl,Proficient,None
+skill_coding,prog_perl,None,Master
+skill_coding,prog_perl,None,Advanced
+prog_perl,skill_coding,Master,None
+prog_perl,skill_coding,Advanced,None
+prog_perl,skill_coding,None,Expert
+prog_perl,skill_coding,None,Proficient
+skill_coding,prog_php,Expert,None
+skill_coding,prog_php,Proficient,None
+skill_coding,prog_php,None,Master
+skill_coding,prog_php,None,Advanced
+prog_php,skill_coding,Master,None
+prog_php,skill_coding,Advanced,None
+prog_php,skill_coding,None,Expert
+prog_php,skill_coding,None,Proficient
+skill_coding,prog_powershell,Expert,None
+skill_coding,prog_powershell,Proficient,None
+skill_coding,prog_powershell,None,Master
+skill_coding,prog_powershell,None,Advanced
+prog_powershell,skill_coding,Master,None
+prog_powershell,skill_coding,Advanced,None
+prog_powershell,skill_coding,None,Expert
+prog_powershell,skill_coding,None,Proficient
+skill_coding,prog_python,Expert,None
+skill_coding,prog_python,Proficient,None
+skill_coding,prog_python,None,Master
+skill_coding,prog_python,None,Advanced
+prog_python,skill_coding,Master,None
+prog_python,skill_coding,Advanced,None
+prog_python,skill_coding,None,Expert
+prog_python,skill_coding,None,Proficient
+skill_coding,prog_r,Expert,None
+skill_coding,prog_r,Proficient,None
+skill_coding,prog_r,None,Master
+skill_coding,prog_r,None,Advanced
+prog_r,skill_coding,Master,None
+prog_r,skill_coding,Advanced,None
+prog_r,skill_coding,None,Expert
+prog_r,skill_coding,None,Proficient
+skill_coding,prog_ruby,Expert,None
+skill_coding,prog_ruby,Proficient,None
+skill_coding,prog_ruby,None,Master
+skill_coding,prog_ruby,None,Advanced
+prog_ruby,skill_coding,Master,None
+prog_ruby,skill_coding,Advanced,None
+prog_ruby,skill_coding,None,Expert
+prog_ruby,skill_coding,None,Proficient
+skill_coding,prog_rust,Expert,None
+skill_coding,prog_rust,Proficient,None
+skill_coding,prog_rust,None,Master
+skill_coding,prog_rust,None,Advanced
+prog_rust,skill_coding,Master,None
+prog_rust,skill_coding,Advanced,None
+prog_rust,skill_coding,None,Expert
+prog_rust,skill_coding,None,Proficient
+skill_coding,prog_scala,Expert,None
+skill_coding,prog_scala,Proficient,None
+skill_coding,prog_scala,None,Master
+skill_coding,prog_scala,None,Advanced
+prog_scala,skill_coding,Master,None
+prog_scala,skill_coding,Advanced,None
+prog_scala,skill_coding,None,Expert
+prog_scala,skill_coding,None,Proficient
+skill_coding,prog_solidity,Expert,None
+skill_coding,prog_solidity,Proficient,None
+skill_coding,prog_solidity,None,Master
+skill_coding,prog_solidity,None,Advanced
+prog_solidity,skill_coding,Master,None
+prog_solidity,skill_coding,Advanced,None
+prog_solidity,skill_coding,None,Expert
+prog_solidity,skill_coding,None,Proficient
+skill_coding,prog_sql,Expert,None
+skill_coding,prog_sql,Proficient,None
+skill_coding,prog_sql,None,Master
+skill_coding,prog_sql,None,Advanced
+prog_sql,skill_coding,Master,None
+prog_sql,skill_coding,Advanced,None
+prog_sql,skill_coding,None,Expert
+prog_sql,skill_coding,None,Proficient
+skill_coding,prog_swift,Expert,None
+skill_coding,prog_swift,Proficient,None
+skill_coding,prog_swift,None,Master
+skill_coding,prog_swift,None,Advanced
+prog_swift,skill_coding,Master,None
+prog_swift,skill_coding,Advanced,None
+prog_swift,skill_coding,None,Expert
+prog_swift,skill_coding,None,Proficient
+skill_coding,prog_typescript,Expert,None
+skill_coding,prog_typescript,Proficient,None
+skill_coding,prog_typescript,None,Master
+skill_coding,prog_typescript,None,Advanced
+prog_typescript,skill_coding,Master,None
+prog_typescript,skill_coding,Advanced,None
+prog_typescript,skill_coding,None,Expert
+prog_typescript,skill_coding,None,Proficient
+prog_objective_c,prog_c,None,Expert
+prog_objective_c,prog_c,None,Proficient
+prog_c,prog_objective_c,Expert,None
+prog_c,prog_objective_c,Proficient,None
+prog_typescript,prog_javascript,None,Expert
+prog_typescript,prog_javascript,None,Proficient
+prog_javascript,prog_typescript,Expert,None
+prog_javascript,prog_typescript,Proficient,None
+tool_blender,fam_3d_modeling,None,Power user
+fam_3d_modeling,tool_blender,Power user,None
+tool_aws,fam_cloud_infrastructure,None,Power user
+fam_cloud_infrastructure,tool_aws,Power user,None
+tool_azure,fam_cloud_infrastructure,None,Power user
+fam_cloud_infrastructure,tool_azure,Power user,None
+tool_google_cloud,fam_cloud_infrastructure,None,Power user
+fam_cloud_infrastructure,tool_google_cloud,Power user,None
+prog_sql,fam_databases,None,Expert
+fam_databases,prog_sql,Expert,None
+tool_sql,fam_databases,None,Power user
+fam_databases,tool_sql,Power user,None
+tool_sas,fam_statistics,None,Power user
+fam_statistics,tool_sas,Power user,None
+tool_spss,fam_statistics,None,Power user
+fam_statistics,tool_spss,Power user,None
+tool_stata,fam_statistics,None,Power user
+fam_statistics,tool_stata,Power user,None
+tool_looker,skill_data_visualization,None,Power user
+skill_data_visualization,tool_looker,Power user,None
+tool_power_bi,skill_data_visualization,None,Power user
+skill_data_visualization,tool_power_bi,Power user,None
+tool_tableau,skill_data_visualization,None,Power user
+skill_data_visualization,tool_tableau,Power user,None
+tool_jupyter,prog_julia,None,Power user
+tool_jupyter,prog_julia,None,Regular
+prog_julia,tool_jupyter,Power user,None
+prog_julia,tool_jupyter,Regular,None
+tool_jupyter,prog_python,None,Power user
+tool_jupyter,prog_python,None,Regular
+prog_python,tool_jupyter,Power user,None
+prog_python,tool_jupyter,Regular,None
+tool_jupyter,prog_r,None,Power user
+tool_jupyter,prog_r,None,Regular
+prog_r,tool_jupyter,Power user,None
+prog_r,tool_jupyter,Regular,None
+tool_github_copilot,skill_coding,None,Power user
+tool_github_copilot,skill_coding,None,Regular
+skill_coding,tool_github_copilot,Power user,None
+skill_coding,tool_github_copilot,Regular,None
+tool_jetbrains_ides,skill_coding,None,Power user
+tool_jetbrains_ides,skill_coding,None,Regular
+skill_coding,tool_jetbrains_ides,Power user,None
+skill_coding,tool_jetbrains_ides,Regular,None
+tech_savviness,dev_professional_status,Professional developer,Avoidant
+tech_savviness,pref_early_vs_late,Bleeding edge,Avoidant
+pref_early_vs_late,tech_savviness,Avoidant,Bleeding edge
+tool_github_copilot,coding_ai_usage_frequency,Tried but not active,Power user
+tool_github_copilot,coding_ai_usage_frequency,Tried but not active,Regular
+tool_github_copilot,coding_ai_usage_frequency,Never used,Power user
+tool_github_copilot,coding_ai_usage_frequency,Never used,Regular
+tool_github_copilot,coding_ai_usage_frequency,Never used,Occasional
+tool_github_copilot,coding_ai_usage_frequency,Never used,Tried it
+tool_github_copilot,coding_ai_usage_frequency,Actively avoids,Power user
+tool_github_copilot,coding_ai_usage_frequency,Actively avoids,Regular
+coding_ai_usage_frequency,tool_github_copilot,Power user,Tried but not active
+coding_ai_usage_frequency,tool_github_copilot,Power user,Never used
+coding_ai_usage_frequency,tool_github_copilot,Power user,Actively avoids
+coding_ai_usage_frequency,tool_github_copilot,Regular,Tried but not active
+coding_ai_usage_frequency,tool_github_copilot,Regular,Never used
+coding_ai_usage_frequency,tool_github_copilot,Regular,Actively avoids
+coding_ai_usage_frequency,tool_github_copilot,Occasional,Never used
+coding_ai_usage_frequency,tool_github_copilot,Tried it,Never used
+coding_agent_workflow_impact,coding_agent_failure_tolerance,Does not use agents,Major productivity increase
+coding_agent_workflow_impact,coding_agent_failure_tolerance,Does not use agents,Moderate productivity increase
+coding_agent_workflow_impact,coding_agent_failure_tolerance,Does not use agents,Small targeted improvement
+coding_agent_workflow_impact,coding_agent_failure_tolerance,Does not use agents,Negative / slowdown
+coding_agent_failure_tolerance,coding_agent_workflow_impact,Major productivity increase,Does not use agents
+coding_agent_failure_tolerance,coding_agent_workflow_impact,Moderate productivity increase,Does not use agents
+coding_agent_failure_tolerance,coding_agent_workflow_impact,Small targeted improvement,Does not use agents
+coding_agent_failure_tolerance,coding_agent_workflow_impact,Negative / slowdown,Does not use agents
+coding_agent_workflow_impact,coding_agent_usage_frequency,Not yet but interested,Major productivity increase
+coding_agent_workflow_impact,coding_agent_usage_frequency,Not yet but interested,Moderate productivity increase
+coding_agent_workflow_impact,coding_agent_usage_frequency,Not yet but interested,Small targeted improvement
+coding_agent_workflow_impact,coding_agent_usage_frequency,Not yet but interested,Negative / slowdown
+coding_agent_workflow_impact,coding_agent_usage_frequency,No plans,Major productivity increase
+coding_agent_workflow_impact,coding_agent_usage_frequency,No plans,Moderate productivity increase
+coding_agent_workflow_impact,coding_agent_usage_frequency,No plans,Small targeted improvement
+coding_agent_workflow_impact,coding_agent_usage_frequency,No plans,Negative / slowdown
+coding_agent_usage_frequency,coding_agent_workflow_impact,Major productivity increase,Not yet but interested
+coding_agent_usage_frequency,coding_agent_workflow_impact,Major productivity increase,No plans
+coding_agent_usage_frequency,coding_agent_workflow_impact,Moderate productivity increase,Not yet but interested
+coding_agent_usage_frequency,coding_agent_workflow_impact,Moderate productivity increase,No plans
+coding_agent_usage_frequency,coding_agent_workflow_impact,Small targeted improvement,Not yet but interested
+coding_agent_usage_frequency,coding_agent_workflow_impact,Small targeted improvement,No plans
+coding_agent_usage_frequency,coding_agent_workflow_impact,Negative / slowdown,Not yet but interested
+coding_agent_usage_frequency,coding_agent_workflow_impact,Negative / slowdown,No plans
+coding_agent_control_expectation,coding_agent_autonomy_preference,Autonomous execution,Requires explicit approval before edits
+coding_agent_control_expectation,coding_agent_autonomy_preference,Autonomous execution,Read-only assistance preferred
+coding_agent_control_expectation,coding_agent_autonomy_preference,Suggest-only assistant,Agent may edit within scoped files
+coding_agent_control_expectation,coding_agent_autonomy_preference,Suggest-only assistant,Agent may run broad tasks autonomously
+coding_agent_control_expectation,coding_agent_autonomy_preference,No agent autonomy,Agent may edit within scoped files
+coding_agent_control_expectation,coding_agent_autonomy_preference,No agent autonomy,Agent may run broad tasks autonomously
+coding_agent_autonomy_preference,coding_agent_control_expectation,Requires explicit approval before edits,Autonomous execution
+coding_agent_autonomy_preference,coding_agent_control_expectation,Agent may edit within scoped files,Suggest-only assistant
+coding_agent_autonomy_preference,coding_agent_control_expectation,Agent may edit within scoped files,No agent autonomy
+coding_agent_autonomy_preference,coding_agent_control_expectation,Agent may run broad tasks autonomously,Suggest-only assistant
+coding_agent_autonomy_preference,coding_agent_control_expectation,Agent may run broad tasks autonomously,No agent autonomy
+coding_agent_autonomy_preference,coding_agent_control_expectation,Read-only assistance preferred,Autonomous execution
+skill_coding,dev_professional_status,Professional developer,None
+skill_coding,dev_professional_status,Hobbyist / side-project coder,None
+skill_coding,open_source_activity_level,Maintainer / core contributor,None
+skill_coding,open_source_activity_level,Regular contributor,None
+open_source_activity_level,skill_coding,None,Maintainer / core contributor
+open_source_activity_level,skill_coding,None,Regular contributor
+open_source_activity_level,dev_professional_status,Professional developer,No coding activity
+open_source_activity_level,dev_professional_status,Hobbyist / side-project coder,No coding activity
+open_source_activity_level,github_contribution_mode,Code pusher,No coding activity
+open_source_activity_level,github_contribution_mode,Pull request contributor,No coding activity
+open_source_activity_level,github_contribution_mode,Repository maintainer,No coding activity
+github_contribution_mode,open_source_activity_level,No coding activity,Code pusher
+github_contribution_mode,open_source_activity_level,No coding activity,Pull request contributor
+github_contribution_mode,open_source_activity_level,No coding activity,Repository maintainer
+release_maintenance_orientation,open_source_activity_level,No coding activity,Active release maintainer
+release_maintenance_orientation,open_source_activity_level,No coding activity,Occasional release contributor
+release_maintenance_orientation,open_source_activity_level,No coding activity,Dependency / update maintainer
+release_maintenance_orientation,open_source_activity_level,No coding activity,Internal-only maintainer
+open_source_activity_level,release_maintenance_orientation,Active release maintainer,No coding activity
+open_source_activity_level,release_maintenance_orientation,Occasional release contributor,No coding activity
+open_source_activity_level,release_maintenance_orientation,Dependency / update maintainer,No coding activity
+open_source_activity_level,release_maintenance_orientation,Internal-only maintainer,No coding activity
+tool_git,github_contribution_mode,Code pusher,Never used
+tool_git,github_contribution_mode,Pull request contributor,Never used
+tool_git,github_contribution_mode,Repository maintainer,Never used
+github_contribution_mode,tool_git,Never used,Code pusher
+github_contribution_mode,tool_git,Never used,Pull request contributor
+github_contribution_mode,tool_git,Never used,Repository maintainer
+tool_github,github_contribution_mode,Code pusher,Never used
+tool_github,github_contribution_mode,Pull request contributor,Never used
+tool_github,github_contribution_mode,Issue reporter,Never used
+tool_github,github_contribution_mode,Reviewer / commenter,Never used
+tool_github,github_contribution_mode,Repository maintainer,Never used
+tool_github,github_contribution_mode,Star / fork explorer,Never used
+github_contribution_mode,tool_github,Never used,Code pusher
+github_contribution_mode,tool_github,Never used,Pull request contributor
+github_contribution_mode,tool_github,Never used,Issue reporter
+github_contribution_mode,tool_github,Never used,Reviewer / commenter
+github_contribution_mode,tool_github,Never used,Repository maintainer
+github_contribution_mode,tool_github,Never used,Star / fork explorer
+tool_gitlab,github_contribution_mode,Code pusher,Never used
+tool_gitlab,github_contribution_mode,Pull request contributor,Never used
+tool_gitlab,github_contribution_mode,Issue reporter,Never used
+tool_gitlab,github_contribution_mode,Reviewer / commenter,Never used
+tool_gitlab,github_contribution_mode,Repository maintainer,Never used
+tool_gitlab,github_contribution_mode,Star / fork explorer,Never used
+github_contribution_mode,tool_gitlab,Never used,Code pusher
+github_contribution_mode,tool_gitlab,Never used,Pull request contributor
+github_contribution_mode,tool_gitlab,Never used,Issue reporter
+github_contribution_mode,tool_gitlab,Never used,Reviewer / commenter
+github_contribution_mode,tool_gitlab,Never used,Repository maintainer
+github_contribution_mode,tool_gitlab,Never used,Star / fork explorer
+val_community,values_priority,Community,Minor
+val_community,values_priority,Community,Irrelevant
+att_risk_taking,risk_tolerance,Risk-averse,Enthusiast
+att_risk_taking,risk_tolerance,Risk-seeking,Opposed
+cog_detail_orientation,cog_big_picture_vs_detail,Big-picture only,Very high
+cog_detail_orientation,cog_big_picture_vs_detail,Detail-obsessed,Low
+cog_detail_orientation,cog_big_picture_vs_detail,Detail-obsessed,None
+cog_big_picture_vs_detail,cog_detail_orientation,Very high,Big-picture only
+cog_big_picture_vs_detail,cog_detail_orientation,Low,Detail-obsessed
+cog_big_picture_vs_detail,cog_detail_orientation,None,Detail-obsessed
+decision_style,cog_decision_speed,Snap decisions,Deliberative
+topic_astronomy,acad_astronomy,Passionate,Averse
+topic_astronomy,acad_astronomy,Averse,Passionate
+acad_astronomy,topic_astronomy,Passionate,Averse
+acad_astronomy,topic_astronomy,Averse,Passionate
+topic_theater,acad_drama,Passionate,Averse
+topic_theater,acad_drama,Averse,Passionate
+acad_drama,topic_theater,Passionate,Averse
+acad_drama,topic_theater,Averse,Passionate
+topic_languages,acad_foreign_languages,Passionate,Averse
+topic_languages,acad_foreign_languages,Averse,Passionate
+acad_foreign_languages,topic_languages,Passionate,Averse
+acad_foreign_languages,topic_languages,Averse,Passionate
+topic_literature,acad_literature,Passionate,Averse
+topic_literature,acad_literature,Averse,Passionate
+acad_literature,topic_literature,Passionate,Averse
+acad_literature,topic_literature,Averse,Passionate
+topic_music,acad_music,Passionate,Averse
+topic_music,acad_music,Averse,Passionate
+acad_music,topic_music,Passionate,Averse
+acad_music,topic_music,Averse,Passionate
+topic_philosophy,acad_philosophy,Passionate,Averse
+topic_philosophy,acad_philosophy,Averse,Passionate
+acad_philosophy,topic_philosophy,Passionate,Averse
+acad_philosophy,topic_philosophy,Averse,Passionate
+topic_visual_art,acad_visual_art,Passionate,Averse
+topic_visual_art,acad_visual_art,Averse,Passionate
+acad_visual_art,topic_visual_art,Passionate,Averse
+acad_visual_art,topic_visual_art,Averse,Passionate
+topic_history,bookg_history,Love,Averse
+bookg_history,topic_history,Averse,Love
+topic_philosophy,bookg_philosophy,Love,Averse
+bookg_philosophy,topic_philosophy,Averse,Love
+topic_poetry,bookg_poetry,Love,Averse
+bookg_poetry,topic_poetry,Averse,Love
+topic_true_crime,bookg_true_crime,Love,Averse
+bookg_true_crime,topic_true_crime,Averse,Love
+topic_meditation,habit_meditation,Daily,Averse
+habit_meditation,topic_meditation,Averse,Daily
+topic_dance,hob_ballroom_dance,Avid,Averse
+topic_dance,hob_ballroom_dance,Active,Averse
+hob_ballroom_dance,topic_dance,Averse,Avid
+hob_ballroom_dance,topic_dance,Averse,Active
+topic_birdwatching,hob_birdwatching,Avid,Averse
+topic_birdwatching,hob_birdwatching,Active,Averse
+hob_birdwatching,topic_birdwatching,Averse,Avid
+hob_birdwatching,topic_birdwatching,Averse,Active
+topic_baking,hob_bread_baking,Avid,Averse
+topic_baking,hob_bread_baking,Active,Averse
+hob_bread_baking,topic_baking,Averse,Avid
+hob_bread_baking,topic_baking,Averse,Active
+topic_calligraphy,hob_calligraphy,Avid,Averse
+topic_calligraphy,hob_calligraphy,Active,Averse
+hob_calligraphy,topic_calligraphy,Averse,Avid
+hob_calligraphy,topic_calligraphy,Averse,Active
+topic_collecting,hob_coin_collecting,Avid,Averse
+topic_collecting,hob_coin_collecting,Active,Averse
+hob_coin_collecting,topic_collecting,Averse,Avid
+hob_coin_collecting,topic_collecting,Averse,Active
+topic_genealogy,hob_genealogy,Avid,Averse
+topic_genealogy,hob_genealogy,Active,Averse
+hob_genealogy,topic_genealogy,Averse,Avid
+hob_genealogy,topic_genealogy,Averse,Active
+topic_craft_beer,hob_home_brewing,Avid,Averse
+topic_craft_beer,hob_home_brewing,Active,Averse
+hob_home_brewing,topic_craft_beer,Averse,Avid
+hob_home_brewing,topic_craft_beer,Averse,Active
+topic_knitting,hob_knitting,Avid,Averse
+topic_knitting,hob_knitting,Active,Averse
+hob_knitting,topic_knitting,Averse,Avid
+hob_knitting,topic_knitting,Averse,Active
+topic_dance,hob_salsa_dancing,Avid,Averse
+topic_dance,hob_salsa_dancing,Active,Averse
+hob_salsa_dancing,topic_dance,Averse,Avid
+hob_salsa_dancing,topic_dance,Averse,Active
+topic_collecting,hob_stamp_collecting,Avid,Averse
+topic_collecting,hob_stamp_collecting,Active,Averse
+hob_stamp_collecting,topic_collecting,Averse,Avid
+hob_stamp_collecting,topic_collecting,Averse,Active
+topic_stand_up_comedy,hob_stand_up_comedy,Avid,Averse
+topic_stand_up_comedy,hob_stand_up_comedy,Active,Averse
+hob_stand_up_comedy,topic_stand_up_comedy,Averse,Avid
+hob_stand_up_comedy,topic_stand_up_comedy,Averse,Active
+topic_astronomy,hob_stargazing,Avid,Averse
+topic_astronomy,hob_stargazing,Active,Averse
+hob_stargazing,topic_astronomy,Averse,Avid
+hob_stargazing,topic_astronomy,Averse,Active
+topic_gardening,hob_vegetable_gardening,Avid,Averse
+topic_gardening,hob_vegetable_gardening,Active,Averse
+hob_vegetable_gardening,topic_gardening,Averse,Avid
+hob_vegetable_gardening,topic_gardening,Averse,Active
+topic_wine,hob_winemaking,Avid,Averse
+topic_wine,hob_winemaking,Active,Averse
+hob_winemaking,topic_wine,Averse,Avid
+hob_winemaking,topic_wine,Averse,Active
+topic_woodworking,hob_woodworking,Avid,Averse
+topic_woodworking,hob_woodworking,Active,Averse
+hob_woodworking,topic_woodworking,Averse,Avid
+hob_woodworking,topic_woodworking,Averse,Active
+topic_gaming,lstyle_gaming_freq,Daily,Averse
+topic_podcasts,lstyle_podcast_listening,Daily,Averse
+lstyle_podcast_listening,topic_podcasts,Averse,Daily
+topic_cycling,sport_cycling,Play,Averse
+sport_cycling,topic_cycling,Averse,Play
+topic_running,sport_running,Play,Averse
+sport_running,topic_running,Averse,Play
+topic_yoga,sport_yoga,Play,Averse
+sport_yoga,topic_yoga,Averse,Play
+pref_work_location,att_remote_work,Enthusiast,Strongly office
+pref_work_location,att_remote_work,Opposed,Strongly remote
+att_remote_work,pref_work_location,Strongly office,Enthusiast
+att_remote_work,pref_work_location,Strongly remote,Opposed
+pref_work_location,att_working_from_office,Enthusiast,Strongly remote
+pref_work_location,att_working_from_office,Opposed,Strongly office
+att_working_from_office,pref_work_location,Strongly office,Opposed
+att_working_from_office,pref_work_location,Strongly remote,Enthusiast
+demo_veteran_status,seniority,Retired,Active duty
+fam_contract_law,academic_field,Law,None
+academic_field,fam_contract_law,None,Law
+ind_healthcare,role_function,Clinical,None
+skill_people_management,dev_ic_manager_orientation,People manager,None
+dev_ic_manager_orientation,skill_people_management,None,People manager
+trait_spirituality,religiosity,Devout,Absent
+trait_spirituality,val_spirituality_faith,Core value,Absent
+health_dietary_restriction,demo_religion_affiliation,Atheist / agnostic,Religious
+health_dietary_restriction,demo_religion_affiliation,None,Religious
+health_assistive_tech,accessibility_needs,Visual,None
+accessibility_needs,health_assistive_tech,None,Visual
+health_motion_sensitivity,accessibility_needs,Visual,None
+accessibility_needs,health_motion_sensitivity,None,Visual
+sport_crossfit,health_fitness_level,Sedentary,Play
+health_fitness_level,sport_crossfit,Play,Sedentary
+sport_triathlon,health_fitness_level,Sedentary,Play
+health_fitness_level,sport_triathlon,Play,Sedentary
+hob_ballroom_dance,lstyle_exercise_freq,Never,Avid
+hob_ballroom_dance,lstyle_exercise_freq,Never,Active
+hob_horseback_riding,lstyle_exercise_freq,Never,Avid
+hob_horseback_riding,lstyle_exercise_freq,Never,Active
+hob_kayaking,lstyle_exercise_freq,Never,Avid
+hob_kayaking,lstyle_exercise_freq,Never,Active
+hob_paddleboarding,lstyle_exercise_freq,Never,Avid
+hob_paddleboarding,lstyle_exercise_freq,Never,Active
+hob_salsa_dancing,lstyle_exercise_freq,Never,Avid
+hob_salsa_dancing,lstyle_exercise_freq,Never,Active
+hob_scuba_diving,lstyle_exercise_freq,Never,Avid
+hob_scuba_diving,lstyle_exercise_freq,Never,Active
+sport_archery,lstyle_exercise_freq,Never,Play
+habit_meal_prepping,lstyle_cooking_freq,Never,Daily
+habit_meal_prepping,lstyle_cooking_freq,Never,Weekly
+skill_baking,hob_bread_baking,Avid,None
+skill_baking,hob_bread_baking,Active,None
+hob_bread_baking,skill_baking,None,Avid
+hob_bread_baking,skill_baking,None,Active
+skill_sketching,hob_urban_sketching,Avid,None
+skill_sketching,hob_urban_sketching,Active,None
+hob_urban_sketching,skill_sketching,None,Avid
+hob_urban_sketching,skill_sketching,None,Active
+skill_gardening,hob_vegetable_gardening,Avid,None
+skill_gardening,hob_vegetable_gardening,Active,None
+hob_vegetable_gardening,skill_gardening,None,Avid
+hob_vegetable_gardening,skill_gardening,None,Active
+skill_cooking,lstyle_cooking_freq,Daily,None
+sport_climbing,hob_bouldering,Avid,None
+sport_climbing,hob_bouldering,Active,None
+hob_bouldering,sport_climbing,None,Avid
+hob_bouldering,sport_climbing,None,Active
+sport_climbing,hob_rock_climbing,Avid,None
+sport_climbing,hob_rock_climbing,Active,None
+hob_rock_climbing,sport_climbing,None,Avid
+hob_rock_climbing,sport_climbing,None,Active
+lstyle_diet_type,cuis_vegan,Avoid,Vegan
+cuis_vegan,lstyle_diet_type,Vegan,Avoid
+lstyle_diet_type,cuis_vegetarian,Avoid,Vegetarian
+lstyle_diet_type,cuis_vegetarian,Avoid,Vegan
+cuis_vegetarian,lstyle_diet_type,Vegetarian,Avoid
+cuis_vegetarian,lstyle_diet_type,Vegan,Avoid
+cuis_chinese,cuis_cantonese,Love,Avoid
+cuis_cantonese,cuis_chinese,Avoid,Love
+cuis_sichuan,cuis_chinese,Avoid,Love
+cuis_chinese,cuis_sichuan,Love,Avoid
+cuis_sushi,cuis_japanese,Avoid,Love
+cuis_japanese,cuis_sushi,Love,Avoid
+cuis_middle_eastern,cuis_lebanese,Love,Avoid
+cuis_lebanese,cuis_middle_eastern,Avoid,Love
+cuis_spanish_tapas,cuis_spanish,Avoid,Love
+cuis_spanish,cuis_spanish_tapas,Love,Avoid
+pref_early_vs_late,att_new_technology,Opposed,Bleeding edge
+att_new_technology,pref_early_vs_late,Bleeding edge,Opposed
+coding_ai_usage_frequency,coding_ai_learning_source,AI-enabled coding tools,Never used
+coding_ai_learning_source,coding_ai_usage_frequency,Never used,AI-enabled coding tools
+developer_help_seeking_preference,coding_ai_usage_frequency,Never used,Ask AI first
+developer_help_seeking_preference,coding_ai_usage_frequency,Actively avoids,Ask AI first
+coding_ai_usage_frequency,developer_help_seeking_preference,Ask AI first,Never used
+coding_ai_usage_frequency,developer_help_seeking_preference,Ask AI first,Actively avoids
+stackoverflow_usage_pattern,developer_help_seeking_preference,Search Stack Overflow / Q&A first,Never used
+developer_help_seeking_preference,stackoverflow_usage_pattern,Never used,Search Stack Overflow / Q&A first
+stackoverflow_usage_pattern,stackoverflow_participation_style,Reads / searches only,Never used
+stackoverflow_usage_pattern,stackoverflow_participation_style,Votes / bookmarks,Never used
+stackoverflow_usage_pattern,stackoverflow_participation_style,Comments / discusses,Never used
+stackoverflow_usage_pattern,stackoverflow_participation_style,Asks questions,Never used
+stackoverflow_usage_pattern,stackoverflow_participation_style,Answers questions,Never used
+stackoverflow_usage_pattern,stackoverflow_participation_style,Moderates / curates,Never used
+stackoverflow_participation_style,stackoverflow_usage_pattern,Never used,Reads / searches only
+stackoverflow_participation_style,stackoverflow_usage_pattern,Never used,Votes / bookmarks
+stackoverflow_participation_style,stackoverflow_usage_pattern,Never used,Comments / discusses
+stackoverflow_participation_style,stackoverflow_usage_pattern,Never used,Asks questions
+stackoverflow_participation_style,stackoverflow_usage_pattern,Never used,Answers questions
+stackoverflow_participation_style,stackoverflow_usage_pattern,Never used,Moderates / curates
+open_source_activity_level,code_review_participation_level,Frequent reviewer,No coding activity
+code_review_participation_level,open_source_activity_level,No coding activity,Frequent reviewer
+open_source_activity_level,coding_ai_usage_frequency,Daily,No coding activity
+coding_ai_usage_frequency,open_source_activity_level,No coding activity,Daily
+pr_collaboration_style,open_source_activity_level,No coding activity,Small focused PRs
+pr_collaboration_style,open_source_activity_level,No coding activity,Moderate scoped PRs
+pr_collaboration_style,open_source_activity_level,No coding activity,Large feature PRs
+pr_collaboration_style,open_source_activity_level,No coding activity,Draft / iterative PRs
+open_source_activity_level,pr_collaboration_style,Small focused PRs,No coding activity
+open_source_activity_level,pr_collaboration_style,Moderate scoped PRs,No coding activity
+open_source_activity_level,pr_collaboration_style,Large feature PRs,No coding activity
+open_source_activity_level,pr_collaboration_style,Draft / iterative PRs,No coding activity
+open_source_activity_level,dev_contribution_context,Open-source / community work,Private-only developer
+open_source_activity_level,dev_contribution_context,Open-source / community work,No coding activity
+dev_contribution_context,open_source_activity_level,Private-only developer,Open-source / community work
+dev_contribution_context,open_source_activity_level,No coding activity,Open-source / community work
+skill_code_review,code_review_participation_level,Frequent reviewer,None
+code_review_participation_level,skill_code_review,None,Frequent reviewer
+skill_coding,skill_code_review,Master,None
+skill_coding,skill_code_review,Advanced,None
+skill_code_review,skill_coding,None,Master
+skill_code_review,skill_coding,None,Advanced
+code_refactoring_frequency,bug_fix_scope_preference,Broad refactor while fixing,Never refactors
+bug_fix_scope_preference,code_refactoring_frequency,Never refactors,Broad refactor while fixing
+code_testing_approach,bug_fix_test_behavior,Always adds regression tests,No tests
+code_testing_approach,bug_fix_test_behavior,No tests,Test-driven development (TDD)
+bug_fix_test_behavior,code_testing_approach,Test-driven development (TDD),No tests
+bug_fix_test_behavior,code_testing_approach,No tests,Always adds regression tests
+code_summary_documentation,code_comment_style,No comments,Always includes file-level TLDR
+code_summary_documentation,code_comment_style,No comments,Always includes function-level TLDR
+code_comment_style,code_summary_documentation,Always includes file-level TLDR,No comments
+code_comment_style,code_summary_documentation,Always includes function-level TLDR,No comments
+coding_tool_security_privacy_blocker,coding_agent_adoption_barrier,Security / privacy / compliance,Not a concern
+coding_agent_adoption_barrier,coding_tool_security_privacy_blocker,Not a concern,Security / privacy / compliance
+fam_auditing,fam_accounting,Aware,Expert
+fam_auditing,fam_accounting,None,Expert
+fam_auditing,fam_accounting,None,Proficient
+fam_accounting,fam_auditing,Expert,Aware
+fam_accounting,fam_auditing,Expert,None
+fam_accounting,fam_auditing,Proficient,None
+fam_statistics,fam_actuarial_science,Expert,Aware
+fam_statistics,fam_actuarial_science,Expert,None
+fam_statistics,fam_actuarial_science,Proficient,None
+fam_actuarial_science,fam_statistics,Aware,Expert
+fam_actuarial_science,fam_statistics,None,Expert
+fam_actuarial_science,fam_statistics,None,Proficient
+fam_astrophysics,fam_astronomy,Aware,Expert
+fam_astrophysics,fam_astronomy,None,Expert
+fam_astrophysics,fam_astronomy,None,Proficient
+fam_astronomy,fam_astrophysics,Expert,Aware
+fam_astronomy,fam_astrophysics,Expert,None
+fam_astronomy,fam_astrophysics,Proficient,None
+fam_machine_learning,fam_deep_learning,Expert,Aware
+fam_machine_learning,fam_deep_learning,Expert,None
+fam_machine_learning,fam_deep_learning,Proficient,None
+fam_deep_learning,fam_machine_learning,Aware,Expert
+fam_deep_learning,fam_machine_learning,None,Expert
+fam_deep_learning,fam_machine_learning,None,Proficient
+skill_financial_modeling,fam_corporate_finance,Aware,Master
+skill_financial_modeling,fam_corporate_finance,None,Master
+skill_financial_modeling,fam_corporate_finance,None,Advanced
+fam_corporate_finance,skill_financial_modeling,Master,Aware
+fam_corporate_finance,skill_financial_modeling,Master,None
+fam_corporate_finance,skill_financial_modeling,Advanced,None
+skill_audio_production,fam_music_production,Aware,Master
+skill_audio_production,fam_music_production,None,Master
+skill_audio_production,fam_music_production,None,Advanced
+fam_music_production,skill_audio_production,Master,Aware
+fam_music_production,skill_audio_production,Master,None
+fam_music_production,skill_audio_production,Advanced,None
+skill_photography,fam_photography,Aware,Master
+skill_photography,fam_photography,None,Master
+skill_photography,fam_photography,None,Advanced
+fam_photography,skill_photography,Master,Aware
+fam_photography,skill_photography,Master,None
+fam_photography,skill_photography,Advanced,None
+skill_project_management,fam_project_management,Aware,Master
+skill_project_management,fam_project_management,None,Master
+skill_project_management,fam_project_management,None,Advanced
+fam_project_management,skill_project_management,Master,Aware
+fam_project_management,skill_project_management,Master,None
+fam_project_management,skill_project_management,Advanced,None
+skill_audio_production,fam_sound_engineering,Aware,Master
+skill_audio_production,fam_sound_engineering,None,Master
+skill_audio_production,fam_sound_engineering,None,Advanced
+fam_sound_engineering,skill_audio_production,Master,Aware
+fam_sound_engineering,skill_audio_production,Master,None
+fam_sound_engineering,skill_audio_production,Advanced,None
+skill_statistical_modeling,fam_statistics,Aware,Master
+skill_statistical_modeling,fam_statistics,None,Master
+skill_statistical_modeling,fam_statistics,None,Advanced
+fam_statistics,skill_statistical_modeling,Master,Aware
+fam_statistics,skill_statistical_modeling,Master,None
+fam_statistics,skill_statistical_modeling,Advanced,None
+subject_specialty,fam_agronomy,None,Agronomy
+fam_agronomy,subject_specialty,Agronomy,None
+subject_specialty,fam_behavioral_economics,None,Behavioral economics
+fam_behavioral_economics,subject_specialty,Behavioral economics,None
+subject_specialty,fam_cardiology,None,Cardiology
+fam_cardiology,subject_specialty,Cardiology,None
+subject_specialty,fam_comparative_literature,None,Comparative literature
+fam_comparative_literature,subject_specialty,Comparative literature,None
+subject_specialty,fam_constitutional_law,None,Constitutional law
+fam_constitutional_law,subject_specialty,Constitutional law,None
+subject_specialty,fam_culinary_arts,None,Culinary arts
+fam_culinary_arts,subject_specialty,Culinary arts,None
+subject_specialty,fam_curriculum_design,None,Curriculum design
+fam_curriculum_design,subject_specialty,Curriculum design,None
+subject_specialty,fam_journalism,None,Investigative reporting
+fam_journalism,subject_specialty,Investigative reporting,None
+subject_specialty,fam_machine_learning,None,Machine learning
+fam_machine_learning,subject_specialty,Machine learning,None
+subject_specialty,fam_molecular_biology,None,Molecular biology
+fam_molecular_biology,subject_specialty,Molecular biology,None
+subject_specialty,fam_operations_management,None,Operations
+fam_operations_management,subject_specialty,Operations,None
+subject_specialty,fam_quantitative_trading,None,Quant trading
+fam_quantitative_trading,subject_specialty,Quant trading,None
+subject_specialty,fam_robotics,None,Robotics
+fam_robotics,subject_specialty,Robotics,None
+subject_specialty,fam_structural_engineering,None,Structural engineering
+fam_structural_engineering,subject_specialty,Structural engineering,None
+subject_specialty,fam_urban_planning,None,Urban planning
+fam_urban_planning,subject_specialty,Urban planning,None
+ind_accounting,fam_accounting,None,Veteran
+fam_accounting,ind_accounting,Veteran,None
+ind_insurance,fam_insurance,None,Veteran
+fam_insurance,ind_insurance,Veteran,None
+ind_logistics,fam_logistics,None,Veteran
+fam_logistics,ind_logistics,Veteran,None
+ind_mining,fam_mining,None,Veteran
+fam_mining,ind_mining,Veteran,None
+ind_real_estate,fam_real_estate,None,Veteran
+fam_real_estate,ind_real_estate,Veteran,None
+ind_textiles,fam_textiles,None,Veteran
+fam_textiles,ind_textiles,Veteran,None
+skill_financial_modeling,cog_numeracy_comfort,None,Master
+skill_financial_modeling,cog_numeracy_comfort,None,Advanced
+cog_numeracy_comfort,skill_financial_modeling,Master,None
+cog_numeracy_comfort,skill_financial_modeling,Advanced,None
+skill_mathematics,cog_numeracy_comfort,None,Master
+skill_mathematics,cog_numeracy_comfort,None,Advanced
+cog_numeracy_comfort,skill_mathematics,Master,None
+cog_numeracy_comfort,skill_mathematics,Advanced,None
+skill_mental_arithmetic,cog_numeracy_comfort,None,Master
+skill_mental_arithmetic,cog_numeracy_comfort,None,Advanced
+cog_numeracy_comfort,skill_mental_arithmetic,Master,None
+cog_numeracy_comfort,skill_mental_arithmetic,Advanced,None
+skill_statistical_modeling,cog_numeracy_comfort,None,Master
+skill_statistical_modeling,cog_numeracy_comfort,None,Advanced
+cog_numeracy_comfort,skill_statistical_modeling,Master,None
+cog_numeracy_comfort,skill_statistical_modeling,Advanced,None
+tool_excel,skill_spreadsheet_modeling,None,Power user
+skill_spreadsheet_modeling,tool_excel,Power user,None
+tool_google_sheets,skill_spreadsheet_modeling,None,Power user
+skill_spreadsheet_modeling,tool_google_sheets,Power user,None
+tool_premiere_pro,skill_video_editing,None,Power user
+skill_video_editing,tool_premiere_pro,Power user,None
+tool_quickbooks,fam_accounting,None,Power user
+fam_accounting,tool_quickbooks,Power user,None
+tool_xero,fam_accounting,None,Power user
+fam_accounting,tool_xero,Power user,None
+neurotype,bfi2_facet_anxiety,Very low,Anxiety-prone
+neurotype,big5_anxiety,Very low,Anxiety-prone
+decision_style,pref_logic_vs_intuition,Pure logic,Intuitive
+decision_style,pref_logic_vs_intuition,Pure intuition,Analytical
+register,cog_formality,Very formal,Colloquial
+register,cog_formality,Slangy,Formal / standard
+cog_formality,register,Formal / standard,Slangy
+cog_formality,register,Colloquial,Very formal
+val_privacy,att_data_privacy,Enthusiast,Irrelevant
+val_privacy,att_data_privacy,Opposed,Core value
+topic_sports,sport_american_football,Follow,Averse
+sport_american_football,topic_sports,Averse,Follow
+topic_sports,sport_archery,Follow,Averse
+sport_archery,topic_sports,Averse,Follow
+topic_sports,sport_badminton,Follow,Averse
+sport_badminton,topic_sports,Averse,Follow
+topic_sports,sport_baseball,Follow,Averse
+sport_baseball,topic_sports,Averse,Follow
+topic_sports,sport_basketball,Follow,Averse
+sport_basketball,topic_sports,Averse,Follow
+topic_sports,sport_bowling,Follow,Averse
+sport_bowling,topic_sports,Averse,Follow
+topic_sports,sport_boxing,Follow,Averse
+sport_boxing,topic_sports,Averse,Follow
+topic_sports,sport_climbing,Follow,Averse
+sport_climbing,topic_sports,Averse,Follow
+topic_sports,sport_cricket,Follow,Averse
+sport_cricket,topic_sports,Averse,Follow
+topic_sports,sport_crossfit,Follow,Averse
+sport_crossfit,topic_sports,Averse,Follow
+topic_sports,sport_cycling,Follow,Averse
+sport_cycling,topic_sports,Averse,Follow
+topic_sports,sport_darts,Follow,Averse
+sport_darts,topic_sports,Averse,Follow
+topic_sports,sport_equestrian,Follow,Averse
+sport_equestrian,topic_sports,Averse,Follow
+topic_sports,sport_fencing,Follow,Averse
+sport_fencing,topic_sports,Averse,Follow
+topic_sports,sport_golf,Follow,Averse
+sport_golf,topic_sports,Averse,Follow
+topic_sports,sport_gymnastics,Follow,Averse
+sport_gymnastics,topic_sports,Averse,Follow
+topic_sports,sport_hockey,Follow,Averse
+sport_hockey,topic_sports,Averse,Follow
+topic_sports,sport_martial_arts,Follow,Averse
+sport_martial_arts,topic_sports,Averse,Follow
+topic_sports,sport_mma,Follow,Averse
+sport_mma,topic_sports,Averse,Follow
+topic_sports,sport_rowing,Follow,Averse
+sport_rowing,topic_sports,Averse,Follow
+topic_sports,sport_rugby,Follow,Averse
+sport_rugby,topic_sports,Averse,Follow
+topic_sports,sport_running,Follow,Averse
+sport_running,topic_sports,Averse,Follow
+topic_sports,sport_sailing,Follow,Averse
+sport_sailing,topic_sports,Averse,Follow
+topic_sports,sport_skateboarding,Follow,Averse
+sport_skateboarding,topic_sports,Averse,Follow
+topic_sports,sport_skiing,Follow,Averse
+sport_skiing,topic_sports,Averse,Follow
+topic_sports,sport_snowboarding,Follow,Averse
+sport_snowboarding,topic_sports,Averse,Follow
+topic_sports,sport_soccer,Follow,Averse
+sport_soccer,topic_sports,Averse,Follow
+topic_sports,sport_squash,Follow,Averse
+sport_squash,topic_sports,Averse,Follow
+topic_sports,sport_surfing,Follow,Averse
+sport_surfing,topic_sports,Averse,Follow
+topic_sports,sport_swimming,Follow,Averse
+sport_swimming,topic_sports,Averse,Follow
+topic_sports,sport_table_tennis,Follow,Averse
+sport_table_tennis,topic_sports,Averse,Follow
+topic_sports,sport_tennis,Follow,Averse
+sport_tennis,topic_sports,Averse,Follow
+topic_sports,sport_track_field,Follow,Averse
+sport_track_field,topic_sports,Averse,Follow
+topic_sports,sport_triathlon,Follow,Averse
+sport_triathlon,topic_sports,Averse,Follow
+topic_sports,sport_volleyball,Follow,Averse
+sport_volleyball,topic_sports,Averse,Follow
+topic_sports,sport_weightlifting,Follow,Averse
+sport_weightlifting,topic_sports,Averse,Follow
+topic_sports,sport_wrestling,Follow,Averse
+sport_wrestling,topic_sports,Averse,Follow
+topic_film,filmg_action,Love,Averse
+filmg_action,topic_film,Averse,Love
+topic_film,filmg_adventure,Love,Averse
+filmg_adventure,topic_film,Averse,Love
+topic_film,filmg_animation,Love,Averse
+filmg_animation,topic_film,Averse,Love
+topic_film,filmg_art_house,Love,Averse
+filmg_art_house,topic_film,Averse,Love
+topic_film,filmg_biopic,Love,Averse
+filmg_biopic,topic_film,Averse,Love
+topic_film,filmg_comedy,Love,Averse
+filmg_comedy,topic_film,Averse,Love
+topic_film,filmg_comedy_drama,Love,Averse
+filmg_comedy_drama,topic_film,Averse,Love
+topic_film,filmg_crime,Love,Averse
+filmg_crime,topic_film,Averse,Love
+topic_film,filmg_disaster,Love,Averse
+filmg_disaster,topic_film,Averse,Love
+topic_film,filmg_documentary,Love,Averse
+filmg_documentary,topic_film,Averse,Love
+topic_film,filmg_drama,Love,Averse
+filmg_drama,topic_film,Averse,Love
+topic_film,filmg_fantasy,Love,Averse
+filmg_fantasy,topic_film,Averse,Love
+topic_film,filmg_historical,Love,Averse
+filmg_historical,topic_film,Averse,Love
+topic_film,filmg_horror,Love,Averse
+filmg_horror,topic_film,Averse,Love
+topic_film,filmg_indie_film,Love,Averse
+filmg_indie_film,topic_film,Averse,Love
+topic_film,filmg_musical,Love,Averse
+filmg_musical,topic_film,Averse,Love
+topic_film,filmg_mystery,Love,Averse
+filmg_mystery,topic_film,Averse,Love
+topic_film,filmg_noir,Love,Averse
+filmg_noir,topic_film,Averse,Love
+topic_film,filmg_romance,Love,Averse
+filmg_romance,topic_film,Averse,Love
+topic_film,filmg_sci_fi,Love,Averse
+filmg_sci_fi,topic_film,Averse,Love
+topic_film,filmg_superhero,Love,Averse
+filmg_superhero,topic_film,Averse,Love
+topic_film,filmg_thriller,Love,Averse
+filmg_thriller,topic_film,Averse,Love
+topic_film,filmg_war,Love,Averse
+filmg_war,topic_film,Averse,Love
+topic_film,filmg_western,Love,Averse
+filmg_western,topic_film,Averse,Love
+topic_music,musg_afrobeats,Love,Averse
+musg_afrobeats,topic_music,Averse,Love
+topic_music,musg_ambient,Love,Averse
+musg_ambient,topic_music,Averse,Love
+topic_music,musg_bluegrass,Love,Averse
+musg_bluegrass,topic_music,Averse,Love
+topic_music,musg_blues,Love,Averse
+musg_blues,topic_music,Averse,Love
+topic_music,musg_bollywood,Love,Averse
+musg_bollywood,topic_music,Averse,Love
+topic_music,musg_classical,Love,Averse
+topic_music,musg_country,Love,Averse
+musg_country,topic_music,Averse,Love
+topic_music,musg_disco,Love,Averse
+musg_disco,topic_music,Averse,Love
+topic_music,musg_drum_bass,Love,Averse
+musg_drum_bass,topic_music,Averse,Love
+topic_music,musg_electronic,Love,Averse
+musg_electronic,topic_music,Averse,Love
+topic_music,musg_folk,Love,Averse
+musg_folk,topic_music,Averse,Love
+topic_music,musg_funk,Love,Averse
+musg_funk,topic_music,Averse,Love
+topic_music,musg_gospel,Love,Averse
+musg_gospel,topic_music,Averse,Love
+topic_music,musg_hip_hop,Love,Averse
+musg_hip_hop,topic_music,Averse,Love
+topic_music,musg_house,Love,Averse
+musg_house,topic_music,Averse,Love
+topic_music,musg_indie,Love,Averse
+musg_indie,topic_music,Averse,Love
+topic_music,musg_j_pop,Love,Averse
+musg_j_pop,topic_music,Averse,Love
+topic_music,musg_jazz,Love,Averse
+musg_jazz,topic_music,Averse,Love
+topic_music,musg_k_pop,Love,Averse
+musg_k_pop,topic_music,Averse,Love
+topic_music,musg_latin,Love,Averse
+musg_latin,topic_music,Averse,Love
+topic_music,musg_lo_fi,Love,Averse
+musg_lo_fi,topic_music,Averse,Love
+topic_music,musg_metal,Love,Averse
+musg_metal,topic_music,Averse,Love
+topic_music,musg_opera,Love,Averse
+musg_opera,topic_music,Averse,Love
+topic_music,musg_pop,Love,Averse
+topic_music,musg_punk,Love,Averse
+musg_punk,topic_music,Averse,Love
+topic_music,musg_r_b,Love,Averse
+musg_r_b,topic_music,Averse,Love
+topic_music,musg_reggae,Love,Averse
+musg_reggae,topic_music,Averse,Love
+topic_music,musg_reggaeton,Love,Averse
+musg_reggaeton,topic_music,Averse,Love
+topic_music,musg_rock,Love,Averse
+topic_music,musg_ska,Love,Averse
+musg_ska,topic_music,Averse,Love
+topic_music,musg_soul,Love,Averse
+musg_soul,topic_music,Averse,Love
+topic_music,musg_synthwave,Love,Averse
+musg_synthwave,topic_music,Averse,Love
+topic_music,musg_techno,Love,Averse
+musg_techno,topic_music,Averse,Love
+topic_music,musg_trance,Love,Averse
+musg_trance,topic_music,Averse,Love
+topic_music,musg_trap,Love,Averse
+musg_trap,topic_music,Averse,Love
+topic_comics,bookg_graphic_novels,Love,Averse
+bookg_graphic_novels,topic_comics,Averse,Love
+topic_literature,bookg_literary_fiction,Love,Averse
+bookg_literary_fiction,topic_literature,Averse,Love
+topic_science,bookg_popular_science,Love,Averse
+bookg_popular_science,topic_science,Averse,Love
+topic_self_improvement,bookg_self_help,Love,Averse
+bookg_self_help,topic_self_improvement,Averse,Love
+topic_travel,bookg_travel_writing,Love,Averse
+bookg_travel_writing,topic_travel,Averse,Love
+acad_environmental_science,topic_environment,Passionate,Averse
+acad_environmental_science,topic_environment,Averse,Passionate
+topic_history,acad_world_history,Passionate,Averse
+topic_history,acad_world_history,Averse,Passionate
+acad_world_history,topic_history,Passionate,Averse
+acad_world_history,topic_history,Averse,Passionate
+lstyle_shopping_style,att_brand_loyalty,Opposed,Brand loyal
+att_brand_loyalty,lstyle_shopping_style,Brand loyal,Opposed
+coding_tool_open_source_importance,att_open_source,Opposed,Critical
+att_open_source,coding_tool_open_source_importance,Critical,Opposed
+topic_cryptocurrency,att_cryptocurrency,Enthusiast,Averse
+att_cryptocurrency,topic_cryptocurrency,Averse,Enthusiast
+topic_technology,att_new_technology,Enthusiast,Averse
+att_new_technology,topic_technology,Averse,Enthusiast
+topic_religion,att_organized_religion,Enthusiast,Averse
+topic_social_media,att_social_media,Enthusiast,Averse
+att_social_media,topic_social_media,Averse,Enthusiast
+topic_space,att_space_exploration,Enthusiast,Averse
+att_space_exploration,topic_space,Averse,Enthusiast
+topic_activism,demo_political_engagement,Activist,Averse
+hob_paragliding,dospert_recreational_risk_tolerance,Very low,Avid
+hob_paragliding,dospert_recreational_risk_tolerance,Very low,Active
+dospert_recreational_risk_tolerance,hob_paragliding,Avid,Very low
+dospert_recreational_risk_tolerance,hob_paragliding,Active,Very low
+hob_skydiving,dospert_recreational_risk_tolerance,Very low,Avid
+hob_skydiving,dospert_recreational_risk_tolerance,Very low,Active
+dospert_recreational_risk_tolerance,hob_skydiving,Avid,Very low
+dospert_recreational_risk_tolerance,hob_skydiving,Active,Very low

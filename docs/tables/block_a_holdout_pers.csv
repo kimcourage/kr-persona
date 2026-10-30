@@ -1,0 +1,17 @@
+﻿quantity,training,held_out
+R2 O,0.05,0.0472
+R2 C,0.0383,0.0371
+R2 E,0.0077,-0.0014
+R2 A,0.0692,0.0725
+R2 N,0.0281,0.0284
+residual corr O-C,0.1199,0.0737
+residual corr O-E,0.3038,0.2605
+residual corr O-A,-0.0271,-0.0672
+residual corr O-N,0.0265,0.0366
+residual corr C-E,0.0354,0.0794
+residual corr C-A,0.1355,0.0616
+residual corr C-N,-0.2682,-0.2091
+residual corr E-A,-0.1096,-0.1192
+residual corr E-N,0.1365,0.0889
+residual corr A-N,-0.2083,-0.2127
+n,3516.0,907.0

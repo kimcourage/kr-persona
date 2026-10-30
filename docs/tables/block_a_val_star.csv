@@ -1,0 +1,21 @@
+﻿attribute,value,values,prior,cuts,loading
+val_creativity_self_expression,self_direction,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_independence,self_direction,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_personal_freedom,self_direction,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_adventure,stimulation,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_fun_enjoyment,hedonism,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_achievement,achievement,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_career_success,achievement,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_power_influence,power,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_wealth,power,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_social_status,power,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_recognition,power,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_security_stability,security,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_order_structure,security,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_tradition,tradition,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_helping_others,benevolence,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_integrity_honesty,benevolence,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_loyalty,benevolence,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_equality,universalism,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_justice_fairness,universalism,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75
+val_beauty_aesthetics,universalism,Core value / Important / Moderate / Minor / Irrelevant,0.080 / 0.325 / 0.365 / 0.180 / 0.050,-1.6449 / -0.7388 / 0.2404 / 1.4051,0.75

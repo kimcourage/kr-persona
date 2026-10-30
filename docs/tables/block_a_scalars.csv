@@ -1,0 +1,41 @@
+﻿block,model,quantity,value
+pers,100%,n,4423
+pers,100%,pd_fixed,False
+pers,80%,n,3516
+pers,80%,pd_fixed,False
+values,100%,n,1177
+values,100%,sigma2,0.05293617896650084
+values,100%,sigma2_theory_angles,0.040032952192735144
+values,100%,psi2_mean,0.3550416493535268
+values,100%,r0,0.1297525877435095
+values,100%,sigma0_2,0.35885162578542357
+values,100%,heldout_ss_theory,2.5922331917438908
+values,100%,heldout_ss_mds,2.473854928973748
+values,100%,heldout_mds_better,1.0
+values,100%,link_shrink,1.0
+values,100%,mds_eigenvalues,2.102 1.499 1.344 1.033 0.951 0.833 0.818 0.736 0.667 -0.0
+values,100%,C_Gamma,"[[0.00245, 0.00427], [0.00427, 0.01344]]"
+values,80%,n,963
+values,80%,sigma2,0.05956605741969943
+values,80%,sigma2_theory_angles,0.042629359226591605
+values,80%,psi2_mean,0.35905953714166305
+values,80%,r0,0.14228957377083684
+values,80%,sigma0_2,0.3583215323291588
+values,80%,heldout_ss_theory,2.5924918518805358
+values,80%,heldout_ss_mds,2.489031487800762
+values,80%,heldout_mds_better,0.98
+values,80%,link_shrink,1.0
+values,80%,mds_eigenvalues,2.085 1.555 1.353 1.005 0.938 0.824 0.804 0.734 0.685 -0.0
+values,80%,C_Gamma,"[[0.00217, 0.00338], [0.00338, 0.01416]]"
+dev,100%,n_professionals,40320
+dev,100%,share_in_professionals_class0,0.8923558368534513
+dev,100%,share_in_professionals_class1,0.08985023030242921
+dev,100%,share_in_professionals_class2,0.01779393284411933
+dev,100%,share_of_employed_class1,0.02052491941262997
+dev,100%,share_of_employed_class2,0.0040647534951218115
+dev,80%,n_professionals,32291
+dev,80%,share_in_professionals_class0,0.8888645960077803
+dev,80%,share_in_professionals_class1,0.09227752993538717
+dev,80%,share_in_professionals_class2,0.018857874056832636
+dev,80%,share_of_employed_class1,0.02110981308247881
+dev,80%,share_of_employed_class2,0.0043140101035582966

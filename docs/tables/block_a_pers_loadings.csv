@@ -1,0 +1,51 @@
+﻿instrument,domain,facet,attribute,loading,source,same_facet_partner,domain_only_corr,shared_rho,corr_with_partner
+BFI-2,O,intellectual_curiosity,bfi2_facet_intellectual_curiosity,0.86,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,O,aesthetic_sensitivity,bfi2_facet_aesthetic_sensitivity,0.58,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,O,creative_imagination,bfi2_facet_creative_imagination,0.64,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+IPIP-NEO,O,imagination,big5_imagination,0.72,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_creative_imagination,0.461,0.261,0.6
+IPIP-NEO,O,artistic_interest,big5_artistic_interest,0.63,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_aesthetic_sensitivity,0.365,0.371,0.6
+IPIP-NEO,O,emotionality,big5_emotionality,0.63,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,O,adventurousness,big5_adventurousness,0.52,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,O,intellect,big5_intellect,0.66,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_intellectual_curiosity,0.568,0.085,0.6
+IPIP-NEO,O,liberalism,big5_liberalism,0.34,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+BFI-2 domain,O,(mean of 3 facets),bfi2_domain_open_mindedness,0.861,"derived: sd = 0.8056, loading = corr(z_d, eta_d)",,,,
+BFI-2,C,organization,bfi2_facet_organization,0.79,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,C,productiveness,bfi2_facet_productiveness,0.76,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,C,responsibility,bfi2_facet_responsibility,0.65,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+IPIP-NEO,C,self_efficacy,big5_self_efficacy,0.55,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,C,orderliness,big5_orderliness,0.64,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_organization,0.506,0.2,0.6
+IPIP-NEO,C,dutifulness,big5_dutifulness,0.47,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_responsibility,0.305,0.439,0.6
+IPIP-NEO,C,achievement_striving,big5_achievement_striving,0.7,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_productiveness,0.532,0.147,0.6
+IPIP-NEO,C,self_discipline,big5_self_discipline,0.73,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,C,cautiousness,big5_cautiousness,0.55,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+BFI-2 domain,C,(mean of 3 facets),bfi2_domain_conscientiousness,0.882,"derived: sd = 0.8311, loading = corr(z_d, eta_d)",,,,
+BFI-2,E,sociability,bfi2_facet_sociability,0.86,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,E,assertiveness,bfi2_facet_assertiveness,0.55,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,E,energy_level,bfi2_facet_energy_level,0.72,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+IPIP-NEO,E,friendliness,big5_friendliness,0.83,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,E,gregariousness,big5_gregariousness,0.91,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_sociability,0.783,0.0,0.783
+IPIP-NEO,E,assertiveness,big5_assertiveness,0.58,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_assertiveness,0.319,0.413,0.6
+IPIP-NEO,E,activity_level,big5_activity_level,0.35,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_energy_level,0.252,0.535,0.6
+IPIP-NEO,E,excitement_seeking,big5_excitement_seeking,0.48,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,E,cheerfulness,big5_cheerfulness,0.53,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+BFI-2 domain,E,(mean of 3 facets),bfi2_domain_extraversion,0.871,"derived: sd = 0.8149, loading = corr(z_d, eta_d)",,,,
+BFI-2,A,compassion,bfi2_facet_compassion,0.72,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,A,respectfulness,bfi2_facet_respectfulness,0.65,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,A,trust,bfi2_facet_trust,0.54,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+IPIP-NEO,A,trust,big5_trust,0.41,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_trust,0.221,0.493,0.6
+IPIP-NEO,A,morality,big5_morality,0.69,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,A,altruism,big5_altruism,0.6,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,A,cooperation,big5_cooperation,0.74,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_respectfulness,0.481,0.233,0.6
+IPIP-NEO,A,modesty,big5_modesty,0.32,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,A,sympathy,big5_sympathy,0.6,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_compassion,0.432,0.303,0.6
+BFI-2 domain,A,(mean of 3 facets),bfi2_domain_agreeableness,0.821,"derived: sd = 0.7757, loading = corr(z_d, eta_d)",,,,
+BFI-2,N,anxiety,bfi2_facet_anxiety,0.9,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,N,depression,bfi2_facet_depression,0.81,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+BFI-2,N,emotional_volatility,bfi2_facet_emotional_volatility,0.8,"Choi et al. (2025) Table 3, KOR employee T1 (n = 856)",,,,
+IPIP-NEO,N,anxiety,big5_anxiety,0.86,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_anxiety,0.774,0.0,0.774
+IPIP-NEO,N,anger,big5_anger,0.66,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_emotional_volatility,0.528,0.16,0.6
+IPIP-NEO,N,depression,big5_depression,0.62,"장승민 (2017) 표 7, 성인 표본 (N = 334)",bfi2_facet_depression,0.502,0.213,0.6
+IPIP-NEO,N,self_consciousness,big5_self_consciousness,0.58,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,N,immoderation,big5_immoderation,0.33,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+IPIP-NEO,N,vulnerability,big5_vulnerability,0.71,"장승민 (2017) 표 7, 성인 표본 (N = 334)",,,,
+BFI-2 domain,N,(mean of 3 facets),bfi2_domain_negative_emotionality,0.936,"derived: sd = 0.8941, loading = corr(z_d, eta_d)",,,,

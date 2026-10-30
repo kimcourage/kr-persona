@@ -1,0 +1,27 @@
+# Raw data files, relative to data_dir (config/paths.toml).
+# The files are not part of this repository; see docs/03_자료.md for how to obtain them.
+# When a source is replaced by a newer release, change the file name here only.
+
+[census2020]
+person = "인구주택총조사/2020_2__표본_인구_20261027_16151.csv"
+household = "인구주택총조사/2020_2%_표본_가구주택_20261028_81963.csv"
+
+[knhanes2022]
+all = "국민건강영양조사/HN22_ALL.sav"
+
+[hfcs2025]
+household = "가계금융복지조사/2025_가구마스터_20261028_54700.csv"
+member = "가계금융복지조사/2025_가구원_20261028_24426.csv"
+
+[eaps2025h1]
+type_a = "지역별고용조사/2025_상반기(A형_시군구_대분류)(2021~)_20261029_96201.csv"
+type_b = "지역별고용조사/2025_상반기(B형_전국_소분류)_20261028_26742.csv"
+
+[kgss]
+all = "한국종합사회조사/2003-2025_KGSS_kor_public_v2.sav"
+
+[klosa]
+wave10 = "고령화연구패널/w10_20260413.sav"
+
+[oecd_bfi2]
+xlsx = "OECD_BFI-2s.xlsx"

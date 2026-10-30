@@ -1,0 +1,134 @@
+﻿속성,개발자가 아닌 사람의 값
+ai_task_code_generation,Not applicable
+ai_task_code_review,Not applicable
+ai_task_codebase_learning,Not applicable
+ai_task_data_generation_analytics,Not applicable
+ai_task_debugging_fixing,Not applicable
+ai_task_deployment_monitoring,Not applicable
+ai_task_documentation,Not applicable
+ai_task_learning_concepts,Not applicable
+ai_task_project_planning,Not applicable
+ai_task_refactoring,Not applicable
+ai_task_search_answers,Not applicable
+ai_task_testing,Not applicable
+code_observability_habit,Not applicable
+code_review_participation_level,Rare / no review
+coding_agent_failure_tolerance,Does not use agents
+coding_agent_usage_frequency,No plans
+coding_ai_learning_source,Not learning AI tooling
+coding_ai_usage_frequency,Never used
+dev_ic_manager_orientation,Not applicable
+github_contribution_mode,Rare GitHub user
+issue_engagement_style,Rare issue usage
+open_source_activity_level,No coding activity
+pr_collaboration_style,Rare PR usage
+prog_assembly,None
+prog_bash,None
+prog_c,None
+prog_clojure,None
+prog_cobol,None
+prog_dart,None
+prog_elixir,None
+prog_erlang,None
+prog_f,None
+prog_fortran,None
+prog_go,None
+prog_graphql,None
+prog_haskell,None
+prog_java,None
+prog_javascript,None
+prog_julia,None
+prog_kotlin,None
+prog_lua,None
+prog_matlab,None
+prog_objective_c,None
+prog_ocaml,None
+prog_perl,None
+prog_php,None
+prog_powershell,None
+prog_python,None
+prog_r,None
+prog_ruby,None
+prog_rust,None
+prog_scala,None
+prog_solidity,None
+prog_sql,None
+prog_swift,None
+prog_typescript,None
+release_maintenance_orientation,Not involved in releases
+skill_coding,None
+stackoverflow_participation_style,Does not participate
+stackoverflow_usage_pattern,Never used
+tool_aws,Never used
+tool_azure,Never used
+tool_docker,Never used
+tool_git,Never used
+tool_github,Never used
+tool_github_copilot,Never used
+tool_gitlab,Never used
+tool_google_cloud,Never used
+tool_jetbrains_ides,Never used
+tool_jupyter,Never used
+tool_kubernetes,Never used
+tool_linear,Never used
+tool_linux_cli,Never used
+tool_matlab,Never used
+tool_postman,Never used
+tool_python,Never used
+tool_r,Never used
+tool_sql,Never used
+tool_terraform,Never used
+tool_unity,Never used
+tool_unreal_engine,Never used
+tool_vim,Never used
+tool_vs_code,Never used
+bug_fix_scope_preference,Not applicable (출력만 바꿈)
+bug_fix_test_behavior,Not applicable (출력만 바꿈)
+code_abstraction_level,Not applicable (출력만 바꿈)
+code_api_design_orientation,Not applicable (출력만 바꿈)
+code_comment_style,Not applicable (출력만 바꿈)
+code_complexity_tolerance,Not applicable (출력만 바꿈)
+code_dependencies_approach,Not applicable (출력만 바꿈)
+code_error_handling,Not applicable (출력만 바꿈)
+code_indentation_style,Not applicable (출력만 바꿈)
+code_modularity_preference,Not applicable (출력만 바꿈)
+code_naming_verbosity,Not applicable (출력만 바꿈)
+code_performance_priority,Not applicable (출력만 바꿈)
+code_refactoring_frequency,Not applicable (출력만 바꿈)
+code_security_review_habit,Not applicable (출력만 바꿈)
+code_structure_preference,Not applicable (출력만 바꿈)
+code_summary_documentation,Not applicable (출력만 바꿈)
+code_testing_approach,Not applicable (출력만 바꿈)
+code_type_system_orientation,Not applicable (출력만 바꿈)
+codebase_onboarding_style,Not applicable (출력만 바꿈)
+coding_agent_adoption_barrier,Not applicable (출력만 바꿈)
+coding_agent_autonomy_preference,Not applicable (출력만 바꿈)
+coding_agent_context_sharing_comfort,Not applicable (출력만 바꿈)
+coding_agent_control_expectation,Not applicable (출력만 바꿈)
+coding_agent_explanation_preference,Not applicable (출력만 바꿈)
+coding_agent_memory_preference,Not applicable (출력만 바꿈)
+coding_agent_security_expectation,Not applicable (출력만 바꿈)
+coding_agent_tool_integration_preference,Not applicable (출력만 바꿈)
+coding_agent_workflow_impact,Not applicable (출력만 바꿈)
+coding_ai_complexity_comfort,Not applicable (출력만 바꿈)
+coding_ai_job_threat_perception,Not applicable (출력만 바꿈)
+coding_ai_output_trust,Not applicable (출력만 바꿈)
+coding_ai_sentiment,Not applicable (출력만 바꿈)
+coding_tool_ai_capability_importance,Not applicable (출력만 바꿈)
+coding_tool_alternative_sensitivity,Not applicable (출력만 바꿈)
+coding_tool_api_completeness_importance,Not applicable (출력만 바꿈)
+coding_tool_ethics_blocker,Not applicable (출력만 바꿈)
+coding_tool_obsolescence_blocker,Not applicable (출력만 바꿈)
+coding_tool_open_source_importance,Not applicable (출력만 바꿈)
+coding_tool_reliability_latency_importance,Not applicable (출력만 바꿈)
+coding_tool_security_privacy_blocker,Not applicable (출력만 바꿈)
+commit_cadence_style,Not applicable (출력만 바꿈)
+debugging_strategy,Not applicable (출력만 바꿈)
+dev_contribution_context,Not applicable (출력만 바꿈)
+dev_primary_work_surface,Not applicable (출력만 바꿈)
+dev_role_archetype,Not applicable (출력만 바꿈)
+dev_toolchain_complexity,Not applicable (출력만 바꿈)
+developer_help_seeking_preference,Not applicable (출력만 바꿈)
+developer_problem_profile,Not applicable (출력만 바꿈)
+future_developer_skill_belief,Not applicable (출력만 바꿈)
+human_help_boundary_for_ai_coding,Not applicable (출력만 바꿈)

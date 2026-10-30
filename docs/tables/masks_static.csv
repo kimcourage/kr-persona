@@ -1,0 +1,428 @@
+﻿출처,대상 속성,조건,효과
+0단계 생성기(generate/base.py),lang_english,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_mandarin,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_cantonese,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_spanish,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_hindi,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_arabic,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_french,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_portuguese,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_bengali,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_russian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_japanese,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_german,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_italian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_turkish,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_vietnamese,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_thai,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_indonesian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_malay,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_swahili,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_dutch,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_polish,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_ukrainian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_persian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_hebrew,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_greek,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_czech,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_hungarian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_romanian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_swedish,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_norwegian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_danish,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_finnish,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_tagalog,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_urdu,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_tamil,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_telugu,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_marathi,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_punjabi,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_gujarati,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_hausa,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_yoruba,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_igbo,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_amharic,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_zulu,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_afrikaans,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_serbian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_croatian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_bulgarian,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),lang_slovak,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_united_states,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_canada,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_mexico,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_brazil,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_argentina,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_united_kingdom,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_france,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_germany,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_italy,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_spain,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_netherlands,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_sweden,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_poland,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_russia,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_turkey,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_egypt,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_saudi_arabia,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_uae,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_israel,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_iran,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_nigeria,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_kenya,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_south_africa,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_ethiopia,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_india,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_pakistan,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_bangladesh,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_china,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_japan,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_vietnam,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_thailand,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_indonesia,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_philippines,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_australia,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_new_zealand,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_singapore,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_malaysia,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_greece,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_portugal,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),english_proficiency,region ∈ {East Asia},금지: Native
+0단계 생성기(generate/base.py),cult_united_states,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_canada,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_mexico,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_brazil,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_argentina,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_united_kingdom,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_france,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_germany,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_italy,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_spain,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_netherlands,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_sweden,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_poland,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_russia,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_turkey,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_egypt,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_saudi_arabia,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_uae,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_israel,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_iran,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_nigeria,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_kenya,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_south_africa,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_ethiopia,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_india,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_pakistan,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_bangladesh,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_china,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_japan,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_vietnam,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_thailand,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_indonesia,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_philippines,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_australia,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_new_zealand,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_singapore,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_malaysia,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_greece,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),cult_portugal,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived there
+0단계 생성기(generate/base.py),lang_english,english_proficiency ∈ {Native},허용: Native
+0단계 생성기(generate/base.py),lang_english,english_proficiency ∈ {Fluent (C1-C2)},허용: Fluent
+0단계 생성기(generate/base.py),lang_english,english_proficiency ∈ {Intermediate (B1-B2)},허용: Conversational
+0단계 생성기(generate/base.py),lang_english,english_proficiency ∈ {Basic (A1-A2)},허용: Basic
+0단계 생성기(generate/base.py),lang_english,english_proficiency ∈ {None},허용: None
+0단계 생성기(generate/base.py),lifex_relationship_history,"demo_marital_status ∈ {Single, In a relationship, Engaged}",금지: Married once | Remarried | Widowed
+0단계 생성기(generate/base.py),lifex_relationship_history,"demo_marital_status ∈ {Married, Divorced, Widowed}",금지: Limited
+0단계 생성기(generate/base.py),lifex_loss_experience,demo_marital_status ∈ {Widowed},허용: Lost a partner / child | Multiple bereavements
+0단계 생성기(generate/base.py),lifex_education_journey,"highest_education ∈ {No formal, Primary, Secondary, Vocational / cert, Some college, Associate's, Bachelor's}",금지: Advanced degrees
+0단계 생성기(generate/base.py),lstyle_work_schedule,"demo_employment_status ∈ {Full-time, Part-time, Self-employed, Gig / freelance}",금지: Unemployed
+0단계 생성기(generate/base.py),lstyle_work_schedule,"demo_employment_status ∈ {Student, Unemployed, Retired, Homemaker}",허용: Unemployed
+0단계 생성기(generate/base.py),lifex_faith_journey,"demo_religion_affiliation ∈ {None, Atheist / agnostic}",금지: Lifelong faith | Converted | Returned to faith
+0단계 생성기(generate/base.py),lifex_faith_journey,"demo_religion_affiliation ∈ {Christian, Buddhist, Folk / traditional, Muslim, Hindu, Jewish, Sikh}",금지: Lapsed / left faith | Always secular
+충돌 수정(generate/masks.py),cult_united_states,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_canada,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_mexico,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_brazil,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_argentina,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_united_kingdom,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_france,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_germany,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_italy,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_spain,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_netherlands,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_sweden,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_poland,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_russia,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_turkey,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_egypt,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_saudi_arabia,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_uae,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_israel,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_iran,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_nigeria,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_kenya,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_south_africa,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_ethiopia,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_india,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_pakistan,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_bangladesh,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_china,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_japan,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_vietnam,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_thailand,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_indonesia,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_philippines,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_australia,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_new_zealand,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_singapore,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_malaysia,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_greece,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),cult_portugal,lifex_travel_breadth ∈ {Never left country},금지: Lived there | Visited
+충돌 수정(generate/masks.py),lifex_cultural_exposure,lifex_travel_breadth ∈ {Never left country},금지: Lived across cultures | Third-culture kid
+충돌 수정(generate/masks.py),major_life_events,lifex_travel_breadth ∈ {Never left country},금지: Migration / immigration
+충돌 수정(generate/masks.py),major_life_events,lifex_geographic_mobility ∈ {Never left hometown},금지: Migration / immigration | Major relocation
+충돌 수정(generate/masks.py),lifex_hometown_tie,lifex_geographic_mobility ∈ {Never left hometown},허용: Still there
+충돌 수정(generate/masks.py),lifex_hometown_tie,"lifex_geographic_mobility ∈ {Moved nationally, Moved internationally}",금지: Still there
+충돌 수정(generate/masks.py),lifex_career_path_shape,"years_experience ∈ {11-20, 20+}",금지: Just starting
+충돌 수정(generate/masks.py),lifex_career_path_shape,demo_employment_status ∈ {Retired},금지: Just starting
+충돌 수정(generate/masks.py),lifex_entrepreneurship_history,seniority ∈ {Founder},금지: Never considered | Considered it
+충돌 수정(generate/masks.py),lifex_entrepreneurship_history,lifex_career_path_shape ∈ {Entrepreneurial},금지: Never considered | Considered it
+충돌 수정(generate/masks.py),lifex_career_path_shape,"lifex_entrepreneurship_history ∈ {Never considered, Considered it}",금지: Entrepreneurial
+충돌 수정(generate/masks.py),major_life_events,"lifex_entrepreneurship_history ∈ {Never considered, Considered it}",금지: Started a business
+충돌 수정(generate/masks.py),lifex_entrepreneurship_history,major_life_events ∈ {Started a business},금지: Never considered | Considered it
+충돌 수정(generate/masks.py),institution_tier,"highest_education ∈ {No formal, Primary}",금지: Top-tier research | Mid-tier university | Community college
+충돌 수정(generate/masks.py),institution_tier,"highest_education ∈ {Secondary} 그리고 demo_employment_status ∈ {Full-time, Part-time, Self-employed, Gig / freelance, Unemployed, Retired, Homemaker}",금지: Top-tier research | Mid-tier university | Community college
+충돌 수정(generate/masks.py),institution_tier,highest_education ∈ {Some college},금지: Self-taught | Not applicable
+충돌 수정(generate/masks.py),institution_tier,highest_education ∈ {Associate's},허용: Community college
+충돌 수정(generate/masks.py),institution_tier,"highest_education ∈ {Bachelor's, Master's, Doctorate, Postdoc}",허용: Top-tier research | Mid-tier university
+충돌 수정(generate/masks.py),fam_particle_physics,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_astrophysics,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_molecular_biology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_biochemistry,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_organic_chemistry,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_physical_chemistry,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_nanotechnology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_materials_science,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_nuclear_engineering,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_epidemiology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_actuarial_science,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_compilers,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_cryptography,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_cardiology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_neurology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_oncology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_radiology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_surgery,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_immunology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_pharmacology,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_constitutional_law,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_tax_law,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_quantitative_trading,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_deep_learning,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),fam_distributed_systems,"highest_education ∈ {No formal, Primary}",금지: Expert
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Software & AI},허용: Machine learning | Quant trading | Curriculum design | Behavioral economics | Operations | Robotics
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Healthcare & Medicine},허용: Machine learning | Cardiology | Curriculum design | Molecular biology | Operations | Robotics
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Law & Policy},허용: Constitutional law | Behavioral economics | Operations | Investigative reporting | Urban planning
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Finance & Economics},허용: Machine learning | Quant trading | Behavioral economics | Operations
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Education},금지: Quant trading | Investigative reporting | Electrical work
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Engineering},금지: Cardiology | Constitutional law | Curriculum design | Behavioral economics | Comparative literature | Agronomy | Investigative reporting | Culinary arts
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Natural Sciences},허용: Machine learning | Cardiology | Quant trading | Molecular biology | Operations | Agronomy | Robotics
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Social Sciences},금지: Cardiology | Quant trading | Structural engineering | Molecular biology | Agronomy | Robotics | Culinary arts | Electrical work
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Arts & Humanities},허용: Curriculum design | Comparative literature | Operations | Urban planning | Culinary arts
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Business & Management},허용: Machine learning | Quant trading | Curriculum design | Behavioral economics | Operations | Urban planning | Culinary arts
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Agriculture},허용: Machine learning | Molecular biology | Operations | Agronomy | Culinary arts | Electrical work
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Manufacturing},허용: Machine learning | Structural engineering | Operations | Agronomy | Robotics | Electrical work
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Media & Journalism},허용: Machine learning | Constitutional law | Comparative literature | Operations | Investigative reporting
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Public Sector},금지: Cardiology | Quant trading | Molecular biology | Comparative literature | Robotics | Culinary arts
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Hospitality},허용: Operations | Culinary arts | Electrical work
+충돌 수정(generate/masks.py),subject_specialty,domain ∈ {Skilled Trades},허용: Structural engineering | Operations | Culinary arts | Electrical work
+충돌 수정(generate/masks.py),lifex_military_history,"demo_veteran_status ∈ {Active duty, Reserve / guard, Veteran}",금지: Never served | Military family
+충돌 수정(generate/masks.py),demo_veteran_status,"lifex_military_history ∈ {Never served, Military family}",허용: Civilian | Military family
+충돌 수정(generate/masks.py),major_life_events,"lifex_military_history ∈ {Never served, Military family}",금지: Military service
+충돌 수정(generate/masks.py),lifex_military_history,major_life_events ∈ {Military service},금지: Never served | Military family
+충돌 수정(generate/masks.py),demo_veteran_status,"age_bracket ∈ {65-74, 75-84, 85+}",금지: Active duty
+충돌 수정(generate/masks.py),demo_veteran_status,"demo_employment_status ∈ {Retired, Homemaker, Unemployed}",금지: Active duty
+충돌 수정(generate/masks.py),lifex_military_history,age_bracket ∈ {18-24},금지: Career veteran | Combat veteran
+충돌 수정(generate/masks.py),lifex_military_history,"age_bracket ∈ {25-34, 35-44, 45-54, 55-64}",금지: Combat veteran
+충돌 수정(generate/masks.py),lifex_health_journey,health_chronic_condition ∈ {None},금지: Manages chronic condition
+충돌 수정(generate/masks.py),major_life_events,lifex_health_journey ∈ {No major events},금지: Health journey
+충돌 수정(generate/masks.py),lifex_health_journey,major_life_events ∈ {Health journey},금지: No major events
+충돌 수정(generate/masks.py),health_fitness_level,"lstyle_exercise_freq ∈ {Monthly, Rarely, Never}",금지: Athlete
+충돌 수정(generate/masks.py),health_fitness_level,lstyle_exercise_freq ∈ {Daily},금지: Sedentary
+충돌 수정(generate/masks.py),health_medication_use,health_chronic_condition ∈ {Multiple},금지: None
+충돌 수정(generate/masks.py),health_neurodivergence,health_attention_condition ∈ {Diagnosed},금지: Neurotypical
+충돌 수정(generate/masks.py),health_attention_condition,health_neurodivergence ∈ {Neurotypical},금지: Diagnosed
+충돌 수정(generate/masks.py),health_attention_condition,health_neurodivergence ∈ {ADHD},금지: None
+충돌 수정(generate/masks.py),health_neurodivergence,health_attention_condition ∈ {None},금지: ADHD
+충돌 수정(generate/masks.py),health_attention_condition,neurotype ∈ {ADHD},금지: None
+충돌 수정(generate/masks.py),neurotype,health_attention_condition ∈ {None},금지: ADHD
+충돌 수정(generate/masks.py),sport_soccer,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_basketball,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_american_football,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_baseball,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_tennis,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_golf,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_cricket,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_rugby,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_hockey,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_volleyball,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_swimming,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_running,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_cycling,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_boxing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_mma,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_wrestling,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_skiing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_snowboarding,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_surfing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_skateboarding,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_climbing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_gymnastics,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_track_field,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_badminton,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_table_tennis,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_squash,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_sailing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_rowing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_martial_arts,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_yoga,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_pilates,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_crossfit,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_weightlifting,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_bowling,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_archery,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_equestrian,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_fencing,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),sport_triathlon,lstyle_exercise_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),lifex_loss_experience,lifex_relationship_history ∈ {Widowed},허용: Lost a partner / child | Multiple bereavements
+충돌 수정(generate/masks.py),lifex_relationship_history,"lifex_loss_experience ∈ {No major loss, Lost a grandparent, Lost a parent}",금지: Widowed
+충돌 수정(generate/masks.py),lifex_loss_experience,"age_bracket ∈ {75-84, 85+}",금지: No major loss
+충돌 수정(generate/masks.py),major_life_events,lifex_loss_experience ∈ {No major loss},금지: Bereavement
+충돌 수정(generate/masks.py),lifex_loss_experience,major_life_events ∈ {Bereavement},금지: No major loss
+충돌 수정(generate/masks.py),lifex_relationship_history,demo_marital_status ∈ {Married},금지: Widowed
+충돌 수정(generate/masks.py),lstyle_device_ecosystem,lstyle_primary_messenger ∈ {iMessage},금지: Android/Google | Linux
+충돌 수정(generate/masks.py),lstyle_primary_messenger,"lstyle_device_ecosystem ∈ {Android/Google, Linux}",금지: iMessage
+충돌 수정(generate/masks.py),lstyle_browser,"lstyle_device_ecosystem ∈ {Android/Google, Linux}",금지: Safari
+충돌 수정(generate/masks.py),lstyle_device_ecosystem,lstyle_browser ∈ {Safari},금지: Android/Google | Linux
+충돌 수정(generate/masks.py),lstyle_primary_social,linkedin_activity ∈ {Inactive},금지: LinkedIn
+충돌 수정(generate/masks.py),linkedin_activity,lstyle_primary_social ∈ {LinkedIn},금지: Inactive
+충돌 수정(generate/masks.py),lstyle_streaming_hours,lstyle_screen_time ∈ {<2 hrs},금지: 16+
+충돌 수정(generate/masks.py),lstyle_screen_time,lstyle_streaming_hours ∈ {16+},금지: <2 hrs
+충돌 수정(generate/masks.py),skill_driving,"demo_driver_status ∈ {Daily driver, Occasional driver}",금지: None
+충돌 수정(generate/masks.py),skill_driving,demo_driver_status ∈ {Cannot drive},허용: Beginner | None
+충돌 수정(generate/masks.py),cuis_korean,cult_south_korea ∈ {Native},금지: Avoid
+충돌 수정(generate/masks.py),health_dietary_restriction,"demo_religion_affiliation ∈ {None, Atheist / agnostic}",금지: Religious
+충돌 수정(generate/masks.py),att_veganism,"lstyle_diet_type ∈ {Vegan, Vegetarian}",금지: Opposed
+충돌 수정(generate/masks.py),lstyle_diet_type,att_veganism ∈ {Opposed},금지: Vegetarian | Vegan
+충돌 수정(generate/masks.py),cuis_vegan,lstyle_diet_type ∈ {Vegan},금지: Avoid
+충돌 수정(generate/masks.py),lstyle_diet_type,cuis_vegan ∈ {Avoid},금지: Vegan
+충돌 수정(generate/masks.py),cuis_vegetarian,lstyle_diet_type ∈ {Vegetarian},금지: Avoid
+충돌 수정(generate/masks.py),lstyle_diet_type,cuis_vegetarian ∈ {Avoid},금지: Vegetarian
+충돌 수정(generate/masks.py),topic_wine,lstyle_alcohol_use ∈ {Never},금지: Passionate
+충돌 수정(generate/masks.py),topic_craft_beer,lstyle_alcohol_use ∈ {Never},금지: Passionate
+충돌 수정(generate/masks.py),fam_sommelier_knowledge,lstyle_alcohol_use ∈ {Never},금지: Expert
+충돌 수정(generate/masks.py),hob_winemaking,lstyle_alcohol_use ∈ {Never},금지: Avid
+충돌 수정(generate/masks.py),hob_home_brewing,lstyle_alcohol_use ∈ {Never},금지: Avid
+충돌 수정(generate/masks.py),coding_agent_failure_tolerance,"coding_agent_usage_frequency ∈ {Daily, Weekly, Monthly or infrequent}",금지: Does not use agents
+충돌 수정(generate/masks.py),coding_agent_usage_frequency,coding_agent_failure_tolerance ∈ {Does not use agents},금지: Daily | Weekly | Monthly or infrequent
+충돌 수정(generate/masks.py),skill_coding,dev_professional_status ∈ {Professional developer},금지: Beginner | None
+충돌 수정(generate/masks.py),tech_savviness,dev_professional_status ∈ {Professional developer},금지: Avoidant
+충돌 수정(generate/masks.py),open_source_activity_level,dev_professional_status ∈ {Professional developer},금지: No coding activity
+충돌 수정(generate/masks.py),skill_coding,"open_source_activity_level ∈ {Maintainer / core contributor, Regular contributor}",금지: None
+충돌 수정(generate/masks.py),open_source_activity_level,skill_coding ∈ {None},금지: Maintainer / core contributor | Regular contributor
+충돌 수정(generate/masks.py),skill_coding,prog_python ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_python,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_javascript ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_javascript,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_typescript ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_typescript,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_java ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_java,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_c ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_c,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_go ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_go,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_rust ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_rust,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_ruby ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_ruby,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_php ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_php,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_swift ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_swift,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_kotlin ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_kotlin,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_objective_c ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_objective_c,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_scala ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_scala,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_haskell ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_haskell,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_elixir ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_elixir,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_erlang ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_erlang,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_clojure ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_clojure,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_lua ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_lua,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_perl ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_perl,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_r ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_r,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_julia ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_julia,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_matlab ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_matlab,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_sql ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_sql,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_bash ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_bash,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_powershell ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_powershell,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_dart ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_dart,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_f ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_f,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_ocaml ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_ocaml,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_assembly ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_assembly,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_cobol ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_cobol,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_fortran ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_fortran,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_solidity ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_solidity,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),skill_coding,prog_graphql ∈ {Expert},금지: None
+충돌 수정(generate/masks.py),prog_graphql,skill_coding ∈ {None},금지: Expert
+충돌 수정(generate/masks.py),prog_python,"tool_python ∈ {Power user, Regular}",금지: None
+충돌 수정(generate/masks.py),tool_python,prog_python ∈ {None},금지: Power user | Regular
+충돌 수정(generate/masks.py),tool_python,"prog_python ∈ {Expert, Proficient}",금지: Never used
+충돌 수정(generate/masks.py),prog_python,tool_python ∈ {Never used},금지: Expert | Proficient
+충돌 수정(generate/masks.py),prog_sql,"tool_sql ∈ {Power user, Regular}",금지: None
+충돌 수정(generate/masks.py),tool_sql,prog_sql ∈ {None},금지: Power user | Regular
+충돌 수정(generate/masks.py),tool_sql,"prog_sql ∈ {Expert, Proficient}",금지: Never used
+충돌 수정(generate/masks.py),prog_sql,tool_sql ∈ {Never used},금지: Expert | Proficient
+충돌 수정(generate/masks.py),prog_r,"tool_r ∈ {Power user, Regular}",금지: None
+충돌 수정(generate/masks.py),tool_r,prog_r ∈ {None},금지: Power user | Regular
+충돌 수정(generate/masks.py),tool_r,"prog_r ∈ {Expert, Proficient}",금지: Never used
+충돌 수정(generate/masks.py),prog_r,tool_r ∈ {Never used},금지: Expert | Proficient
+충돌 수정(generate/masks.py),prog_matlab,"tool_matlab ∈ {Power user, Regular}",금지: None
+충돌 수정(generate/masks.py),tool_matlab,prog_matlab ∈ {None},금지: Power user | Regular
+충돌 수정(generate/masks.py),tool_matlab,"prog_matlab ∈ {Expert, Proficient}",금지: Never used
+충돌 수정(generate/masks.py),prog_matlab,tool_matlab ∈ {Never used},금지: Expert | Proficient
+충돌 수정(generate/masks.py),multilingualism,"english_proficiency ∈ {Intermediate (B1-B2), Fluent (C1-C2)}",금지: Monolingual
+충돌 수정(generate/masks.py),lifex_languages_lifetime,"english_proficiency ∈ {Intermediate (B1-B2), Fluent (C1-C2)}",금지: One
+충돌 수정(generate/masks.py),demo_home_language,lifex_immigration_generation ∈ {Native multi-generational},금지: Heritage language
+충돌 수정(generate/masks.py),val_community,values_priority ∈ {Community},금지: Minor | Irrelevant
+충돌 수정(generate/masks.py),lifex_service_history,"lstyle_volunteering ∈ {Daily, Weekly}",금지: None
+충돌 수정(generate/masks.py),sport_esports,lstyle_gaming_freq ∈ {Never},금지: Play
+충돌 수정(generate/masks.py),att_risk_taking,risk_tolerance ∈ {Risk-averse},금지: Enthusiast
+충돌 수정(generate/masks.py),att_risk_taking,risk_tolerance ∈ {Risk-seeking},금지: Opposed
+충돌 수정(generate/masks.py),lifex_cultural_exposure,lifex_geographic_mobility ∈ {Never left hometown},금지: Lived across cultures | Third-culture kid
+충돌 수정(generate/masks.py),trait_spirituality,religiosity ∈ {Devout},금지: Absent
+충돌 수정(generate/masks.py),trait_spirituality,val_spirituality_faith ∈ {Core value},금지: Absent
+충돌 수정(generate/masks.py),val_privacy,att_data_privacy ∈ {Opposed},금지: Core value
+충돌 수정(generate/masks.py),val_privacy,att_data_privacy ∈ {Enthusiast},금지: Irrelevant
