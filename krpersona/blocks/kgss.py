@@ -323,15 +323,10 @@ def fit_value_links(df, C, B, X_, Y, models, order, grid=(0.025, 0.05, 0.1, 0.2,
 
 # ---------------------------------------------------------------- generation
 def census_participation():
-    """P(사회분야단체 참여 | sex, ag7, edu5) from the census sample (person weights, age 20+), for the volunteering two-stage rule"""
-    R = pd.read_csv(paths.raw('census2020', 'person'), encoding='cp949', dtype=str,
-                    usecols=['성별코드', '만연령', '교육정도코드', '수학구분코드', '출생국적_대한민국여부', '현재국적_대한민국여부', '출생지구분코드', '인구가중값',
-                             '사회활동_사회분야단체_참여및활동여부'])
-    R = R[(R.출생국적_대한민국여부 == '1') & (R.현재국적_대한민국여부 == '1') & (R.출생지구분코드 != '4') & (R.만연령.astype(int) >= 20)]
-    y = R.사회활동_사회분야단체_참여및활동여부.astype(float).to_numpy() == 1
-    cell = (R.성별코드.astype(int).to_numpy() - 1) * 100 + core.ag7(R.만연령.astype(int).to_numpy()) * 10 + core.edu5_census(R.교육정도코드.astype(int), pd.to_numeric(R.수학구분코드).fillna(1).to_numpy())
-    w = R.인구가중값.astype(float).to_numpy()
-    t = pd.DataFrame(dict(c=cell, y=y * w, w=w)).groupby('c').sum(); return (t.y / t.w).to_dict(), float((y * w).sum() / w.sum())
+    """P(사회분야단체 참여 | sex, ag7, edu5) from the census sample (person weights, age 20+), for the volunteering two-stage rule.
+    Read from the census aggregates (krpersona/census/aggregates.py; computed there from the raw census)."""
+    from krpersona.census import aggregates
+    return aggregates.load()['participation']
 
 def predict_mix(M, X, gen_years_col=None):
     """probabilities at the generation year(s): mix of year-specific predictions with the inverse-distance weights"""

@@ -3,10 +3,10 @@ import json, numpy as np, pandas as pd
 from krpersona import paths
 from krpersona.matraix.sampler import KRSampler
 from krpersona.generate.assign import build
+from krpersona.census import aggregates
 
 NA = 'Not applicable'
 REAL_P = lambda: paths.art('census', 'P.parquet')      # prepared real census person extract (census/prep.py)
-REAL_RAW = lambda: paths.raw('census2020', 'person')
 FMAGE = {1: (12, 14), 2: (15, 19), 3: (20, 24), 4: (25, 29), 5: (30, 34), 6: (35, 39), 7: (40, 60)}
 JTEN_LB = {1: 0, 2: 0, 3: 1, 4: 3, 5: 5, 6: 10, 7: 15, 8: 20}
 EXP_BINS = [('0-2', 0, 2), ('3-5', 3, 5), ('6-10', 6, 10), ('11-20', 11, 20), ('20+', 20, 99)]
@@ -66,19 +66,14 @@ class Base:
         keep = ['hid', 'pos', 'rel', 'sex', 'age', 'mar', 'nat', 'bplace', 'r5', 'r1', 'edu', 'sch', 'fmage', 'econ', 'status', 'occ', 'ind', 'jten', 'place',
                 'comm', 'mode', 'lim', 'births', 'deaths', 'prejob', 'brk', 'sido', 'dong', 'gtype', 'hkind', 'k', 'tenure_h', 'car', 'pet', 'own', 'grand']
         self.P = P.loc[el, keep].reset_index(drop=True)
-        # post-stratification to real person-weighted sex x age5 x sido of the same population
-        R = pd.read_csv(REAL_RAW(), encoding='cp949', dtype=str, usecols=['성별코드', '만연령', '행정구역시도코드', '출생국적_대한민국여부', '현재국적_대한민국여부', '출생지구분코드', '인구가중값'])
-        R = R[(R.출생국적_대한민국여부 == '1') & (R.현재국적_대한민국여부 == '1') & (R.출생지구분코드 != '4') & (R.만연령.astype(int) >= 19)]
-        cell = lambda s, a, d: s.astype(int).astype(str) + '_' + (np.minimum(a.astype(int), 85) // 5).astype(str) + '_' + d.astype(int).astype(str)
-        tgt = pd.Series(R.인구가중값.astype(float).to_numpy()).groupby(cell(R.성별코드, R.만연령, R.행정구역시도코드).to_numpy()).sum()
-        self.P['cell'] = cell(self.P.sex, self.P.age, self.P.sido).to_numpy()
+        # post-stratification to real person-weighted sex x age5 x sido of the same population (census aggregates, krpersona/census/aggregates.py)
+        A = aggregates.load(); tgt = A['poststrat']
+        self.P['cell'] = aggregates.CELL(self.P.sex, self.P.age, self.P.sido).to_numpy()
         cnt = self.P.cell.map(self.P.cell.value_counts())
         self.P['w0'] = self.P.cell.map(tgt).fillna(0) / cnt
         self.P['w'] = self.P.w0
         # mother-child age gap distribution (real census, mothers who are head or spouse with co-resident children)
-        rp = pd.read_parquet(REAL_P())
-        mo = rp[rp.rel.isin([1, 2]) & (rp.sex == 2)][['hid', 'age']].rename(columns={'age': 'ma'})
-        ch = rp[rp.rel == 3][['hid', 'age']].merge(mo, on='hid'); gap = (ch.ma - ch.age); self.gap = gap[(gap >= 15) & (gap <= 50)].to_numpy()
+        self.gap = A['gap']
 
     def draw(self, n):
         p = self.P.w.to_numpy(); p = p / p.sum()

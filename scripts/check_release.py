@@ -6,6 +6,8 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from krpersona.generate.resources import BUNDLE_FILES, check_bundle
 SKIP_DIRS = {'.git', '.venv', 'venv', '__pycache__', '.pytest_cache', 'build', 'dist'}
 PRIVATE_SUFFIXES = {'.parquet', '.pkl', '.pickle', '.npz', '.sav', '.dta', '.sas7bdat',
                     '.feather', '.pt', '.zip', '.gz', '.pem', '.key'}
@@ -41,20 +43,32 @@ def text_content(path):
 
 def check(root=ROOT):
     problems = []
+    bundle = root / 'bundle'
+    bundle_valid = False
+    if bundle.exists():
+        try:
+            check_bundle(bundle)
+            bundle_valid = True
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            problems.append(f'bundle: 파일 구성 또는 무결성 오류 ({exc})')
     for path in publication_files(root):
         rel = path.relative_to(root)
+        bundle_name = rel.as_posix().removeprefix('bundle/')
+        is_bundle = rel.parts[0] == 'bundle' and bundle_name in BUNDLE_FILES
+        if rel.parts[0] == 'bundle' and bundle_name not in BUNDLE_FILES | {'MANIFEST.json'}:
+            problems.append(f'{rel}: 생성 묶음의 지정 목록에 없는 파일')
         if path.is_symlink():
             problems.append(f'{rel}: 외부 파일을 가리킬 수 있는 심볼릭 링크')
             continue
         if not path.exists():  # A tracked file deleted from the working tree.
             continue
-        if (path.suffix.lower() in PRIVATE_SUFFIXES or rel.parts[0] in {'data', 'artifacts'}
+        if ((path.suffix.lower() in PRIVATE_SUFFIXES and not (is_bundle and bundle_valid)) or rel.parts[0] in {'data', 'artifacts'}
                 or rel.as_posix() == 'config/paths.toml'
                 or (path.name.startswith('.env') and path.name != '.env.example')):
             problems.append(f'{rel}: 원자료·실행 산출물 또는 개인 설정')
         if path.name == '.DS_Store':
             problems.append(f'{rel}: 운영체제 메타데이터')
-        if path.stat().st_size > 2_000_000:
+        if path.stat().st_size > 2_000_000 and not (is_bundle and bundle_valid):
             problems.append(f'{rel}: 2 MB 초과 파일 — 공개 대상인지 확인 필요')
         try:
             content = text_content(path)
@@ -73,4 +87,4 @@ if __name__ == '__main__':
     if issues:
         print('\n'.join(issues))
         sys.exit(1)
-    print('공개 파일 점검 통과')
+    print('공개 파일 구성 및 무결성 점검 통과 (자료 공개 허용 여부는 별도 검토)')

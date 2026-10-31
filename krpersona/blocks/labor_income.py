@@ -1,4 +1,5 @@
-"""Labor block (EAPS 2025 H1): company size, own monthly wage band. Income block (HFCS 2025): household income, mortgage; SES and income quartile cut points."""
+"""Labor block (EAPS 2025 H1): company size, own monthly wage band. Income block (HFCS 2025): household income, mortgage; SES and income quartile cut points.
+Amounts inside an income bin are drawn from NQ weighted quantiles of the survey incomes in that bin (wquantiles), not from the incomes themselves."""
 import sys, pickle, numpy as np, pandas as pd
 from krpersona import paths
 from krpersona.blocks import core
@@ -83,14 +84,24 @@ def ses_cuts_adult(d):
     eq = (d.inc / np.sqrt(d.hhsize)).to_numpy(); pw = d.w.to_numpy() * d.nad.to_numpy(); o_ = np.argsort(eq); cw = np.cumsum(pw[o_]) / pw.sum()
     return [float(eq[o_][np.searchsorted(cw, p)]) for p in (.2, .4, .6, .8)]
 
+NQ = 200
+
+
+def wquantiles(v, w, n=NQ):
+    """n weighted quantiles at (i + 0.5) / n, linear interpolation between the sorted values"""
+    o = np.argsort(v); v, w = np.asarray(v, float)[o], np.asarray(w, float)[o]
+    c = (np.cumsum(w) - 0.5 * w) / w.sum()
+    return np.interp((np.arange(n) + 0.5) / n, c, v)
+
+
 def fit_income(mx, quick=False):
     d = hfcs(); d = d[~d.ho] if core.HOLDOUT else d; par = ['sex', 'ag7', 'edu5', 'mar4', 'emp5', 'occ10', 'hh5', 'nemp4', 'metro']
     P = [(k, core.BG[k][1], core.BG[k][2]) for k in par]; L = [len(core.BG[k][0]) for k in par]
     pairs = [(1, 2), (0, 3), (1, 4), (6, 7)]
     m_inc = core.fit_attr(mx, 'household_income', None, [None] * (len(INC_CUTS) + 1), [f'{a}–{a + 1000}' for a in [0] + INC_CUTS[:-1]] + ['20000+'], P, L, d[par].to_numpy(int), d.ibin.to_numpy(int), d.w.to_numpy(float), pairs, quick=quick)
     m_inc['cats'] = [None] * (len(INC_CUTS) + 1)
-    # within-bin donors (actual amounts) for drawing a value inside the chosen bin
-    don = {b: (g.inc.to_numpy(), g.w.to_numpy()) for b, g in d.groupby('ibin')}
+    # amounts inside the chosen bin: NQ weighted quantiles of the household incomes in the bin (equal weights), not the incomes themselves
+    don = {b: (wquantiles(g.inc.to_numpy(), g.w.to_numpy()), np.ones(NQ)) for b, g in d.groupby('ibin')}
     print('household_income n', m_inc['n'], m_inc['info'], round(m_inc['ll'], 4), round(m_inc['ll_marginal'], 4), flush=True)
     o = d[d.own]; o = o.assign(ib7=np.digitize(o.inc, [2000, 3500, 5000, 7000, 10000, 15000]))
     par2 = ['ag7', 'emp5', 'hh5', 'metro', 'ib7']; P2 = [(k, core.BG[k][1], core.BG[k][2]) for k in par2[:4]] + [('ib7', None, None)]; L2 = [7, 5, 5, 2, 7]

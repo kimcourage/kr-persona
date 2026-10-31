@@ -50,7 +50,7 @@ def generation():
                      sum(b[0] for b in rep) if rep else None, sum(b[-1] for b in rep) if rep else None, st.get('seconds')))
     add('생성', '표본 생성 통계', pd.DataFrame(rows, columns=['표본', '이름', '인원', '생성 시도', '거부 검사 통과율', '시험 통과율(칸별 가중 계산용)', '우세 성향 δ',
                                                          'MatrAIx 속성', '다시 뽑기 전 규칙 위반 인원', '40번 다시 뽑은 뒤 남은 인원', '소요(초)']),
-        ['거부 검사: 0단계 검사 규칙과 MatrAIx 금지 규칙 84개(7장). 다시 뽑기: 규칙 세트 1~3의 hard 규칙(7장). 남은 인원은 버리지 않고 그대로 둔다.'],
+        ['거부 검사: 자체 검사 규칙과 MatrAIx 금지 규칙 84개(7장). 다시 뽑기: 규칙 세트 1~3의 hard 규칙(7장). 남은 인원은 버리지 않고 그대로 둔다.'],
         {5: '0.0000', 6: '0.0000'})
 
 
@@ -104,7 +104,7 @@ def validation():
     G['_o'] = G.자료.map({s: i for i, s in enumerate(SOURCES)}); G = G.sort_values(['_o', 'k']).drop(columns='_o')
     G.columns = [c.replace('_', ' ') for c in G.columns]
     add('① 분포 거리', '① 속성 2개·3개 조합의 평균 총변동거리(떼어 둔 실제 자료 대비)', G,
-        ['합성 = 검증 표본(80% 모형). 표본오차 기준 = 합성이 참일 때 분리분 크기의 표본이 보이는 거리. MatrAIx = 1단계 재현 표본의 한국 Native 성인.',
+        ['합성 = 검증 표본(80% 모형). 표본오차 기준 = 합성이 참일 때 분리분 크기의 표본이 보이는 거리. MatrAIx = 재현 표본의 한국 문화 Native 성인(2장).',
          'MatrAIx에 없는 kr_* 속성이 든 조합은 MatrAIx 칸이 비어 있다. KGSS 3개 조합은 1,500개 무작위.'], {5: '0.000', 6: '0.000', 7: '0.000', 8: '0.00', 9: '0.00'})
     T.to_csv(OUT / 'csv' / 'tvd_all_subsets.csv', index=False, encoding='utf-8-sig')
     T2 = T.assign(초과=T.합성 - T['표본오차 기준']).sort_values('초과', ascending=False).groupby('자료').head(10)
@@ -145,9 +145,9 @@ def validation():
     au = load(V('audit_out_on.pkl'))
     if au:
         D = au['kr'].copy(); D.insert(0, '구분', '한국 정체성·성격 점검'); D.insert(2, '설명', None)
-        T = au['demo'].rename(columns={'id': '점검'})[['점검', '설명', 'MatrAIx 한국 Native 성인', '생성 표본']].copy(); T.insert(0, '구분', '1단계 페르소나 안 모순 점검')
-        T.loc[len(T)] = ('1단계 페르소나 안 모순 점검', 'hard 하나 이상', None, au['any_hard'][0], au['any_hard'][1])
-        add('진단 점검', '1단계 MatrAIx 진단 점검을 최종 표본에 적용(MatrAIx 한국 Native 성인 대 최종 표본)', pd.concat([D, T]),
+        T = au['demo'].rename(columns={'id': '점검'})[['점검', '설명', 'MatrAIx 한국 Native 성인', '생성 표본']].copy(); T.insert(0, '구분', '페르소나 안 모순 점검')
+        T.loc[len(T)] = ('페르소나 안 모순 점검', 'hard 하나 이상', None, au['any_hard'][0], au['any_hard'][1])
+        add('진단 점검', 'MatrAIx 진단 점검(2장)을 최종 표본에 적용(MatrAIx 한국 Native 성인 대 최종 표본)', pd.concat([D, T]),
             [f"MatrAIx {au['n'][0]:,}명, 최종 표본 {au['n'][1]:,}명. 상관 행은 비율이 아니라 상관계수다. 점검 정의는 docs/02_MatrAIx와의_관계.md."], {4: '0.0000', 5: '0.0000'})
     lc = load(V('language_check.pkl'))
     if lc:
@@ -157,8 +157,8 @@ def validation():
             vals = sorted(set().union(*[set(v[key].index) for v in lc.values()]), key=str)
             for x in vals: rows.append([lab, str(x)] + [float(v[key].get(x, 0)) for v in lc.values()])
         rows.append(['회화 이상인 영어 외 외국어 수', '평균(개)'] + [v['other_languages_mean'] for v in lc.values()])
-        add('언어', '언어 속성 분포(3차 보완 전후)', pd.DataFrame(rows, columns=['속성', '값'] + list(lc)),
-            ['3차 수정의 규칙에서 만든 금지 규칙이 특정 언어를 강제한 결함과 그 보완(8장).'], {k: '0.000' for k in range(3, 3 + len(lc))})
+        add('언어', '언어 속성 분포', pd.DataFrame(rows, columns=['속성', '값'] + list(lc)),
+            ['영어 능력은 KGSS 모형, 다중언어 수준은 뽑힌 언어 수에서 정한다(6·7장). 언어 속성 쌍은 규칙에서 만든 금지 규칙에 넣지 않는다(8장).'], {k: '0.000' for k in range(3, 3 + len(lc))})
 
 
 # ------------------------------------------------------------------ ③ rules
@@ -174,7 +174,7 @@ def rules():
         if k == 4:
             lab = [c for c in T.columns if c.startswith('위반율: ')]
             T4 = T[['id', 'group', 'severity', '규칙 종류', 'description'] + lab].copy(); T4.columns = [c.replace('위반율: ', '') for c in T4.columns]
-            main = [c for c in T4.columns if '보완 후 검증' in c]
+            main = [c for c in T4.columns if c.startswith('검증 표본')]
             if main: T4 = T4.sort_values(['severity', main[0]], ascending=[True, False])
             add('③ 세트 4 규칙별', '③ 세트 4: 규칙별 위반율(적용 대상 중)', T4, ['세트 1~3의 규칙별 값과 적용 대상 수는 csv/v3_rules_setN_by_rule_all_samples.csv.'], {c: '0.00%' for c in range(6, 6 + len(lab))})
     if parts:
@@ -182,7 +182,7 @@ def rules():
         D = D[cols]
         fm = {i: '0.00%' for i in range(3, len(cols) + 1)}
         add('③ 모순율', '③ 독립 규칙 세트로 잰 모순율(위반이 하나 이상인 페르소나 비율)', D,
-            ['세트 1~3은 생성기 수정에 썼고, 세트 4는 측정용으로 썼다가 마지막에 규칙 3개를 수정에 썼다. 각 세트의 독립 측정값은 그 세트로 고치기 전 표본의 값이다(8장).',
+            ['세트 1과 세트 2·3의 hard 규칙은 생성기(금지 규칙, 다시 뽑기)에 들어 있으므로 독립 측정이 아니다. 세트 4는 생성기와 다른 세트를 보지 않은 작성자가 쓴 측정용 세트이며, 생성기에는 그 가운데 규칙 3개(R4-VAL-H10, R4-PER-H30, R4-MIL-H04)의 조건이 들어 있다(8장).',
              '"규칙 수" 행은 비율이 아니라 개수다.'], fm)
     g = load(V('rules4_groups.pkl'))
     if g is not None:
@@ -208,14 +208,14 @@ def summary():
     for k in (4, 3, 2, 1):
         RS = load(V(f'rules_set{k}.pkl'))
         if RS is None: continue
-        S = RS['summary'].set_index('대상'); main = [l for l in S.index if '보완 후 검증' in l]; fin = [l for l in S.index if '보완 후 최종' in l]
+        S = RS['summary'].set_index('대상'); main = [l for l in S.index if l.startswith('검증 표본')]; fin = [l for l in S.index if l.startswith('최종 표본')]
         for c, nm in [(HC, 'hard 하나 이상'), (KRC, '한국 속성 관련'), (MXC, 'MatrAIx 속성만')]:
             rows.append((f'③ 세트 {k}', nm, float(S.loc[main[0], c]) if main else None, float(S.loc[MX, c]) if MX in S.index else None, float(S.loc[fin[0], c]) if fin else None))
     for f in ['render_check_val.pkl']:
         rc = load(V(f))
         if rc: d = rc['R']; rows.append(('⑤ 전달 누락 비율', '한국 렌더러(합성) / MatrAIx 렌더러(같은 페르소나)', d.kr_missing.mean() / d.n_attr.mean(), d.mx_missing.mean() / d.n_attr.mean(), None))
     D = pd.DataFrame(rows, columns=['구분', '항목', 'kr-persona', 'MatrAIx', '기준값 또는 최종 표본'])
-    TABLES.insert(0, ('요약', '요약', ['kr-persona = 검증 표본(80% 모형, 2만 명). MatrAIx = 1단계 재현 표본의 한국 문화 Native 성인 37,237명.',
+    TABLES.insert(0, ('요약', '요약', ['kr-persona = 검증 표본(80% 모형, 2만 명). MatrAIx = 재현 표본의 한국 문화 Native 성인 37,237명(2장).',
                                        '마지막 열: ①은 표본오차 기준, ②는 분리분 반 대 반, ③은 최종 표본(100% 모형)의 값.'], D, {3: '0.0000', 4: '0.0000', 5: '0.0000'}))
 
 

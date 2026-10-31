@@ -11,7 +11,7 @@ ROOT = Path(__file__).parents[1]
 
 
 @pytest.mark.parametrize('history', [False, True])
-def test_validation_accepts_current_samples_without_history(tmp_path, history):
+def test_validation_uses_current_samples_even_when_history_exists(tmp_path, history):
     artifacts = tmp_path / 'artifacts with spaces'
     samples = artifacts / 'samples'
     names = ['val_on', 'out_on']
@@ -48,8 +48,9 @@ else:
     language = next(c for c in commands if 'krpersona.validate.language_check' in c)
     rules = [c for c in commands if 'krpersona.validate.rules_summary' in c]
     assert len(rules) == 4
-    assert len([a for a in language if '=' in a]) == (4 if history else 2)
+    assert len([a for a in language if '=' in a]) == 2
     for command in rules:
         inputs = [a for a in command if '=' in a]
-        assert len(inputs) == (6 if history else 2)
-        assert inputs[0].startswith('수정 전' if history else '3차 보완 후 검증 표본')
+        assert len(inputs) == 2
+        assert inputs[0].startswith('검증 표본(80% 모형)=')
+        assert inputs[1].startswith('최종 표본(100% 모형)=')

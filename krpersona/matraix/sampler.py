@@ -4,7 +4,7 @@
   A code equal to len(values) is the sentinel "no MatrAIx category" (out-of-category Korean value): every link from it is factor 1.
 - Edges K -> K are not used to generate K; they enter only q of a K node drawn inside an allowed set (h^-1(k), Omega) or a stage-0 placeholder.
 - Edges b -> a with b not in K and a in K are reversed: b is drawn later with factor P_e(x_a | v_b)^(gamma_b w_e).
-- Masks whose target is in K are not used, except for stage-0 placeholder nodes drawn from MatrAIx q.
+- Masks whose target is in K act only where a K node is drawn from MatrAIx q (inside an allowed set or as a placeholder); fixed K codes are not masked.
 - CPTs whose target is in K: q of that node only, with not-yet-drawn parents averaged over their prior.
 - Everything else (edges, CPTs, masks into non-K nodes) is used as in MatrAIx, with K values as inputs.
 """

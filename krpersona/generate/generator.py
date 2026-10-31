@@ -1,8 +1,9 @@
-"""Persona generator: the stage-0 generator with the Korean survey models in place of the placeholders.
+"""Persona generator: the base generator (generate/base.py) with the Korean survey models in place of the placeholders.
 Order: base -> mapping/rules -> children (+ KLoSA) -> labor -> income -> personality -> values -> health -> KGSS -> MatrAIx rest."""
 import json, pickle, numpy as np, pandas as pd
 from scipy.stats import norm
 from krpersona import paths
+from krpersona.census import aggregates
 from krpersona.generate.base import Gen0, Base, NA, REAL_P, FMAGE, JTEN_LB, EXP_BINS, IND, BFI2, BFI2_DOMAIN, IPIP, DOM, LEVELS, TAU, FACT, level
 from krpersona.matraix.sampler import KRSampler
 from krpersona.matraix.graph import graph_values
@@ -21,7 +22,7 @@ LAM_IPIP = {'anxiety': .86, 'anger': .66, 'depression': .62, 'self_consciousness
             'trust': .41, 'morality': .69, 'altruism': .60, 'cooperation': .74, 'modesty': .32, 'sympathy': .60,
             'self_efficacy': .55, 'orderliness': .64, 'dutifulness': .47, 'achievement_striving': .70, 'self_discipline': .73, 'cautiousness': .55}
 LAM_MBTI, LAM_BAT = 0.7, 0.7     # no Korean source: assumption
-# step 5: IPIP-NEO facet -> BFI-2 facet measuring the same facet. Without a shared facet part the two correlate only through the domain
+# IPIP-NEO facet -> BFI-2 facet measuring the same facet. Without a shared facet part the two correlate only through the domain
 # (e.g. assertiveness .55 x .58 = .32); the facet-specific parts are now shared so that the two measures correlate SAME_FACET_R (assumption)
 SAME_FACET = {'gregariousness': 'sociability', 'assertiveness': 'assertiveness', 'activity_level': 'energy_level', 'sympathy': 'compassion', 'cooperation': 'respectfulness',
               'trust': 'trust', 'orderliness': 'organization', 'achievement_striving': 'productiveness', 'dutifulness': 'responsibility', 'anxiety': 'anxiety',
@@ -36,8 +37,8 @@ METRO_SIDO = [11, 23, 31]
 IND12 = {'A': 0, 'B': 1, 'C': 1, 'D': 2, 'E': 2, 'F': 3, 'G': 4, 'H': 5, 'I': 6, 'J': 7, 'K': 8, 'L': 9, 'M': 9, 'N': 9, 'O': 10, 'P': 10, 'Q': 10, 'R': 11, 'S': 11, 'T': 11, 'U': 10}
 SIZE_OUT = ['1-4 employees', '5-9 employees', '10-29 employees', '30-99 employees', '100-299 employees', '300+ employees']
 SIZE_SETS = [['Startup (<50)'], ['Startup (<50)'], ['Startup (<50)'], ['Startup (<50)', 'SMB (50-500)'], ['SMB (50-500)'], ['SMB (50-500)', 'Mid (500-5k)', 'Enterprise (5k+)']]
-KR_ADDED = ['english_proficiency', 'lang_english', 'dev_professional_status'] + ['trait_curiosity', 'cog_curiosity', 'trait_creativity', 'trait_appreciation_of_beauty', 'trait_open_mindedness', 'cog_open_mindedness', 'cog_ambiguity_tolerance', 'need_for_closure', 'att_rapid_change', 'pref_novelty_vs_familiarity', 'pref_routine_vs_variety', 'pref_stability_vs_change', 'trait_discipline', 'trait_perseverance', 'trait_prudence', 'trait_self_regulation', 'trait_ambition', 'cog_procrastination', 'lstyle_tidiness', 'pref_plan_vs_spontaneous', 'cog_decision_speed', 'trait_zest', 'trait_leadership', 'skill_leadership', 'interpersonal_agency_dominance', 'cog_assertiveness', 'pref_big_group_vs_one_on_one', 'trait_competitiveness', 'pref_competition_vs_collab', 'trait_kindness', 'trait_humility', 'trait_honesty', 'interpersonal_communion_warmth', 'cog_politeness', 'trait_resilience', 'cog_optimism', 'pref_logic_vs_intuition']   # round 3: = DERIVED attributes   # step 5: English ability (KGSS 2018), developer status (EAPS B형 occupation)
-# step 5 round 3: MatrAIx personality-like attributes made from the Korean personality scores instead of the MatrAIx graph.
+KR_ADDED = ['english_proficiency', 'lang_english', 'dev_professional_status'] + ['trait_curiosity', 'cog_curiosity', 'trait_creativity', 'trait_appreciation_of_beauty', 'trait_open_mindedness', 'cog_open_mindedness', 'cog_ambiguity_tolerance', 'need_for_closure', 'att_rapid_change', 'pref_novelty_vs_familiarity', 'pref_routine_vs_variety', 'pref_stability_vs_change', 'trait_discipline', 'trait_perseverance', 'trait_prudence', 'trait_self_regulation', 'trait_ambition', 'cog_procrastination', 'lstyle_tidiness', 'pref_plan_vs_spontaneous', 'cog_decision_speed', 'trait_zest', 'trait_leadership', 'skill_leadership', 'interpersonal_agency_dominance', 'cog_assertiveness', 'pref_big_group_vs_one_on_one', 'trait_competitiveness', 'pref_competition_vs_collab', 'trait_kindness', 'trait_humility', 'trait_honesty', 'interpersonal_communion_warmth', 'cog_politeness', 'trait_resilience', 'cog_optimism', 'pref_logic_vs_intuition']   # the last 37 = DERIVED attributes; English ability (KGSS 2018), developer status (EAPS B형 occupation)
+# MatrAIx personality-like attributes made from the Korean personality scores instead of the MatrAIx graph.
 # (attribute, source score, sign, r, anchors). z = sign * r * source + sqrt(1 - r^2) * noise, cut at the MatrAIx prior proportions (first value = top).
 # anchors (attribute, sign): the value may not sit at the opposite extreme of an anchor (sign +1: first value goes with the anchor's first value).
 # r is an assumption (0.8 near-identical construct, 0.6-0.7 related construct); 'MBTI_J'/'MBTI_F' anchors are the MBTI letters.
@@ -90,9 +91,7 @@ class Base4(Base):
         super().__init__(sh, sp, rng)
         if core.HOLDOUT:   # mother-child gaps from training households only (same split as the CART synthesis: seed 5, 80%)
             Hr = pd.read_parquet(paths.art('census', 'H.parquet')); tr = set(Hr.hid.sample(frac=0.8, random_state=5))
-            rp = pd.read_parquet(REAL_P()); rp = rp[rp.hid.isin(tr)]
-            mo = rp[rp.rel.isin([1, 2]) & (rp.sex == 2)][['hid', 'age']].rename(columns={'age': 'ma'})
-            ch = rp[rp.rel == 3][['hid', 'age']].merge(mo, on='hid'); gap = (ch.ma - ch.age); self.gap = gap[(gap >= 15) & (gap <= 50)].to_numpy()
+            rp = pd.read_parquet(REAL_P()); self.gap = aggregates.expand(aggregates.freq_table(aggregates.gaps_from(rp[rp.hid.isin(tr)])))
         P = pd.read_parquet(sp)
         hd = P[P.rel == 1].drop_duplicates('hid').set_index('hid')
         for c in ['sex', 'age', 'mar', 'edu', 'sch', 'econ', 'status', 'occ']:
@@ -112,7 +111,7 @@ class Gen4(Gen0):
         self.S = KRSampler(self.K, placeholder=set(), seed=seed, extra_masks=self._extra_masks(), dyn_masks=self._dyn_masks())
         self.V = self.S.values; self.ph_order = []; self.delta = 0.30
         X = core.SUF   # '' = models on all data, '_80' = validation models on 80% of each source
-        M = lambda f: paths.art('models', f)
+        M = lambda f: paths.inp('models', f)
         self.PP = json.load(open(M(f'pers_params{X}.json'))); self.VP = json.load(open(M(f'value_params{X}.json')))
         self.HM = pickle.load(open(M(f'health_models{X}.pkl'), 'rb')); self.LI = pickle.load(open(M(f'labor_income_models{X}.pkl'), 'rb'))
         self.KG = pickle.load(open(M(f'kgss_models{X}.pkl'), 'rb')); self.FM = pickle.load(open(M(f'family_models{X}.pkl'), 'rb'))
@@ -129,7 +128,7 @@ class Gen4(Gen0):
     def _dyn_masks(self):
         V = graph_values(); return dyn_language_masks(V) + nondev_masks(V) + rule_pair_masks(self.K)
 
-    # ------------------------------------------------------------ step 5 round 2: developer status, re-draw of contradicting MatrAIx parts
+    # ------------------------------------------------------------ developer status, re-draw of contradicting MatrAIx parts
     def _dev(self, work, occ, letter, bgc, s01, rng):
         """1-digit occupation 2 workers: EAPS B형 model -> Professional developer / Non-developer technologist / other; everyone else 'Not a developer'"""
         from krpersona.blocks import dev as DEVM
@@ -164,7 +163,7 @@ class Gen4(Gen0):
         self.repair_hist = hist; self.repair_left = rows
 
     def _multi(self, codes):
-        """round 3: multilingualism (a MatrAIx root with no parents) is set from the languages drawn: number of languages at Conversational or better
+        """multilingualism (a MatrAIx root with no parents) is set from the languages drawn: number of languages at Conversational or better
         (Korean, English from english_proficiency, other lang_*) 1 -> Monolingual, 2 -> Bilingual, 3+ -> Trilingual+"""
         V = self.V
         if not hasattr(self, '_ml'):
@@ -247,7 +246,7 @@ class Gen4(Gen0):
         self._set('lstyle_commute_mode', cm)
         lim = D.lim.fillna(0).astype(int).to_numpy(); nb = np.array([bin(x).count('1') for x in lim])
         # census activity limitation bits: 1 vision, 2 hearing, 4 physical, 8 mental, 16 intellectual/autism, 32 speech
-        # (step 5: speech alone -> Physical, as in the Korean classification 외부 신체기능 장애; it was Sensory, which contradicted normal vision and hearing)
+        # (speech alone -> Physical, as in the Korean classification 외부 신체기능 장애; Sensory would contradict normal vision and hearing)
         self._set('demo_disability_status', np.select([lim == 0, nb >= 2, np.isin(lim, [1, 2]), np.isin(lim, [4, 32])], ['No disability', 'Multiple', 'Sensory', 'Physical'], 'Cognitive'))
         self._alloc('health_vision', [['Low vision', 'Blind'] if x & 1 else ['Normal', 'Corrected'] for x in lim])
         self._alloc('health_hearing', [['Moderate loss', 'Deaf / hard of hearing'] if x & 2 else ['Normal', 'Mild loss'] for x in lim])
@@ -316,7 +315,7 @@ class Gen4(Gen0):
             if (working[i] or emp[i] == 'Unemployed') and 25 <= age[i] <= 59: O.add('Career change')
             if nk[i] and mn[i] >= 20 and not cores[i]: O.add('Empty nester')
             if (age[i] >= 60 and not working[i]) or emp[i] == 'Retired': O.add('Retirement')
-            # fallback (step 5: no 'Student' when not enrolled, no 'Early career' with 20+ years of experience)
+            # fallback (no 'Student' when not enrolled, no 'Early career' with 20+ years of experience)
             if not O: O = ({'Early career'} if exo[i] != '20+' else {'Mid-life'}) if age[i] < 40 else ({'Mid-life'} if age[i] < 60 else {'Retirement'})
             ls.append(sorted(O))
         self._alloc('life_stage', ls)
@@ -434,7 +433,7 @@ class Gen4(Gen0):
                 if b in uniq:   # same facet in both instruments: the facet-specific parts are shared so that corr = SAME_FACET_R
                     lb = LAM_BFI2[b]; rho = float(np.clip((SAME_FACET_R - lb * l) / np.sqrt((1 - lb ** 2) * (1 - l ** 2)), 0, 1)); u = rho * uniq[b] + np.sqrt(1 - rho ** 2) * u
                 z = l * eta[:, j] + np.sqrt(1 - l ** 2) * u; lab = level(z)
-                if b in uniq:   # round 3 (rule sets 2 and 3): the same facet is never at opposite extremes in the two instruments
+                if b in uniq:   # rule sets 2 and 3: the same facet is never at opposite extremes in the two instruments
                     bl = self.out[f'bfi2_facet_{b}']; lab = np.where((bl == 'Very high') & (lab == 'Very low'), 'Low', np.where((bl == 'Very low') & (lab == 'Very high'), 'High', lab)).astype(object)
                 self._set(f'big5_{f}', lab); self.fz[f'big5_{f}'] = z
         zl = {k: LAM_MBTI * eta[:, j] + np.sqrt(1 - LAM_MBTI ** 2) * rng.standard_normal(n) for k, j in [('E', 2), ('N', 0), ('F', 3), ('J', 1)]}
@@ -442,7 +441,7 @@ class Gen4(Gen0):
         Z = np.stack([zf[d] for d in FACT], 1); srt = np.sort(Z, 1); top = Z.argmax(1)
         dom = np.where((srt[:, -1] >= 0.51) & (srt[:, -1] - srt[:, -2] >= self.delta), np.array([DOM[d] for d in FACT], dtype=object)[top], 'Balanced')
         self._set('dominant_trait', dom); self.Z = Z; self.eta = eta
-        # social battery; step 5 round 3: no opposite extreme to the BFI-2 extraversion domain or to an extraversion-dominant profile
+        # social battery: no opposite extreme to the BFI-2 extraversion domain or to an extraversion-dominant profile
         order = ['Strong introvert', 'Introvert', 'Ambivert', 'Extrovert', 'Strong extrovert']
         pri = np.array([self.S.prior['lstyle_social_battery'][self.V['lstyle_social_battery'].index(v)] for v in order])
         bi = np.searchsorted(norm.ppf(np.cumsum(pri)[:-1]), zb)
@@ -461,7 +460,7 @@ class Gen4(Gen0):
         return eta, mu
 
     def _derived(self, rng):
-        """step 5 round 3: DERIVED attributes from the personality scores (MatrAIx prior proportions, anchors keep them off opposite extremes)"""
+        """DERIVED attributes from the personality scores (MatrAIx prior proportions, anchors keep them off opposite extremes)"""
         n = len(self.eta); V = self.V
         for t, src, sign, r, anchors in DERIVED:
             z = sign * r * self.fz[src] + np.sqrt(1 - r ** 2) * rng.standard_normal(n)
@@ -522,7 +521,7 @@ class Gen4(Gen0):
                          'Autonomy': low('val_independence', LV_) | low('val_personal_freedom', LV_) | low('schwartz_value_self_direction', LS),
                          'Tradition': low('val_tradition', LV_) | low('schwartz_value_tradition', LS),
                          'Novelty': low('val_adventure', LV_) | low('schwartz_value_stimulation', LS),
-                         'Community': low('schwartz_value_benevolence', LS)}   # after round 3: benevolence alone (was benevolence and universalism); val_community is a MatrAIx node: masked later
+                         'Community': low('schwartz_value_benevolence', LS)}   # benevolence alone; val_community is a MatrAIx node: masked later
         oob['out'] = o   # outputs so far, for the KGSS cross-attribute constraints (kgss.KPAIRS)
         Y = KG.generate(self.KG, bgc, age, oob, rng, part_rate=self.part); self.kgss_y = Y
         for a, (out, cond) in KG.outputs(self.KG, Y).items():

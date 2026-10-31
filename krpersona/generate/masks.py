@@ -47,7 +47,7 @@ def nondev_masks(V):
 
 def rule_pair_masks(K):
     """round 3: masks compiled from the pairwise parts of the fixing rule sets (compile_masks.py -> rule_masks.pkl)"""
-    path = paths.art('masks', 'rule_masks.pkl')
+    path = paths.inp('masks', 'rule_masks.pkl')
     if not path.exists() or os.environ.get('KR_NO_RULE_MASKS') == '1': return []   # KR_NO_RULE_MASKS=1: baseline sample for compile_masks
     out = []
     for (t, c), Fm in pickle.load(open(path, 'rb')).items():

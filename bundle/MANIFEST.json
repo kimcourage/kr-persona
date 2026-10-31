@@ -1,0 +1,67 @@
+{
+ "version": "0.5.0",
+ "built": "2026-10-30",
+ "matraix_commit": "3633d8d",
+ "files": [
+  {
+   "file": "models/pers_params.json",
+   "bytes": 4727,
+   "md5": "af43b2f84ced82ed86dc13b3bbaa1904"
+  },
+  {
+   "file": "models/value_params.json",
+   "bytes": 24872,
+   "md5": "505627f22bbdca12bbcfe020e80295fb"
+  },
+  {
+   "file": "models/health_models.pkl",
+   "bytes": 58875,
+   "md5": "f51a67fa3a932db0ce7ac67269a04da2"
+  },
+  {
+   "file": "models/labor_income_models.pkl",
+   "bytes": 152021,
+   "md5": "0242fc6af9fc35d982f797aeb081139e"
+  },
+  {
+   "file": "models/kgss_models.pkl",
+   "bytes": 515168,
+   "md5": "1fa3155c9dd9359ac90a76fa72bb6dab"
+  },
+  {
+   "file": "models/family_models.pkl",
+   "bytes": 265682,
+   "md5": "80c9baad1142ad326afc0cf8f854f0ea"
+  },
+  {
+   "file": "models/dev_models.pkl",
+   "bytes": 842,
+   "md5": "672695fead75b7598ae6f9f5c5d05abd"
+  },
+  {
+   "file": "masks/mask_class.pkl",
+   "bytes": 28825,
+   "md5": "a5eb8419654adbc76091c4055cdf7aee"
+  },
+  {
+   "file": "masks/rule_masks.pkl",
+   "bytes": 77640,
+   "md5": "3bbfe580ddb6140f995347b195df2a79"
+  },
+  {
+   "file": "census/syn_s1_H.parquet",
+   "bytes": 3816141,
+   "md5": "6b27fca395e2660b4c90b838c8e20849"
+  },
+  {
+   "file": "census/syn_s1_P.parquet",
+   "bytes": 15808447,
+   "md5": "b299bfa670d26e117a18e44a3d18a694"
+  },
+  {
+   "file": "census/aggregates.pkl",
+   "bytes": 21284,
+   "md5": "1497746a81d840c3dbdcb00b3c97afed"
+  }
+ ]
+}

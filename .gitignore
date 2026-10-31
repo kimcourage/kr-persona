@@ -16,6 +16,18 @@ config/paths.toml
 *.gz
 *.log
 
+# Generation inputs; all other raw data and pipeline outputs remain excluded.
+!/bundle/models/health_models.pkl
+!/bundle/models/labor_income_models.pkl
+!/bundle/models/kgss_models.pkl
+!/bundle/models/family_models.pkl
+!/bundle/models/dev_models.pkl
+!/bundle/masks/mask_class.pkl
+!/bundle/masks/rule_masks.pkl
+!/bundle/census/syn_s1_H.parquet
+!/bundle/census/syn_s1_P.parquet
+!/bundle/census/aggregates.pkl
+
 # credentials and local environment
 .env
 .env.*

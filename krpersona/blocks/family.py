@@ -1,5 +1,7 @@
 """Family block from KLoSA 10th wave (2024, ages 61+): living-children count for men without a fertility record, and age gaps of non-co-resident children.
-Personas are 2020 ages; KLoSA respondents are matched by birth cohort (2020 age = 2024 age - 4)."""
+Personas are 2020 ages; KLoSA respondents are matched by birth cohort (2020 age = 2024 age - 4).
+The stored donors are microaggregated (microaggregate()): each donor's gaps and weight are the means of a group of at least KMIN respondents
+with the same number of non-co-resident children, so the model file holds no respondent's own values."""
 import sys, pickle, numpy as np, pandas as pd, pyreadstat, warnings
 warnings.filterwarnings('ignore')
 from krpersona import paths
@@ -28,6 +30,45 @@ def load():
     d['nco'] = [sum(c) for c in cos]
     return d
 
+KMIN = 5   # smallest group of respondents behind a stored donor
+
+
+def microaggregate(donors, k=KMIN):
+    """{(male, band): [(gaps, weight)]} -> same keys and list order, each usable donor replaced by its group's mean gaps and mean weight.
+    Groups have >= k donors with the same number of children: consecutive in gap order within sex x age band (a remainder of fewer than k
+    joins the last group); classes with fewer than k donors are pooled over the age bands of the same sex; a pool still smaller than k
+    joins, donor by donor, the group of the same sex and number of children with the nearest mean gaps (of the other sex if there is none)."""
+    use = {c: [(np.sort(np.asarray(g, float)), float(w)) for g, w in pool if np.min(g) >= 15] for c, pool in donors.items()}
+    assert max(g.max() for pool in use.values() for g, _ in pool) < 61   # the age filter of draw_gaps never binds for a 61+ persona
+    gap = lambda m: use[m[0]][m[1]][0]
+    def chunks(mem):
+        mem = sorted(mem, key=lambda m: tuple(gap(m))); n = len(mem) // k * k
+        G = [mem[i:i + k] for i in range(0, n, k)]; G[-1] += mem[n:]; return G
+    def nearest(groups, m):
+        return min(groups, key=lambda G: np.abs(np.mean([gap(x) for x in G], 0) - gap(m)).sum())
+    by = {}
+    for c, pool in use.items():
+        for j, (g, _) in enumerate(pool): by.setdefault((c[0], len(g)), {}).setdefault(c[1], []).append((c, j))
+    groups, cross = [], {}
+    for (male, n), bands in sorted(by.items()):
+        own, pool = [], []
+        for b, mem in sorted(bands.items()): (own.extend(chunks(mem)) if len(mem) >= k else pool.extend(mem))
+        if len(pool) >= k: own.extend(chunks(pool))
+        elif own: [nearest(own, m).append(m) for m in pool]
+        else: cross.setdefault(n, []).extend(pool)
+        groups.extend(own)
+    for n, mem in cross.items():
+        same = [G for G in groups if len(gap(G[0])) == n]; assert same, f'no group with {n} children'
+        [nearest(same, m).append(m) for m in mem]
+    out = {c: list(pool) for c, pool in use.items()}
+    for G in groups:
+        mg = np.round(np.mean([gap(m) for m in G], 0)); mw = float(np.mean([use[m[0]][m[1]][1] for m in G]))
+        for c, j in G: out[c][j] = (mg.copy(), mw)
+    assert all(len(out[c][j][0]) == len(use[c][j][0]) for c in use for j in range(len(use[c])))
+    return out, dict(groups=len(groups), smallest=min(map(len, groups)), donors=sum(map(len, use.values())),
+                     removed=sum(map(len, donors.values())) - sum(map(len, use.values())))
+
+
 def fit():
     d = load(); d = d[~d.ho] if core.HOLDOUT else d; mx = core.MX()
     par = [('ab5', None, None), ('mar4', None, None), ('edu4', None, None), ('urban2', None, None)]
@@ -49,6 +90,7 @@ def fit():
         if k.sum(): print(' men', lab, 'n', int(k.sum()), 'mean living children', round(float(np.average(m.ntot[k], weights=m.w10wgt_c[k])), 2))
     gm = np.concatenate([gp for v in don.values() for gp, _ in v]) if don else np.array([])
     print('gap by sex (non-co-resident)', {s: round(float(np.mean(np.concatenate([gp for (sx, b), v in don.items() if sx == s for gp, _ in v]))), 1) for s in (0, 1)})
+    don, info = microaggregate(don); print('donor groups', info)
     out = dict(model=MS[1], models=MS, donors=don, ab=AB, nt=NT)
     pickle.dump(out, open(paths.art('models', f'family_models{core.SUF}.pkl', mkdir=True), 'wb'))
     return out, d
@@ -65,7 +107,7 @@ def draw_total(F_, male, age, mar4, edu4, urban2, nco, rng):
 
 def draw_gaps(F_, male, age, k, rng):
     """ages gaps for k non-co-resident children of a 61+ persona: a donor of the same sex and age band with exactly k such children
-    (keeps the spacing between siblings); fewer donors -> any donor with >= k, then take k of them"""
+    (keeps a realistic spacing between siblings: the mean spacing of a group of >= KMIN respondents); fewer donors -> any donor with >= k, then take k of them"""
     pool = F_['donors'].get((int(male), int(ab(age))), [])
     pool = [(g, w) for g, w in pool if g.min() >= 15 and g.max() <= age]
     ok = [(g, w) for g, w in pool if len(g) == k] or [(g, w) for g, w in pool if len(g) >= k]

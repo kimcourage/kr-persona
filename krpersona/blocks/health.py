@@ -1,5 +1,5 @@
 """Health block (KNHANES 2022): depression/anxiety measurement + structural model (A5), then chronic, general health, smoking, alcohol, exercise, stress."""
-import sys, pickle, json, numpy as np, pandas as pd, pyreadstat, torch
+import sys, pickle, json, numpy as np, pandas as pd, pyreadstat
 from krpersona import paths
 from krpersona.blocks import core
 R_D, R_A = 0.59, 0.58   # neuroticism - depression / anxiety correlations: Davenport et al. (2024, J Affect Disord Rep 17:100832) Tables 1-2 pooled r
@@ -42,10 +42,18 @@ def chi_matrix(d):
     return np.stack(X, 1)
 CHI = ['절편', '여성'] + [f'{a}대' for a in ['30', '40', '50', '60', '70+']] + ['배우자 있음', '사별', '이혼·별거'] + HT6[1:] + ['비취업'] + ['중졸', '고졸', '대졸 이상'] + ['소득 중하', '소득 중상', '소득 상'] + ['만성질환 1개', '만성질환 2개+']
 
+ITEMS = [f'p{i}' for i in range(1, 10)] + [f'g{i}' for i in range(1, 8)]
+
+
+def sem_rows(d):
+    """respondents used by the measurement model: all PHQ-9 and GAD-7 items and every background variable known"""
+    return d[d[ITEMS].notna().all(axis=1) & d[['sex', 'age10', 'mar4', 'ht6', 'emp5', 'edu4', 'inc4', 'chronic']].ge(0).all(axis=1)]
+
+
 def fit_sem(d, Q=20, iters=400):
-    it = [f'p{i}' for i in range(1, 10)] + [f'g{i}' for i in range(1, 8)]
-    ok = d[it].notna().all(axis=1) & d[['sex', 'age10', 'mar4', 'ht6', 'emp5', 'edu4', 'inc4', 'chronic']].ge(0).all(axis=1)
-    s = d[ok]; X = torch.tensor(chi_matrix(s), dtype=torch.float64); Y = torch.tensor(s[it].to_numpy(), dtype=torch.long)
+    import torch
+    it = ITEMS
+    s = sem_rows(d); X = torch.tensor(chi_matrix(s), dtype=torch.float64); Y = torch.tensor(s[it].to_numpy(), dtype=torch.long)
     w = torch.tensor(s.w.to_numpy() / s.w.mean(), dtype=torch.float64); n, p = X.shape
     gh, ghw = np.polynomial.hermite_e.hermegauss(Q); gh = torch.tensor(gh); ghw = torch.tensor(ghw / ghw.sum())
     dim = torch.tensor([0] * 9 + [1] * 7)
@@ -78,13 +86,12 @@ def fit_sem(d, Q=20, iters=400):
     sd = np.sqrt(vmu + 1.0); Gs = Gm / sd[None, :]; Gs[0] -= m / sd
     lam_s = lamv * sd[dim.numpy()]; tau_s = tau - (lamv * m[dim.numpy()])[:, None]
     V = np.array([[1 / sd[0] ** 2, rho / (sd[0] * sd[1])], [rho / (sd[0] * sd[1]), 1 / sd[1] ** 2]])   # Cov(xi | chi) on the new scale
-    return dict(lam=lam_s, tau=tau_s, G=Gs, V=V, rho_resid=rho, n=int(n), chi=CHI, items=it,
-                X=chi_matrix(s), idx=s.index.to_numpy())
+    return dict(lam=lam_s, tau=tau_s, G=Gs, V=V, rho_resid=rho, n=int(n), chi=CHI, items=it)
 
 def posterior_draws(sem, d, M=5, Q=20, rng=None):
     """multiple imputation draws of xi for respondents with all items (grid posterior)"""
     rng = rng or np.random.default_rng(0); from scipy.stats import norm
-    it = sem['items']; s = d.loc[sem['idx']]; X = sem['X']; mu = X @ sem['G']; L = np.linalg.cholesky(sem['V'])
+    it = sem['items']; s = sem_rows(d); X = chi_matrix(s); mu = X @ sem['G']; L = np.linalg.cholesky(sem['V'])
     g = np.linspace(-4, 4, 41); Z = np.stack(np.meshgrid(g, g, indexing='ij'), -1).reshape(-1, 2)
     dim = np.array([0] * 9 + [1] * 7); Y = s[it].to_numpy().astype(int)
     up = np.concatenate([sem['tau'], np.full((16, 1), 1e6)], 1); lo = np.concatenate([np.full((16, 1), -1e6), sem['tau']], 1)
@@ -112,7 +119,7 @@ XI_CUTS = [-0.84, -0.25, 0.25, 0.84]    # xi quintile bins as parents
 
 def fit_block(d, sem, mx, quick=False):
     draws = posterior_draws(sem, d)
-    base = d.loc[sem['idx']].copy(); models = {}
+    base = sem_rows(d).copy(); models = {}
     stack = pd.concat([base.assign(xd=np.digitize(draws[m][:, 0], XI_CUTS), xa=np.digitize(draws[m][:, 1], XI_CUTS), w=base.w / len(draws), rid=base.index.to_numpy()) for m in range(len(draws))])
     parent_def = {k: (k, core.BG[k][1], core.BG[k][2]) for k in BGP}
     lev = {k: len(core.BG[k][0]) for k in BGP}

@@ -4,21 +4,36 @@ on = MatrAIx attributes are sampled (conditioned on the Korean values); off = on
 KR_HOLDOUT=1 uses the validation models (80% of every source) and the census base synthesized from 80% of households.
 Outputs in artifacts/samples/<sample name>/: personas.parquet (published attributes), internal.parquet (internal values such as exact age and 시도,
 not for publication), personas_matraix.parquet (MatrAIx unified dataset format), persona_codes.schema.json, stats.json."""
-import sys, json, time, numpy as np, pandas as pd, pyarrow as pa, pyarrow.parquet as pq
+import argparse, json, time, numpy as np, pandas as pd, pyarrow as pa, pyarrow.parquet as pq
 from krpersona import paths
+from krpersona.generate.resources import check_inputs
+from krpersona.blocks import core
+
+parser = argparse.ArgumentParser(description='사전 추정 모형으로 한국 성인 페르소나를 생성합니다.')
+parser.add_argument('count', type=int, help='생성 인원(양의 정수)')
+parser.add_argument('seed', type=int, help='난수 시드(0 이상의 정수)')
+parser.add_argument('mode', choices=['on', 'off'], help='on: 전체 속성, off: 한국 속성만')
+parser.add_argument('name', help='artifacts/samples 아래 결과 폴더 이름')
+parser.add_argument('calibration', type=int, nargs='?', default=50000, help='사전 보정 표본 수(기본 50000)')
+args = parser.parse_args()
+if args.count <= 0 or args.seed < 0 or args.calibration <= 0:
+    parser.error('인원과 사전 보정 표본 수는 양수, 시드는 0 이상이어야 합니다.')
+if args.name in {'.', '..'} or '/' in args.name or '\\' in args.name:
+    parser.error('결과 이름에는 경로 구분자를 사용할 수 없습니다.')
+check_inputs(core.HOLDOUT)
 from krpersona.generate.generator import Gen4 as Gen0, FACT
 from krpersona.matraix.own_masks import korean_masks, rules
-from krpersona.blocks import core
-N, SEED, ON = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3] == 'on'
-OUT = paths.art('samples', sys.argv[4]); OUT.mkdir(parents=True, exist_ok=True)
+N, SEED, ON = args.count, args.seed, args.mode == 'on'
+OUT = paths.art('samples', args.name); OUT.mkdir(parents=True, exist_ok=True)
 T0 = time.time(); log = lambda *a: print(f'[{time.time()-T0:5.0f}s]', *a, flush=True)
 TAG = 'syn_s5_f0.8' if core.HOLDOUT else 'syn_s1'   # validation: census base synthesized from 80% of households
-G = Gen0(paths.art('census', TAG + '_H.parquet'), paths.art('census', TAG + '_P.parquet'), seed=SEED, switch_on=True)
-cls = pd.read_pickle(paths.art('masks', 'mask_class.pkl')); keep_ids = set(cls.mask_id[cls['처리'] == '모순 검사로 유지'])
+log('loading generation inputs')
+G = Gen0(paths.inp('census', TAG + '_H.parquet'), paths.inp('census', TAG + '_P.parquet'), seed=SEED, switch_on=True)
+cls = pd.read_pickle(paths.inp('masks', 'mask_class.pkl')); keep_ids = set(cls.mask_id[cls['처리'] == '모순 검사로 유지'])
 KEPT = [m for m in korean_masks(G.K) if m['mask_id'] in keep_ids]
 # ---- delta so that Balanced = 26% (MatrAIx prior), and acceptance by cell
 G.repair_on = False   # calibration (delta, trial acceptance) without the step-5 re-draw
-B = int(sys.argv[5]) if len(sys.argv) > 5 else 50000; G.make(B); Z = G.Z; srt = np.sort(Z, 1)
+B = args.calibration; log('calibration', B); G.make(B); Z = G.Z; srt = np.sort(Z, 1)
 def bal(d): return np.mean(~((srt[:, -1] >= 0.51) & (srt[:, -1] - srt[:, -2] >= d)))
 lo, hi = 0.0, 2.0
 for _ in range(40):

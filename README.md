@@ -6,91 +6,115 @@
 
 대상은 국내에서 태어난 대한민국 국적의 19세 이상 성인입니다. 인구 구성과 출생 연도 관련 속성은 **2020년 11월** 기준이며, 기술 및 AI 사용과 생활 습관은 현재를 묘사하도록 구성했습니다. 최신 인구 통계에 맞춘 데이터는 아닙니다.
 
-## 시작하기 전에
+## 빠른 시작
 
-이 저장소에는 코드, 변수 대응표, 방법론 문서와 집계 결과가 있습니다. 원자료, 추정 모형, 생성 표본은 포함하지 않습니다. **페르소나를 생성하려면 원자료를 직접 준비하고 모형을 추정해야 합니다.**
-
-결과부터 확인하려면 [검증 결과](results/검증_결과.xlsx)와 [검증 문서](docs/09_검증.md)를 참고하세요. 속성 목록과 범주는 [attributes.csv](docs/tables/attributes.csv)에 있습니다.
-
-## 설치와 설정
-
-Python 3.11 이상이 필요합니다. 아래 명령은 `kr-persona` 폴더에서 실행합니다. 단계 실행 스크립트는 Bash 기준입니다.
+**`bundle/`의 사전 추정 모형과 생성 입력 파일을 사용하므로, 페르소나 생성에는 원자료 준비나 모형 재추정이 필요하지 않습니다.** Python 3.11 이상과 MatrAIx 저장소가 필요합니다. 아래 명령은 macOS 또는 Linux의 Bash 계열 셸 기준입니다.
 
 ```bash
+git clone https://github.com/kimcourage/kr-persona.git
+cd kr-persona
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e ".[test]"
-```
+python -m pip install -e .
 
-MatrAIx는 별도로 내려받습니다. 이 프로젝트의 기준 커밋은 `3633d8dab149a9482a71b024418a49ae828cc941`입니다.
-
-```bash
 git clone https://github.com/MatrAIx-ai/MatrAIx-Persona-8B ../MatrAIx-Persona-8B
 git -C ../MatrAIx-Persona-8B checkout 3633d8dab149a9482a71b024418a49ae828cc941
-cp config/paths.example.toml config/paths.toml
-```
+export KRP_MATRAIX="$(cd ../MatrAIx-Persona-8B && pwd)"
 
-`config/paths.toml`에 다음 세 경로를 입력합니다. 원자료와 산출물은 저장소 밖에 두는 것을 권장합니다.
-
-```toml
-data_dir = "/path/to/data"
-artifacts_dir = "/path/to/artifacts"
-matraix_dir = "/path/to/MatrAIx-Persona-8B"
-```
-
-원자료는 인구주택총조사 2020년 2% 표본, 국민건강영양조사 2022, 가계금융복지조사 2025, 지역별고용조사 2025년 상반기 A형과 B형, KGSS 2003–2025 누적 자료, 고령화연구패널 10차입니다. 자료별 제공처와 필요한 파일은 [자료 준비](docs/03_자료.md)에 정리했습니다. 내려받은 파일 이름이 다르면 [config/data_files.toml](config/data_files.toml)을 수정합니다.
-
-환경 변수 `KRP_DATA`, `KRP_ARTIFACTS`, `KRP_MATRAIX`는 설정 파일보다 우선합니다. `KRP_CONFIG`로 설정 파일의 위치를 따로 지정할 수도 있습니다.
-
-## 실행
-
-자료와 경로를 준비한 뒤 전체 과정을 실행합니다.
-
-```bash
-bash scripts/run_all.sh
-```
-
-전체 실행은 MatrAIx 비교 표본 생성부터 센서스 기반 가상 인구 생성, 모형 추정, 페르소나 생성, 검증과 결과표 작성까지 포함합니다. 단계별 입력과 출력은 [처리 흐름](docs/01_개요.md)에 있습니다. 결과표 작성 단계는 저장소의 `results/`와 `docs/tables/`를 갱신합니다.
-
-모형과 금지 규칙이 준비되어 있으면 원하는 인원만 따로 생성할 수 있습니다. 다음은 시드 42로 1,000명을 생성하는 예입니다.
-
-```bash
 python -m krpersona.generate.run 1000 42 on example
 ```
 
-결과는 `artifacts_dir` 아래 `samples/example/`에 저장됩니다. 같은 이름으로 실행하면 기존 파일을 덮어씁니다.
+위 예시는 1,000명을 생성해 `artifacts/samples/example/`에 저장합니다. 저장소 폴더를 이미 준비했다면 첫 두 명령을 생략하고 해당 폴더에서 시작합니다. 새 터미널에서는 가상환경을 활성화하고 `KRP_MATRAIX`를 다시 설정합니다. 경로를 저장하려면 `config/paths.example.toml`을 `config/paths.toml`로 복사해 `matraix_dir`를 지정할 수 있습니다.
+
+### 생성 인원과 모드 설정
+
+```text
+python -m krpersona.generate.run 인원 시드 on또는off 결과이름 [사전보정인원]
+```
+
+| 인수 | 의미 |
+|---|---|
+| 인원 | 생성할 페르소나 수. 양의 정수 |
+| 시드 | 난수 초기값. 0 이상의 정수 |
+| `on` / `off` | 전체 1,311개 속성 / 한국 자료와 규칙에 따른 242개 속성 |
+| 결과이름 | 결과를 저장할 하위 폴더 이름. 같은 이름으로 실행하면 기존 파일을 덮어씁니다 |
+| 사전보정인원 | 선택 항목. 기본값은 50,000명이며 성격 기준과 통과율 보정에 사용합니다 |
+
+기본 보정 단계 때문에 소규모 표본도 실행 시간이 필요합니다. 설치 확인용으로 빠르게 실행하려면 다음과 같이 보정 인원을 줄일 수 있습니다. 이 설정은 분포 검증이나 기존 결과 재현용이 아닙니다.
+
+```bash
+python -m krpersona.generate.run 100 42 on check 1000
+```
+
+같은 결과를 재현하려면 시드뿐 아니라 모형 파일, 실행 환경, 생성 인원과 사전 보정 인원도 동일해야 합니다. 인수 설명은 `python -m krpersona.generate.run --help`로 확인할 수 있습니다.
 
 ### 한국 속성만 생성하기
 
-한국 자료와 규칙으로 생성하는 속성만 필요하면 세 번째 인수를 `on`에서 `off`로 바꿉니다.
+한국 자료와 규칙으로 생성하는 속성만 필요하면 세 번째 인수를 `off`로 지정합니다.
 
 ```bash
 python -m krpersona.generate.run 1000 42 off example_korean
 ```
 
-이 예시는 시드 42로 1,000명을 생성해 `artifacts_dir/samples/example_korean/`에 저장합니다. `personas.parquet`에는 한국 자료와 규칙으로 생성하는 기존 속성 221개와 추가 한국 속성 21개, 총 **242개 속성**이 들어갑니다. `persona_id`를 포함하면 243열이며, MatrAIx 그래프에서 추가로 추출하는 1,069개 속성은 포함하지 않습니다.
+결과는 `artifacts/samples/example_korean/`에 저장됩니다. `personas.parquet`에는 기존 속성 221개와 추가 한국 속성 21개, 총 **242개 속성**이 포함됩니다. `persona_id`를 포함하면 243열입니다. MatrAIx에서 추가로 추출하는 1,069개 속성은 출력에 포함하지 않습니다.
 
-이 모드도 MatrAIx 설치와 앞서 안내한 원자료 및 모형 준비가 필요합니다. 한국 속성 생성에 사용하는 범주 체계와 일부 확률은 MatrAIx를 참조합니다. 전체 실행 스크립트는 두 모드를 모두 실행하며, 한국 속성만 있는 표본은 `samples/out_off/`에 저장합니다.
+이 모드도 범주 체계와 일부 확률, 사전 보정을 위해 MatrAIx 설치가 필요합니다. 별도의 원자료나 모형 재추정은 필요하지 않습니다.
 
-### 결과 파일
+### 결과 파일 확인
 
-두 모드 모두 아래 파일을 생성합니다.
+두 모드 모두 다음 파일을 생성합니다.
 
 | 파일 | 내용 |
 |---|---|
-| `personas.parquet` | 식별자와 페르소나 속성. `on`은 1,311개, `off`는 242개 |
+| `personas.parquet` | 식별자와 페르소나 속성. `on`은 1,312열, `off`는 243열 |
 | `internal.parquet` | 검증용 내부 값: 정확한 나이, 시도, 잠재 점수 등 |
 | `personas_matraix.parquet` | MatrAIx 통합 형식. 추가 한국 속성 21개는 제외하며, `off`에서 생성하지 않은 속성은 결측으로 저장 |
+| `persona_codes.schema.json` | MatrAIx 통합 형식의 속성 코드와 범주 정의 |
 | `stats.json` | 생성 인원, 통과율, 규칙 위반과 소요 시간 |
+
+다음 코드는 저장소 폴더에서 실행합니다. CSV가 필요하면 마지막 줄로 변환할 수 있습니다.
 
 ```python
 import pandas as pd
 
-personas = pd.read_parquet("/path/to/artifacts/samples/example/personas.parquet")
+personas = pd.read_parquet("artifacts/samples/example/personas.parquet")
 print(personas[["persona_id", "age_bracket", "demo_employment_status"]].head())
+personas.to_csv("artifacts/samples/example/personas.csv", index=False, encoding="utf-8-sig")
 ```
 
-모든 속성을 프롬프트로 전달하는 렌더러도 제공합니다. MatrAIx 템플릿에 연결하는 방법은 [프롬프트 렌더링](docs/07_생성.md#710-프롬프트-렌더링)을 참고하세요. 프로필의 라벨과 범주 값은 MatrAIx와의 호환성을 위해 주로 영어를 사용합니다.
+결과 저장 위치는 `KRP_ARTIFACTS` 또는 `config/paths.toml`의 `artifacts_dir`로 변경할 수 있습니다. 기본값은 저장소의 `artifacts/`입니다. 모형 입력은 해당 산출물 폴더에 있는 파일을 우선 사용하고, 없으면 `bundle/`의 같은 경로에서 불러옵니다. 기존 추정 결과가 있는 폴더를 지정하면 서로 다른 모형 파일이 함께 사용될 수 있으므로 입력 구성을 확인해야 합니다.
+
+모든 속성을 프롬프트로 전달하는 렌더러도 제공합니다. 연결 방법은 [프롬프트 렌더링](docs/07_생성.md#710-프롬프트-렌더링)을 참고하세요. 프로필의 라벨과 범주 값은 MatrAIx와의 호환성을 위해 주로 영어를 사용합니다.
+
+## 생성 입력 파일
+
+`bundle/`은 전체 자료로 추정한 모형을 이용하는 생성용 묶음입니다. 파일 목록과 무결성 확인값은 [MANIFEST.json](bundle/MANIFEST.json)에 있습니다.
+
+| 경로 | 내용 |
+|---|---|
+| `bundle/models/` | 성격, 가치, 건강, 노동 및 소득, KGSS, 가족, 개발자 여부 모형 |
+| `bundle/masks/` | MatrAIx 금지 규칙 분류와 규칙 세트에서 구성한 금지 규칙 |
+| `bundle/census/syn_s1_*.parquet` | 순차 CART 기반 가상 인구 생성으로 구성한 가구 및 가구원 기본 집단 |
+| `bundle/census/aggregates.pkl` | 사후층화 목표, 모자 나이 차이, 사회단체 참여율 참조값 |
+
+건강 모형에는 응답자 설계행렬을 저장하지 않으며, 소득 금액은 구간별 가중 분위값 200개로 저장합니다. 가족 모형의 비동거 자녀 연령 차이와 가중치는 5명 이상으로 구성된 묶음의 평균값을 사용하고, 센서스의 모자 나이 차이는 빈도표로 저장합니다. `results/`와 검증 문서에는 이 저장 방식을 적용한 모형의 결과를 반영했습니다. 검증 표본은 별도로 추정한 80% 모형, 최종 표본은 `bundle/`과 동일한 전체 자료 모형을 사용합니다.
+
+이러한 저장 방식의 변경이 원자료 제공처의 재배포 허용을 의미하지는 않습니다. CART 기반 가상 인구를 포함한 생성 입력 파일의 이용 조건은 별도 확인이 필요합니다. 구성과 검토 범위는 [한계 10.13절](docs/10_한계.md#1013-생성-입력-묶음)에 설명했습니다.
+
+## 모형 재추정과 검증
+
+원자료를 이용해 모형을 다시 추정하거나 실제 자료와 비교하려는 경우에만 다음 절차가 필요합니다. 일반적인 페르소나 생성은 앞의 명령으로 충분합니다.
+
+1. [자료 준비](docs/03_자료.md)에 따라 원자료를 확보하고, 파일명을 `config/data_files.toml`과 맞춥니다.
+2. `python -m pip install -e ".[estimate,test]"`로 추정 및 테스트 의존성을 설치합니다.
+3. `config/paths.toml`에 `data_dir`, `artifacts_dir`, `matraix_dir`를 설정합니다. 개인 경로 설정과 원자료는 Git에 포함하지 않습니다.
+4. `bash scripts/run_all.sh`로 전체 과정을 실행하거나, [처리 흐름](docs/01_개요.md)에 따라 필요한 단계만 실행합니다.
+
+전체 과정에는 MatrAIx 비교 표본, 센서스 기반 가상 인구, 모형 추정, 생성, 검증과 결과표 작성이 포함됩니다. 결과표 작성 단계는 `results/`와 `docs/tables/`를 갱신합니다. 80% 자료로 추정하는 검증용 모형과 해당 기본 집단은 `bundle/`에 포함되지 않습니다.
+
+생성 입력 묶음을 다시 작성하는 명령은 `bash scripts/09_bundle.sh`입니다. 이 단계는 `run_all.sh`에 포함하지 않았으며, 모형의 저장 형식을 확인한 후 산출물 폴더의 파일을 `bundle/`에 복사합니다. 이미 계산된 분위값이나 묶음 평균을 다시 변환하지 않습니다. 파일 구성 및 무결성 검사는 자료의 공개 가능 여부를 판정하지 않습니다.
+
+환경 변수 `KRP_DATA`, `KRP_ARTIFACTS`, `KRP_MATRAIX`, `KRP_BUNDLE`은 설정 파일보다 우선합니다. `KRP_CONFIG`로 별도의 설정 파일을 지정할 수 있습니다.
 
 ## 검증 결과
 
@@ -99,9 +123,9 @@ print(personas[["persona_id", "age_bracket", "demo_employment_status"]].head())
 | 지표 | 비교 자료 | kr-persona | MatrAIx |
 |---|---|---:|---:|
 | 속성 2개 조합의 평균 총변동거리 | 인구주택총조사 2020 | 0.012 | 0.384 |
-| | 국민건강영양조사 2022 | 0.056 | 0.282 |
+| | 국민건강영양조사 2022 | 0.055 | 0.282 |
 | | 지역별고용조사 2025 상반기 | 0.060 | 0.586 |
-| | 가계금융복지조사 2025 | 0.059 | 0.542 |
+| | 가계금융복지조사 2025 | 0.060 | 0.542 |
 | | KGSS 2016–2025 | 0.127 | 0.353 |
 | 규칙 세트 4의 hard 위반이 하나 이상인 비율 | 전체 | 16.2% | 99.6% |
 | | 한국 속성 관련 규칙 | 0.0% | 98.0% |
@@ -133,11 +157,12 @@ print(personas[["persona_id", "age_bracket", "demo_employment_status"]].head())
 | [9. 검증](docs/09_검증.md) | 분포, 일관성, 렌더링 평가 |
 | [10. 한계](docs/10_한계.md) | 알려진 제약과 미검증 범위 |
 
-코드는 `krpersona/`, 실행 스크립트는 `scripts/`, 변수 대응표는 `mapping/`, 정의표는 `docs/tables/`, 집계 결과는 `results/`에 있습니다.
+코드는 `krpersona/`, 생성 입력 파일은 `bundle/`, 실행 스크립트는 `scripts/`, 변수 대응표는 `mapping/`, 정의표는 `docs/tables/`, 집계 결과는 `results/`에 있습니다.
 
 원자료 없이 규칙 테스트와 공개 파일 점검을 실행할 수 있습니다.
 
 ```bash
+python -m pip install -e ".[test]"
 python -m pytest tests
 bash scripts/check_release.sh
 ```

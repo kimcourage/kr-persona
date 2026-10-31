@@ -2,6 +2,8 @@
 import importlib.util
 from pathlib import Path
 import subprocess
+import hashlib
+import json
 
 SPEC = importlib.util.spec_from_file_location('check_release', Path(__file__).parents[1] / 'scripts' / 'check_release.py')
 release = importlib.util.module_from_spec(SPEC)
@@ -44,3 +46,27 @@ def test_nested_folder_does_not_scan_parent_repository(tmp_path):
     (tmp_path / 'private.parquet').write_bytes(b'PAR1')
     (child / 'README.md').write_text('# Public\n')
     assert release.check(child) == []
+
+
+def test_bundle_exemption_requires_exact_manifest_and_checksums(tmp_path):
+    bundle = tmp_path / 'bundle'
+    files = []
+    for name in sorted(release.BUNDLE_FILES):
+        path = bundle / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        data = name.encode()
+        path.write_bytes(data)
+        files.append(dict(file=name, bytes=len(data), md5=hashlib.md5(data).hexdigest()))
+    (bundle / 'MANIFEST.json').write_text(json.dumps(dict(files=files)))
+    assert release.check(tmp_path) == []
+    (bundle / 'models/dev_models.pkl').write_bytes(b'changed')
+    assert any('무결성 오류' in issue for issue in release.check(tmp_path))
+
+
+def test_bundle_does_not_exempt_arbitrary_private_files(tmp_path):
+    bundle = tmp_path / 'bundle'
+    bundle.mkdir()
+    (bundle / 'private.pkl').write_bytes(b'private')
+    issues = release.check(tmp_path)
+    assert any('지정 목록에 없는 파일' in issue for issue in issues)
+    assert any('원자료' in issue for issue in issues)

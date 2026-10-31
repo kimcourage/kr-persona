@@ -105,7 +105,7 @@ def static_masks():
     src = inspect.getsource(MK.conflict_masks)
     G = Gen0.__new__(Gen0)
     out = []
-    for origin, ms in [('0단계 생성기(generate/base.py)', Gen0._extra_masks(G)), ('충돌 수정(generate/masks.py)', MK.conflict_masks(V, K))]:
+    for origin, ms in [('기본 생성기(generate/base.py)', Gen0._extra_masks(G)), ('충돌 방지(generate/masks.py)', MK.conflict_masks(V, K))]:
         for t, cond, mult in ms:
             mult = np.asarray(mult); vt = V[t]
             forb = [v for v, m in zip(vt, mult) if m == 0]
