@@ -10,7 +10,7 @@ MatrAIx(https://github.com/MatrAIx-ai/MatrAIx-Persona-8B)는 페르소나를 LLM
 
 ### 속성과 분류
 
-`persona/schema/dimensions.json`은 속성 1,290개를 정의한다. 속성마다 id, 이름(label), 분류(category), 설명, 값 목록, 기본값(`defaultValue`), 문장 틀(`phrase`)이 있다. 값의 수는 2~16개(중앙값 5, 합계 6,347개)다. 모든 페르소나는 속성마다 값을 정확히 하나 가진다. 분류는 43개이며, 파일의 설명에 따르면 화면에서 묶어 보여 주기 위한 표지일 뿐 속성 사이의 위계를 뜻하지 않는다. 속성이 많은 분류는 다음과 같다.
+`persona/schema/dimensions.json`은 속성 1,290개를 정의한다. 속성마다 id, 이름(label), 분류(category), 설명, 값 목록, 기본값(`defaultValue`), 문장 틀(`phrase`)이 있다. 값의 수는 2\~16개(중앙값 5, 합계 6,347개)다. 모든 페르소나는 속성마다 값을 정확히 하나 가진다. 분류는 43개이며, 파일의 설명에 따르면 화면에서 묶어 보여 주기 위한 표지일 뿐 속성 사이의 위계를 뜻하지 않는다. 속성이 많은 분류는 다음과 같다.
 
 | 분류 | 속성 수 | 분류 | 속성 수 |
 |---|---|---|---|
@@ -32,13 +32,13 @@ MatrAIx(https://github.com/MatrAIx-ai/MatrAIx-Persona-8B)는 페르소나를 LLM
 |---|---|---|
 | 노드 | 1,308 | 출력 속성 1,290 + 잠재 노드 18(`emit: false`) |
 | 쌍별 연결 | 6,999 | 부모 값별 자식 분포 $P_e(v \mid u)$와 가중치 $w_e$ |
-| 전체 조건부 확률표(CPT) | 54 | 부모 2~3개의 값 조합별 자식 분포, 17,645행 |
+| 전체 조건부 확률표(CPT) | 54 | 부모 2\~3개의 값 조합별 자식 분포, 17,645행 |
 | 조건부 금지 규칙(마스크) | 524 | 조건이 맞으면 지정한 값의 확률에 0을 곱함 |
 | 위상 순서 | 1,308 | `proposal_view.topological_order` |
 
 각 노드에는 기본 확률 $P^0_i$가 있다. 그래프 메타데이터는 목표 모집단을 "세계 일반 인구"로 적고 있다. 부모가 없는 뿌리 노드는 86개(출력 속성 68개, 잠재 노드 18개)다. 잠재 노드 18개는 여러 속성을 함께 움직이게 하려고 둔 노드로, 값은 Low, Medium, High이고 기본 확률은 0.25, 0.5, 0.25이며 출력되지 않는다.
 
-쌍별 연결 6,999개는 노드 쌍 854,778개의 0.82%만 잇는다. 연결 가중치는 0.04~0.95(중앙값 0.378, 평균 0.455)다. 연결마다 붙은 근거 표지는 다음과 같다.
+쌍별 연결 6,999개는 노드 쌍 854,778개의 0.82%만 잇는다. 연결 가중치는 0.04\~0.95(중앙값 0.378, 평균 0.455)다. 연결마다 붙은 근거 표지는 다음과 같다.
 
 | 근거 표지(`evidence_level`) | 연결 수 | 비율 |
 |---|---|---|
@@ -56,9 +56,13 @@ CPT 54개의 출처 표지는 `v4_production_repair` 21개, `stackoverflow_surve
 
 `persona/synthesis/sampler/sampler.py`의 `PersonaForwardSampler`는 위상 순서대로 노드를 하나씩 추출한다. 노드 $i$의 값 $v$는 다음 확률로 추출된다.
 
-$$\log q_i(v) = \log P^0_i(v) + \gamma_i\Big[\sum_{e \in E_i} w_e\big(\log P_e(v \mid x_{s(e)}) - \log P^0_i(v)\big) + \sum_{c \in C_i} w_c\big(\log P_c(v \mid \mathbf x_{\mathrm{pa}(c)}) - \log P^0_i(v)\big)\Big] + \sum_{m \in M_i} \log \mu_m(v \mid \mathbf x) + \text{상수}$$
+$$
+\log q_i(v) = \log P^0_i(v) + \gamma_i\Big[\sum_{e \in E_i} w_e\big(\log P_e(v \mid x_{s(e)}) - \log P^0_i(v)\big) + \sum_{c \in C_i} w_c\big(\log P_c(v \mid \mathbf x_{\mathrm{pa}(c)}) - \log P^0_i(v)\big)\Big] + \sum_{m \in M_i} \log \mu_m(v \mid \mathbf x) + \text{상수}
+$$
 
-$$\gamma_i = \frac{1}{\max\big(1, \sqrt{\sum_{c \in C_i} w_c^2 + \sum_{e \in E_i} w_e^2}\big)}, \qquad \mu_m(v \mid \mathbf x) = \begin{cases} 0 & \text{조건이 맞고 } v \in \text{금지 값} \\ 1 & \text{그 밖} \end{cases}$$
+$$
+\gamma_i = \frac{1}{\max\big(1, \sqrt{\sum_{c \in C_i} w_c^2 + \sum_{e \in E_i} w_e^2}\big)}, \qquad \mu_m(v \mid \mathbf x) = \begin{cases} 0 & \text{조건이 맞고 } v \in \text{금지 값} \\ 1 & \text{그 밖} \end{cases}
+$$
 
 $E_i$는 $i$로 들어오는 쌍별 연결 가운데 CPT 부모에서 오는 것을 뺀 집합, $C_i$는 $i$를 자식으로 하는 CPT, $M_i$는 $i$를 대상으로 하는 마스크다. 확률은 $10^{-12}$ 아래로 내려가지 않게 자른다. $\gamma_i$는 부모가 많은 노드의 분포가 지나치게 뾰족해지지 않게 하는 수축 계수다. 값은 정규화하지 않은 누적 분포에서 역변환으로 추출하며, 난수는 `numpy.random.default_rng(seed)` 하나에서 나온다. 마스크를 곱한 뒤 모든 값의 확률이 0이 된 행은 균등 분포로 복원한다. `sample_indices(n, fixed=...)`로 일부 노드를 모든 행에서 같은 값으로 고정할 수 있지만, 행마다 다른 값을 넣는 기능은 없다.
 
@@ -121,7 +125,7 @@ MatrAIx에서 "한국 문화 Native"를 고르는 방법은 `cult_south_korea` �
 | 종교 Christian | 6.9%(성인 7.0%) | 29.0% |
 | 65세 이상 | 10.1%(성인 중 14.3%) | — |
 
-`primary_language`의 값 목록에는 Korean이 없고, 이 노드는 `region`만을 부모로 하는 CPT로 추출된다. `lang_korean`은 `lifex_languages_lifetime`과 잠재 노드 하나만을 부모로 가지므로 지역이나 문화와 무관하다. 한국 문화 Native라는 값은 `region = East Asia`를 거쳐서만 다른 속성에 영향을 미친다. 그래서 주 언어, 민족, 종교는 동아시아 일반의 분포를 따르고, 한국어 능력, 문화 틀(`cultural_background`), 한국 음식 선호, 정치 성향, 가구 규모, 가구소득의 분포는 전체 비교 집단과 거의 같다(예: 가구소득 2만 5천 달러 미만은 47.7%, 전체도 47.7%). 성격과 가치의 내부 상관도 약하다. 같은 개념을 측정하는 BFI-2 외향성과 IPIP 외향성 하위 요인 평균의 상관은 0.279(전체 0.283)이고, Schwartz 원형에서 마주 보는 가치 다섯 쌍의 상관은 −0.003~0.011이다.
+`primary_language`의 값 목록에는 Korean이 없고, 이 노드는 `region`만을 부모로 하는 CPT로 추출된다. `lang_korean`은 `lifex_languages_lifetime`과 잠재 노드 하나만을 부모로 가지므로 지역이나 문화와 무관하다. 한국 문화 Native라는 값은 `region = East Asia`를 거쳐서만 다른 속성에 영향을 미친다. 그래서 주 언어, 민족, 종교는 동아시아 일반의 분포를 따르고, 한국어 능력, 문화 틀(`cultural_background`), 한국 음식 선호, 정치 성향, 가구 규모, 가구소득의 분포는 전체 비교 집단과 거의 같다(예: 가구소득 2만 5천 달러 미만은 47.7%, 전체도 47.7%). 성격과 가치의 내부 상관도 약하다. 같은 개념을 측정하는 BFI-2 외향성과 IPIP 외향성 하위 요인 평균의 상관은 0.279(전체 0.283)이고, Schwartz 원형에서 마주 보는 가치 다섯 쌍의 상관은 −0.003\~0.011이다.
 
 ### 한 페르소나 안의 모순
 
@@ -184,7 +188,9 @@ hard 규칙을 하나 이상 어긴 페르소나는 한국 문화 Native의 76.3
 - $K$ 밖의 노드(출력 속성 1,069개, 잠재 노드 18개)는 MatrAIx 위상 순서대로 2.1절의 식으로 추출한다. 한국 값은 부모 값으로 들어간다.
 - $K$ 밖의 노드 $b$에서 $K$의 노드 $a$로 가는 연결 373개는 방향을 뒤집는다. $a$의 값 $x_a$는 이미 정해져 있으므로, $b$를 추출할 때 다음 항을 더한다.
 
-$$\log q_b(v) \mathrel{+}= \gamma_b\, w_e \big(\log P_e(x_a \mid v) - \log P^0_a(x_a)\big)$$
+$$
+\log q_b(v) \mathrel{+}= \gamma_b\, w_e \big(\log P_e(x_a \mid v) - \log P^0_a(x_a)\big)
+$$
 
 - $K$ 밖 노드의 $\gamma_b$는 새로 받는 연결(뒤집은 연결 포함)의 가중치로 다시 계산한다. 이로써 $\gamma$가 바뀌는 노드는 58개다. $K$의 노드는 MatrAIx의 $\gamma$를 그대로 사용한다.
 - $K$ 안의 연결 467개, $K$의 노드가 자식인 CPT 21개, $K$의 노드가 대상인 마스크는 한국 값을 정할 때 사용하지 않는다. 다만 생성기가 한국 범주 하나를 MatrAIx 범주 여러 개 가운데 하나로 나눌 때(`draw_korean`, 예: 미혼 → {Single, In a relationship, Engaged}) 그 허용 집합 안에서 MatrAIx 확률로 고르는 데 사용된다. 이때 아직 정하지 않은 CPT 부모는 기본 확률로 평균한다. 마스크가 허용 집합을 모두 지우면 허용 집합이 우선한다.
@@ -228,7 +234,7 @@ MatrAIx의 값 목록은 변경하지 않는다. 한국 값에 맞는 MatrAIx �
 | 성격 점수에서 파생한 속성 37개 | `generate/generator.py`(`DERIVED`, `Gen4._derived`) | MatrAIx 성격 및 선호 속성 37개의 그래프 추출 | `docs/tables/derived_attributes.csv`, 7장 |
 | 생성 중 금지 규칙 | `generate/base.py`(`Gen0._extra_masks`, 141개), `generate/masks.py`(`conflict_masks` 286개, `dyn_language_masks` 49개, `nondev_masks` 83개, `rule_pair_masks`), `blocks/kgss.py`(`KPAIRS`) | 없음 | `masks_static.csv`, `masks_compiled.csv`, `nondev_attributes.csv`, 7장, 8장 |
 | 생성 뒤 거부 검사와 칸별 재가중 | `matraix/own_masks.py`(`rules`), `generate/run.py` | 없음(MatrAIx에는 생성 중 마스크만 있다) | 5.6절, 7장 |
-| 일관성 검사 규칙 1~4차, 위반 시 MatrAIx 부분 재추출, 규칙의 쌍별 컴파일 | `rules/set1.py`~`set4.py`, `generate/repair.py`(`RepairRules`), `generate/compile_masks.py` | MatrAIx `consistency_issues` 20개 | 8장 |
+| 일관성 검사 규칙 1\~4차, 위반 시 MatrAIx 부분 재추출, 규칙의 쌍별 컴파일 | `rules/set1.py`\~`set4.py`, `generate/repair.py`(`RepairRules`), `generate/compile_masks.py` | MatrAIx `consistency_issues` 20개 | 8장 |
 | 실제 자료 검증 | `validate/*` | MatrAIx 품질 보고서 | 9장 |
 | MatrAIx 재현과 진단 | `baseline/*` | 없음 | 2.2절 |
 | 출력 파일 | `generate/run.py` | `persona_codes`, Persona 1M parquet | 아래 |
