@@ -31,12 +31,12 @@ MatrAIx(https://github.com/MatrAIx-ai/MatrAIx-Persona-8B)는 페르소나를 LLM
 | 구성 요소 | 개수 | 내용 |
 |---|---|---|
 | 노드 | 1,308 | 출력 속성 1,290 + 잠재 노드 18(`emit: false`) |
-| 쌍별 연결 | 6,999 | 부모 값별 자식 분포 $P_e(v \mid u)$와 가중치 $w_e$ |
+| 쌍별 연결 | 6,999 | 부모 값별 자식 분포 $`P_e(v \mid u)`$와 가중치 $`w_e`$ |
 | 전체 조건부 확률표(CPT) | 54 | 부모 2\~3개의 값 조합별 자식 분포, 17,645행 |
 | 조건부 금지 규칙(마스크) | 524 | 조건이 맞으면 지정한 값의 확률에 0을 곱함 |
 | 위상 순서 | 1,308 | `proposal_view.topological_order` |
 
-각 노드에는 기본 확률 $P^0_i$가 있다. 그래프 메타데이터는 목표 모집단을 "세계 일반 인구"로 적고 있다. 부모가 없는 뿌리 노드는 86개(출력 속성 68개, 잠재 노드 18개)다. 잠재 노드 18개는 여러 속성을 함께 움직이게 하려고 둔 노드로, 값은 Low, Medium, High이고 기본 확률은 0.25, 0.5, 0.25이며 출력되지 않는다.
+각 노드에는 기본 확률 $`P^0_i`$가 있다. 그래프 메타데이터는 목표 모집단을 "세계 일반 인구"로 적고 있다. 부모가 없는 뿌리 노드는 86개(출력 속성 68개, 잠재 노드 18개)다. 잠재 노드 18개는 여러 속성을 함께 움직이게 하려고 둔 노드로, 값은 Low, Medium, High이고 기본 확률은 0.25, 0.5, 0.25이며 출력되지 않는다.
 
 쌍별 연결 6,999개는 노드 쌍 854,778개의 0.82%만 잇는다. 연결 가중치는 0.04\~0.95(중앙값 0.378, 평균 0.455)다. 연결마다 붙은 근거 표지는 다음과 같다.
 
@@ -54,17 +54,17 @@ CPT 54개의 출처 표지는 `v4_production_repair` 21개, `stackoverflow_surve
 
 ### 샘플러
 
-`persona/synthesis/sampler/sampler.py`의 `PersonaForwardSampler`는 위상 순서대로 노드를 하나씩 추출한다. 노드 $i$의 값 $v$는 다음 확률로 추출된다.
+`persona/synthesis/sampler/sampler.py`의 `PersonaForwardSampler`는 위상 순서대로 노드를 하나씩 추출한다. 노드 $`i`$의 값 $`v`$는 다음 확률로 추출된다.
 
-$$
+```math
 \log q_i(v) = \log P^0_i(v) + \gamma_i\Big[\sum_{e \in E_i} w_e\big(\log P_e(v \mid x_{s(e)}) - \log P^0_i(v)\big) + \sum_{c \in C_i} w_c\big(\log P_c(v \mid \mathbf x_{\mathrm{pa}(c)}) - \log P^0_i(v)\big)\Big] + \sum_{m \in M_i} \log \mu_m(v \mid \mathbf x) + \text{상수}
-$$
+```
 
-$$
+```math
 \gamma_i = \frac{1}{\max\big(1, \sqrt{\sum_{c \in C_i} w_c^2 + \sum_{e \in E_i} w_e^2}\big)}, \qquad \mu_m(v \mid \mathbf x) = \begin{cases} 0 & \text{조건이 맞고 } v \in \text{금지 값} \\ 1 & \text{그 밖} \end{cases}
-$$
+```
 
-$E_i$는 $i$로 들어오는 쌍별 연결 가운데 CPT 부모에서 오는 것을 뺀 집합, $C_i$는 $i$를 자식으로 하는 CPT, $M_i$는 $i$를 대상으로 하는 마스크다. 확률은 $10^{-12}$ 아래로 내려가지 않게 자른다. $\gamma_i$는 부모가 많은 노드의 분포가 지나치게 뾰족해지지 않게 하는 수축 계수다. 값은 정규화하지 않은 누적 분포에서 역변환으로 추출하며, 난수는 `numpy.random.default_rng(seed)` 하나에서 나온다. 마스크를 곱한 뒤 모든 값의 확률이 0이 된 행은 균등 분포로 복원한다. `sample_indices(n, fixed=...)`로 일부 노드를 모든 행에서 같은 값으로 고정할 수 있지만, 행마다 다른 값을 넣는 기능은 없다.
+$`E_i`$는 $`i`$로 들어오는 쌍별 연결 가운데 CPT 부모에서 오는 것을 뺀 집합, $`C_i`$는 $`i`$를 자식으로 하는 CPT, $`M_i`$는 $`i`$를 대상으로 하는 마스크다. 확률은 $`10^{-12}`$ 아래로 내려가지 않게 자른다. $`\gamma_i`$는 부모가 많은 노드의 분포가 지나치게 뾰족해지지 않게 하는 수축 계수다. 값은 정규화하지 않은 누적 분포에서 역변환으로 추출하며, 난수는 `numpy.random.default_rng(seed)` 하나에서 나온다. 마스크를 곱한 뒤 모든 값의 확률이 0이 된 행은 균등 분포로 복원한다. `sample_indices(n, fixed=...)`로 일부 노드를 모든 행에서 같은 값으로 고정할 수 있지만, 행마다 다른 값을 넣는 기능은 없다.
 
 ### 렌더러와 공개 형식
 
@@ -160,9 +160,9 @@ hard 규칙을 하나 이상 어긴 페르소나는 한국 문화 Native의 76.3
 |---|---|---|---|
 | 속성 1,290개의 id, 이름, 분류, 값 목록 | `persona/schema/dimensions.json`, `full_dag.json`의 `nodes` | `matraix/graph.py`(`graph_values`), `generate/assign.py`(`build`), `generate/masks.py`(`nondev_plan`) | 값 목록을 수정하지 않는다. MatrAIx 범주가 없는 한국 값은 출력에서만 범주 밖 값으로 기록한다(2.4절) |
 | 그래프 수치: 기본 확률, 쌍별 연결과 가중치, CPT, 위상 순서 | `persona/synthesis/graph/full_dag.json` | `matraix/sampler.py`(`KRSampler`), `blocks/core.py`(`MX`) | 다시 추정하지 않는다. MatrAIx 속성 1,069개와 잠재 노드 18개는 이 수치로 추출한다 |
-| 그래프를 표로 바꾸는 코드: 연결, CPT, 마스크 표, $\gamma_i$, CPT가 대신하는 연결 | `persona/synthesis/sampler/sampler.py`의 `PersonaForwardSampler`(`_compile_pairwise_edges`, `_compile_full_cpts`, `_compile_masks`, `_compile_node_shrinkage`) | `KRSampler.__init__` | `PersonaForwardSampler(graph, SamplingConfig(seed, emit_only=False))`를 생성하여 `in_edges`, `full_cpts`, `masks`, `gamma`, `replaced_parents`, `prior`, `topological_order`를 참조하여 사용한다. 추출 반복문(`sample_indices`)은 사용하지 않는다 |
+| 그래프를 표로 바꾸는 코드: 연결, CPT, 마스크 표, $`\gamma_i`$, CPT가 대신하는 연결 | `persona/synthesis/sampler/sampler.py`의 `PersonaForwardSampler`(`_compile_pairwise_edges`, `_compile_full_cpts`, `_compile_masks`, `_compile_node_shrinkage`) | `KRSampler.__init__` | `PersonaForwardSampler(graph, SamplingConfig(seed, emit_only=False))`를 생성하여 `in_edges`, `full_cpts`, `masks`, `gamma`, `replaced_parents`, `prior`, `topological_order`를 참조하여 사용한다. 추출 반복문(`sample_indices`)은 사용하지 않는다 |
 | 한국 속성이 아닌 노드를 대상으로 하는 MatrAIx 마스크 411개 | `full_dag.json`의 `conditional_masks` | `KRSampler._logits` | 생성 중에 MatrAIx와 같은 방식으로 곱한다. 조건에는 한국 값이 들어간다 |
-| MatrAIx 기본 확률에서 정한 구간 경계 | 노드의 `prior` | `generate/base.py`(`TAU`), `blocks/values.py`, `generate/generator.py`(`DERIVED`), `generate/run.py` | 성격 5단계 경계 $z = \pm 0.51, \pm 1.51$(6.5%, 24%, 39%, 24%, 6.5%), 가치 문항과 파생 속성의 경계, 우세 성격 Balanced 26%(경계 $\delta$의 보정 목표)를 MatrAIx 기본 확률에서 가져온다(6장, 7장) |
+| MatrAIx 기본 확률에서 정한 구간 경계 | 노드의 `prior` | `generate/base.py`(`TAU`), `blocks/values.py`, `generate/generator.py`(`DERIVED`), `generate/run.py` | 성격 5단계 경계 $`z = \pm 0.51, \pm 1.51`$(6.5%, 24%, 39%, 24%, 6.5%), 가치 문항과 파생 속성의 경계, 우세 성격 Balanced 26%(경계 $`\delta`$의 보정 목표)를 MatrAIx 기본 확률에서 가져온다(6장, 7장) |
 | 그래프 연결과 CPT를 블록 모형의 사전 평균으로 | `full_dag.json` | `blocks/core.py`(`MX.prior_mean`) | 조사 자료 벌점 로지스틱 모형의 벌점 중심을 MatrAIx 연결과 CPT에서 계산한다(6장) |
 | 공개 자료 형식과 변환기 | `persona/post_process/unified_dataset/schema.py`(`UNIFIED_SCHEMA`, `AttributeCodec`) | `generate/run.py` | 그대로 import한다 |
 | 공개 전 품질 거르기 규칙 22개 | `persona/post_process/quality_filter/contradictions.json` | `baseline/gen.py` | 규칙 파일을 그대로 불러온다. 적용 코드는 다시 썼다(같은 판정) |
@@ -182,28 +182,28 @@ hard 규칙을 하나 이상 어긴 페르소나는 한국 문화 Native의 76.3
 
 ### 샘플러
 
-`KRSampler`는 MatrAIx의 식을 그대로 다시 구현하되, 한국 속성 집합 $K$(221개, 4.2절)의 값을 생성기가 행마다 정한 뒤 나머지를 추출한다. MatrAIx와 다른 점은 다음과 같으며, 식과 처리 순서는 7.2절에 있다.
+`KRSampler`는 MatrAIx의 식을 그대로 다시 구현하되, 한국 속성 집합 $`K`$(221개, 4.2절)의 값을 생성기가 행마다 정한 뒤 나머지를 추출한다. MatrAIx와 다른 점은 다음과 같으며, 식과 처리 순서는 7.2절에 있다.
 
-- $K$의 값은 MatrAIx 범주 코드로 변환하여 각 행에 입력한다. MatrAIx 범주가 없는 한국 값(예: 주 언어 Korean, 무급가족종사자)은 코드 $|V_a|$("범주 없음")로 포함하고, 이 값에서 나가는 연결과 CPT 항은 인수 1(로그 0)로 설정한다.
-- $K$ 밖의 노드(출력 속성 1,069개, 잠재 노드 18개)는 MatrAIx 위상 순서대로 2.1절의 식으로 추출한다. 한국 값은 부모 값으로 들어간다.
-- $K$ 밖의 노드 $b$에서 $K$의 노드 $a$로 가는 연결 373개는 방향을 뒤집는다. $a$의 값 $x_a$는 이미 정해져 있으므로, $b$를 추출할 때 다음 항을 더한다.
+- $`K`$의 값은 MatrAIx 범주 코드로 변환하여 각 행에 입력한다. MatrAIx 범주가 없는 한국 값(예: 주 언어 Korean, 무급가족종사자)은 코드 $`|V_a|`$("범주 없음")로 포함하고, 이 값에서 나가는 연결과 CPT 항은 인수 1(로그 0)로 설정한다.
+- $`K`$ 밖의 노드(출력 속성 1,069개, 잠재 노드 18개)는 MatrAIx 위상 순서대로 2.1절의 식으로 추출한다. 한국 값은 부모 값으로 들어간다.
+- $`K`$ 밖의 노드 $`b`$에서 $`K`$의 노드 $`a`$로 가는 연결 373개는 방향을 뒤집는다. $`a`$의 값 $`x_a`$는 이미 정해져 있으므로, $`b`$를 추출할 때 다음 항을 더한다.
 
-$$
+```math
 \log q_b(v) \mathrel{+}= \gamma_b\, w_e \big(\log P_e(x_a \mid v) - \log P^0_a(x_a)\big)
-$$
+```
 
-- $K$ 밖 노드의 $\gamma_b$는 새로 받는 연결(뒤집은 연결 포함)의 가중치로 다시 계산한다. 이로써 $\gamma$가 바뀌는 노드는 58개다. $K$의 노드는 MatrAIx의 $\gamma$를 그대로 사용한다.
-- $K$ 안의 연결 467개, $K$의 노드가 자식인 CPT 21개, $K$의 노드가 대상인 마스크는 한국 값을 정할 때 사용하지 않는다. 다만 생성기가 한국 범주 하나를 MatrAIx 범주 여러 개 가운데 하나로 나눌 때(`draw_korean`, 예: 미혼 → {Single, In a relationship, Engaged}) 그 허용 집합 안에서 MatrAIx 확률로 고르는 데 사용된다. 이때 아직 정하지 않은 CPT 부모는 기본 확률로 평균한다. 마스크가 허용 집합을 모두 지우면 허용 집합이 우선한다.
+- $`K`$ 밖 노드의 $`\gamma_b`$는 새로 받는 연결(뒤집은 연결 포함)의 가중치로 다시 계산한다. 이로써 $`\gamma`$가 바뀌는 노드는 58개다. $`K`$의 노드는 MatrAIx의 $`\gamma`$를 그대로 사용한다.
+- $`K`$ 안의 연결 467개, $`K`$의 노드가 자식인 CPT 21개, $`K`$의 노드가 대상인 마스크는 한국 값을 정할 때 사용하지 않는다. 다만 생성기가 한국 범주 하나를 MatrAIx 범주 여러 개 가운데 하나로 나눌 때(`draw_korean`, 예: 미혼 → {Single, In a relationship, Engaged}) 그 허용 집합 안에서 MatrAIx 확률로 고르는 데 사용된다. 이때 아직 정하지 않은 CPT 부모는 기본 확률로 평균한다. 마스크가 허용 집합을 모두 지우면 허용 집합이 우선한다.
 - 조건 속성이 아직 추출되지 않은 마스크는 건너뛴다(MatrAIx는 이 경우 오류를 발생시킨다). 마스크를 곱해 모든 값의 확률이 0이 된 행은 그 마스크를 곱하기 전의 확률로 복원한다(MatrAIx는 균등 분포로 복원한다).
 - MatrAIx 형식의 추가 마스크(`extra_masks`)와 이미 추출한 값에서 행마다 계산하는 마스크(`dyn_masks`)를 MatrAIx 마스크와 같은 방식으로 곱한다(2.5절).
 
-$K$를 비우면 `KRSampler`는 MatrAIx 샘플러와 동일한 분포를 생성한다. `tests/test_sampler.py`가 이를 속성별 총변동거리로 확인한다. 2026-10-30에 저장한 결과는 5만 명씩 추출했을 때 TVD 중앙값 0.0038, 최댓값 0.0114로, MatrAIx끼리 두 번 추출한 기준선(중앙값 0.0039, 최댓값 0.0129)과 같은 수준이다. MatrAIx 속성의 주변 분포를 한국 집계에 맞추는 추가 보정항 $\alpha$는 적용하지 않았다.
+$`K`$를 비우면 `KRSampler`는 MatrAIx 샘플러와 동일한 분포를 생성한다. `tests/test_sampler.py`가 이를 속성별 총변동거리로 확인한다. 2026-10-30에 저장한 결과는 5만 명씩 추출했을 때 TVD 중앙값 0.0038, 최댓값 0.0114로, MatrAIx끼리 두 번 추출한 기준선(중앙값 0.0039, 최댓값 0.0129)과 같은 수준이다. MatrAIx 속성의 주변 분포를 한국 집계에 맞추는 추가 보정항 $`\alpha`$는 적용하지 않았다.
 
 ### MatrAIx 마스크
 
-$K$ 밖이 대상인 마스크 411개는 생성 중에 그대로 사용한다. 0단계 생성기의 한국 속성 151개를 대상으로 하는 마스크는 105개이며, 그중 금지 값이 있는 103개를 `matraix/classify_masks.py`로 나눴다. 0단계 생성기로 생성한 6만 명(시드 11, 센서스 기본 집단 `syn_s1`)에서 한국 값이 한 번이라도 어긴 마스크는 한국 값과 충돌한다고 보고 버리고(19개: 센서스 속성 대상 8개, 규칙 속성 대상 11개), 한 번도 어기지 않은 마스크는 생성 뒤 거부 검사로 옮겼다(84개: 센서스 27개, 규칙 46개, 조사 추정 11개). 결과는 `artifacts/masks/mask_class.pkl`과 `docs/tables/matraix_masks.csv`에 있다. 옮긴 84개는 `matraix/own_masks.py`의 `rules`에서 고정 규칙과 함께 생성된 페르소나 전체에 적용되며, 하나라도 어긴 페르소나는 버리고 다시 생성한다(7장).
+$`K`$ 밖이 대상인 마스크 411개는 생성 중에 그대로 사용한다. 0단계 생성기의 한국 속성 151개를 대상으로 하는 마스크는 105개이며, 그중 금지 값이 있는 103개를 `matraix/classify_masks.py`로 나눴다. 0단계 생성기로 생성한 6만 명(시드 11, 센서스 기본 집단 `syn_s1`)에서 한국 값이 한 번이라도 어긴 마스크는 한국 값과 충돌한다고 보고 버리고(19개: 센서스 속성 대상 8개, 규칙 속성 대상 11개), 한 번도 어기지 않은 마스크는 생성 뒤 거부 검사로 옮겼다(84개: 센서스 27개, 규칙 46개, 조사 추정 11개). 결과는 `artifacts/masks/mask_class.pkl`과 `docs/tables/matraix_masks.csv`에 있다. 옮긴 84개는 `matraix/own_masks.py`의 `rules`에서 고정 규칙과 함께 생성된 페르소나 전체에 적용되며, 하나라도 어긴 페르소나는 버리고 다시 생성한다(7장).
 
-이 분류에는 두 가지 한계가 있다. 첫째, 0단계 생성기는 조사 추정 속성을 MatrAIx 확률로 임시로 추출했으므로, 조사 추정 속성이 대상인 11개는 최종 한국 모형의 값이 아니라 MatrAIx 값으로 판정되었다. 둘째, 5단계에서 $K$에 더한 속성이 대상인 MatrAIx 마스크 8개(`lang_english` 4개, `dev_professional_status` 3개, `english_proficiency` 1개)는 분류하지 않았고, 대상 값이 한국 모형으로 고정되므로 생성 중에도 생성 뒤에도 사용되지 않는다. 버린 19개도 `draw_korean`으로 허용 집합 안에서 값을 고를 때는 다른 MatrAIx 마스크와 함께 곱해진다.
+이 분류에는 두 가지 한계가 있다. 첫째, 0단계 생성기는 조사 추정 속성을 MatrAIx 확률로 임시로 추출했으므로, 조사 추정 속성이 대상인 11개는 최종 한국 모형의 값이 아니라 MatrAIx 값으로 판정되었다. 둘째, 5단계에서 $`K`$에 더한 속성이 대상인 MatrAIx 마스크 8개(`lang_english` 4개, `dev_professional_status` 3개, `english_proficiency` 1개)는 분류하지 않았고, 대상 값이 한국 모형으로 고정되므로 생성 중에도 생성 뒤에도 사용되지 않는다. 버린 19개도 `draw_korean`으로 허용 집합 안에서 값을 고를 때는 다른 MatrAIx 마스크와 함께 곱해진다.
 
 ### 출력 범주
 
@@ -226,7 +226,7 @@ MatrAIx의 값 목록은 변경하지 않는다. 한국 값에 맞는 MatrAIx �
 
 | 구성 요소 | kr-persona 파일 | MatrAIx에서 이것이 대신하는 것 | 문서 |
 |---|---|---|---|
-| 한국 속성 집합 $K$(221개)와 생성 방법 배정 | `generate/assign.py`(`build`), `generate/generator.py`(`KR_ADDED`) | 해당 속성의 그래프 추출 | 4.2절 |
+| 한국 속성 집합 $`K`$(221개)와 생성 방법 배정 | `generate/assign.py`(`build`), `generate/generator.py`(`KR_ADDED`) | 해당 속성의 그래프 추출 | 4.2절 |
 | 새 한국 속성 21개 | `blocks/kgss.py`, `blocks/health.py`, `render/dimensions_kr.json` | 없음 | 4.4절 |
 | 센서스 기본 집단(순차 CART)과 페르소나 추출 | `census/*`, `generate/base.py`(`Base`), `generate/generator.py`(`Base4`) | 뿌리 노드 86개의 독립 추출과 그 아래 인구 속성 | 5장 |
 | 조사 자료 블록 모형(성격, 가치, 건강, 노동, 소득, KGSS, 가족, 개발자 여부) | `blocks/*.py` | 해당 속성의 그래프 추출 | 6장 |
